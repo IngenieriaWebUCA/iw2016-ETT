@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_iw2016_ett_domain_Empresa" items="${empresas}" z="1z+BO7S8a4NpxrBisISTN7w5pMw=">
+        <table:table data="${empresas}" id="l_iw2016_ett_domain_Empresa" path="/empresas" z="EDPfpOp7pqkHf/w/HYUQKoZE668=">
+            <table:column id="c_iw2016_ett_domain_Empresa_CIF" property="CIF" z="jUrcut285cQ1zk9vFRA7SBjc9AE="/>
+            <table:column id="c_iw2016_ett_domain_Empresa_nombre" property="nombre" z="LkJ4T6Hapb72/5/72nSwt0PTl3M="/>
+            <table:column id="c_iw2016_ett_domain_Empresa_actividad" property="actividad" z="P872diqejZLsd/BvO66N3BdVhPY="/>
+            <table:column id="c_iw2016_ett_domain_Empresa_n_Empleados" property="n_Empleados" z="8ZG6EfENB/XQRf0Nu8dgbUYuRXY="/>
+            <table:column id="c_iw2016_ett_domain_Empresa_email" property="email" z="vbzrvnbdWAduRoiqXDfQ6hneHp8="/>
+        </table:table>
+    </page:list>
+</div>

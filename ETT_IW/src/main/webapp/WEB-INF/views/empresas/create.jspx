@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_iw2016_ett_domain_Empresa" modelAttribute="empresa" path="/empresas" render="${empty dependencies}" z="hoJqE/oBDYQqMHgWtyuJHSP28Zk=">
+        <field:input field="CIF" id="c_iw2016_ett_domain_Empresa_CIF" z="t8Mlzg0vRtvQKaBe5U5yv/s58LI="/>
+        <field:input field="nombre" id="c_iw2016_ett_domain_Empresa_nombre" z="NtntwhhI62V1UXtKjM+sFe976MM="/>
+        <field:input field="actividad" id="c_iw2016_ett_domain_Empresa_actividad" z="B6uwssDUiPCdizUJJiQjHq4X7jM="/>
+        <field:input field="n_Empleados" id="c_iw2016_ett_domain_Empresa_n_Empleados" z="RBEoeoeiOrq+WylXY5IHJHANdo0="/>
+        <field:input field="email" id="c_iw2016_ett_domain_Empresa_email" validationMessageCode="field_invalid_email" z="UOJ+5NUi9Ot57OCeRfbGxNBII4A="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_iw2016_ett_domain_Empresa" render="${not empty dependencies}" z="Sd/CrlYf5H1byK+JGkjG+SInXbc="/>
+</div>

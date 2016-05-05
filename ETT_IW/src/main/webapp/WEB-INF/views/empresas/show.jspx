@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_iw2016_ett_domain_Empresa" object="${empresa}" path="/empresas" z="/Uw82/+hNRkIRDvJalxCeD6lPSQ=">
+        <field:display field="CIF" id="s_iw2016_ett_domain_Empresa_CIF" object="${empresa}" z="X8uo+xq1/QGW1rjb+A7j5TS/Tkk="/>
+        <field:display field="nombre" id="s_iw2016_ett_domain_Empresa_nombre" object="${empresa}" z="1c/9m59T3dG1xah5ezinqRd3J1Q="/>
+        <field:display field="actividad" id="s_iw2016_ett_domain_Empresa_actividad" object="${empresa}" z="k58pa/rhwzm8JDZqurYJ7wd50cY="/>
+        <field:display field="n_Empleados" id="s_iw2016_ett_domain_Empresa_n_Empleados" object="${empresa}" z="72g4WeMvqZaFjkUR4sJdMdHpPvc="/>
+        <field:display field="email" id="s_iw2016_ett_domain_Empresa_email" object="${empresa}" z="93Oq+/EEfnHzLbqzb0l4C/NKSvw="/>
+    </page:show>
+</div>
