@@ -34,5 +34,6 @@ public class Empresa {
 
     /**
      */
-
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "empresa")
+    private Set<Oferta> ofertas = new HashSet<Oferta>();
 }
