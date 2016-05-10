@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_iw2016_ett_domain_Localizacion" items="${localizacions}" z="99EIgzy8wyrXEzvmXDlFO2NxTn0=">
+        <table:table data="${localizacions}" id="l_iw2016_ett_domain_Localizacion" path="/localizacions" z="cXUqCgi9Fxheo1BdvV0QyxiunqU=">
+            <table:column id="c_iw2016_ett_domain_Localizacion_Pais" property="pais" z="ETlIkH8FnztsNdbuQpOH2EPJiGM="/>
+            <table:column id="c_iw2016_ett_domain_Localizacion_comunidad" property="comunidad" z="i4tNfiz+UtIAaWps58QYGAZjxQ8="/>
+            <table:column id="c_iw2016_ett_domain_Localizacion_Provincia" property="provincia" z="9HuNIe3iIFrzrlX8f9zOcpXKEK8="/>
+            <table:column id="c_iw2016_ett_domain_Localizacion_Localidad" property="localidad" z="LKQdUA5pAXEeVXfngdE3uJLNjds="/>
+            <table:column id="c_iw2016_ett_domain_Localizacion_direccion" property="direccion" z="HMil4WaSw4CdUg1ztZ5UjxjGC9k="/>
+        </table:table>
+    </page:list>
+</div>

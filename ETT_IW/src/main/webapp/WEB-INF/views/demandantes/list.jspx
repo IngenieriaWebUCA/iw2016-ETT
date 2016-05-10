@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_iw2016_ett_domain_Demandante" items="${demandantes}" z="oLjwZNSza/dCA4OU+zetXu+3Kl8=">
+        <table:table data="${demandantes}" id="l_iw2016_ett_domain_Demandante" path="/demandantes" typeIdFieldName="id_" z="+7qAlTsUn5Qf2fmw9/dEi9Yobtw=">
+            <table:column id="c_iw2016_ett_domain_Demandante_id" property="id" z="mvWW6DLfqDvAjxUgx3P0lLi5nDQ="/>
+            <table:column id="c_iw2016_ett_domain_Demandante_Nombre" property="nombre" z="ELSAnGILf7LkZ5S10YaDw8qK7Ag="/>
+            <table:column id="c_iw2016_ett_domain_Demandante_Apellidos" property="apellidos" z="jjmeelgaP6/GoJqjaDKwH+RXzRM="/>
+            <table:column date="true" dateTimePattern="${demandante_fechanacimiento_date_format}" id="c_iw2016_ett_domain_Demandante_FechaNacimiento" property="fechaNacimiento" z="BRS/nMV2hvFt+EJs1ZgjD17pWpA="/>
+            <table:column id="c_iw2016_ett_domain_Demandante_direccion" property="direccion" z="u8EFynh0U7I0GiBpsYczWeQ7uhA="/>
+            <table:column id="c_iw2016_ett_domain_Demandante_email" property="email" z="Ylhq5AXnTIJW+IALlTu7cC8v1Ls="/>
+        </table:table>
+    </page:list>
+</div>

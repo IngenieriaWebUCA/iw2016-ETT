@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_iw2016_ett_domain_Formacion" items="${formacions}" z="P7EdoEgUCs7OyzV6uNN+zVjEDlc=">
+        <table:table data="${formacions}" id="l_iw2016_ett_domain_Formacion" path="/formacions" typeIdFieldName="id_" z="2JlLY4tdB1tvsrrNkqAEs+XY/TU=">
+            <table:column id="c_iw2016_ett_domain_Formacion_id" property="id" z="wyEvYxgzrjZpbxJbftNEsAG8/fU="/>
+            <table:column id="c_iw2016_ett_domain_Formacion_Titulo" property="titulo" z="tIm5Lykemn0OhFyyVCn+1nmhFps="/>
+            <table:column date="true" dateTimePattern="${formacion_fechainicio_date_format}" id="c_iw2016_ett_domain_Formacion_FechaInicio" property="fechaInicio" z="Gf2S6LTFXZqF3g2yuFZfJXGBqsg="/>
+            <table:column date="true" dateTimePattern="${formacion_fechafin_date_format}" id="c_iw2016_ett_domain_Formacion_FechaFin" property="fechaFin" z="nQo2yAJoNEtKT95OvjvJNMQt4WI="/>
+            <table:column id="c_iw2016_ett_domain_Formacion_Observaciones" property="observaciones" z="ZX0aRsidMCG6osIqsVjlBL357qA="/>
+            <table:column id="c_iw2016_ett_domain_Formacion_Formacion" property="formacion" z="VhJFDknDkSyYYmXANivE17CPrEc="/>
+        </table:table>
+    </page:list>
+</div>

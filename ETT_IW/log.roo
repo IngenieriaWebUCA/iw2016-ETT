@@ -1,2 +1,117 @@
 // Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-05 17:45:27
 // Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-09 17:48:12
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-10 01:12:11
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-05-10 01:16:31
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-10 01:18:51
+entity jpa --class iw2016_ett.domain.Oferta
+field number --type int --fieldName id
+field string --fieldName titulo
+field string --fieldName TipoContrato
+field date --fieldName FechaInicio --type java.util.Date
+field number --type int --fieldName NumeroVacantes
+web mvc all --package iw2016_ett.web
+field date --fieldName FechaAccesible --type java.util.Date
+enum type --class ~.Oferta.Estado
+enum constant --name Espera
+enum constant --name Activa
+enum constant --name Detenida
+enum constant --name Cancelada
+enum constant --name Tramite
+enum constant --name Resuelta
+focus --class iw2016_ett.domain.oferta
+enum type --class ~.Oferta.perfil
+enum constant --name Formacion
+enum constant --name Experiencia
+web mvc all --package iw2016_ett.web
+web mvc all --package iw2016_ett.web
+web mvc all --package iw2016_ett.web
+focus --class iw2016_ett.domain.oferta
+enum type --class ~.Estado
+enum type --class ~.domain.Estado
+enum constant --name Espera
+enum constant --name Activa
+// [failed] enum constant --name Detenida
+enum constant --name Cancelada
+enum constant --name Tramite
+enum constant --name Resuelta
+enum type --class ~.domain.Perfil
+enum constant --name Formacion
+enum constant --name Experiencia
+focus --class iw2016_ett.domain.oferta
+field enum --fieldName Perfil --type ~.domain.Perfil
+field enum --fieldName Estado --type ~.domain.Estado
+enum type --class ~.domain.EstadoInsc
+enum constant --name Recibida
+enum constant --name Retirada
+enum constant --name Estudio
+enum constant --name Descartada
+enum constant --name Aceptada
+entity jpa --class iw2016_ett.domain.Inscripcion
+field number --type int --fieldName id
+field enum --fieldName Estado --type ~.domain.EstadoInsc
+web mvc all --package iw2016_ett.web
+enum type --class ~.domain.Pais
+enum constant --name Espana
+enum type --class ~.domain.Comunidad
+enum type --class ~.domain.Provincia
+enum type --class ~.domain.Localidad
+entity jpa --class iw2016_ett.domain.Localizacion
+field enum --fieldName Pais --type ~.domain.Pais
+field enum --fieldName comunidad --type ~.domain.Comunidad
+field enum --fieldName Provincia --type ~.domain.Provincia
+field enum --fieldName Localidad --type ~.domain.Localidad
+focus --class iw2016_ett.domain.Localizacion
+field string --fieldName direccion
+web mvc all --package iw2016_ett.web
+enum type --class ~.domain.Sexo
+enum constant --name Hombre
+// [failed] enum constant --name Mujer
+enum constant --name NoContesta
+entity jpa --class iw2016_ett.domain.Demandante
+field number --type int --fieldName id
+field string --fieldName Nombre
+field string --fieldName Apellidos
+field date --fieldName FechaNacimiento --type java.util.Date
+field string --fieldName direccion 
+field string --fieldName email
+field number --type int --fieldName Telefono
+field enum --fieldName Sexo --type ~.domain.Sexo
+field string --fieldName Resumen
+field string --fieldName Foto
+field string --fieldName Curriculum
+field string --fieldName Puesto
+web mvc all --package iw2016_ett.web
+entity jpa --class iw2016_ett.domain.Formacion
+field number --type int --fieldName id
+field string --fieldName Titulo
+field date --fieldName FechaInicio --type java.util.Date
+field date --fieldName FechaFin --type java.util.Date
+field string --fieldName Observaciones
+entity jpa --class iw2016_ett.domain.ExperienciaLaboral
+field number --type int --fieldName id
+field string --fieldName Empresa
+field date --fieldName FechaInicio --type java.util.Date
+field date --fieldName FechaFin --type java.util.Date
+field string --fieldName ContrartoTrabajo
+enum type --class ~.domain.Formacion
+enum constant --name TituloAcademico
+enum constant --name CursoAprendizaje
+enum constant --name CursoIdiomas
+// [failed] entity jpa --class iw2016_ett.domain.Formacion
+enum type --class ~.domain.TipoFormacion
+enum constant --name TituloAcademico
+enum constant --name CursoAprendizaje
+enum constant --name CursoIdiomas
+entity jpa --class iw2016_ett.domain.Formacion
+field number --type int --fieldName id
+field string --fieldName Titulo
+field date --fieldName FechaInicio --type java.util.Date
+field date --fieldName FechaFin --type java.util.Date
+field string --fieldName Observaciones
+field enum --fieldName Formacion --type ~.domain.TipoFormacion
+web mvc all --package iw2016_ett.web
+focus --class iw2016_ett.domain.Empresa
+field set --fieldName ofertas --type Oferta --cardinality ONE_TO_MANY --mappedBy empresa
+focus --class iw2016_ett.domain.Oferta
+field reference --fieldName empresa --type Empresa --cardinality MANY_TO_ONE
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-05-10 02:35:05

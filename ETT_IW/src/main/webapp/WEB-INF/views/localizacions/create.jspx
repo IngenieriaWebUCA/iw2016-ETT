@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_iw2016_ett_domain_Localizacion" modelAttribute="localizacion" path="/localizacions" render="${empty dependencies}" z="4dOBgGy5I5f16j8BQYQDsLz0iz0=">
+        <field:select field="Pais" id="c_iw2016_ett_domain_Localizacion_Pais" items="${paises}" path="paises" z="U9HmTNKkTGaGZdGEA7wEvSHwBv8="/>
+        <field:select field="comunidad" id="c_iw2016_ett_domain_Localizacion_comunidad" items="${comunidads}" path="comunidads" z="x2pZr1gPCjWlmI/flVT3mh2Jxdo="/>
+        <field:select field="Provincia" id="c_iw2016_ett_domain_Localizacion_Provincia" items="${provincias}" path="provincias" z="/QYPpcKJk4CnMJt1oXmQQP+wh+M="/>
+        <field:select field="Localidad" id="c_iw2016_ett_domain_Localizacion_Localidad" items="${localidads}" path="localidads" z="aE629K0ciJtT0oCS8mIPg4QxeqA="/>
+        <field:input field="direccion" id="c_iw2016_ett_domain_Localizacion_direccion" z="1ZKDSj8ZgAHwezse9LW1gMnIYPk="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_iw2016_ett_domain_Localizacion" render="${not empty dependencies}" z="WyO+DXBP8ZCJeGJkhmphv81fszk="/>
+</div>

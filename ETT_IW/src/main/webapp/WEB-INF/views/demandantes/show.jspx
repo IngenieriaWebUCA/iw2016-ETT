@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_iw2016_ett_domain_Demandante" object="${demandante}" path="/demandantes" z="JsqHQWck/5yw6SFuQt43fvRpxJQ=">
+        <field:display field="id" id="s_iw2016_ett_domain_Demandante_id" object="${demandante}" z="OJjZRUoxMO5I+LC+NhZQcw/B4Yg="/>
+        <field:display field="nombre" id="s_iw2016_ett_domain_Demandante_Nombre" object="${demandante}" z="PH6ZO+4C1NAXPVO+B+j/5sdq7m0="/>
+        <field:display field="apellidos" id="s_iw2016_ett_domain_Demandante_Apellidos" object="${demandante}" z="ShgJvzV5SKEmP+w21YGCpm9bY/g="/>
+        <field:display date="true" dateTimePattern="${demandante_fechanacimiento_date_format}" field="fechaNacimiento" id="s_iw2016_ett_domain_Demandante_FechaNacimiento" object="${demandante}" z="l8NxNt3nzo6/t4W51JR82Gge8HM="/>
+        <field:display field="direccion" id="s_iw2016_ett_domain_Demandante_direccion" object="${demandante}" z="zuWZq/+/BgvFn8jGTmPyVgOmm8A="/>
+        <field:display field="email" id="s_iw2016_ett_domain_Demandante_email" object="${demandante}" z="GBrhsU/DUdPdM8623QbXWSksd8k="/>
+        <field:display field="telefono" id="s_iw2016_ett_domain_Demandante_Telefono" object="${demandante}" z="JPA5fkGLIF5Zzfe9EyPCMplx5xM="/>
+        <field:display field="sexo" id="s_iw2016_ett_domain_Demandante_Sexo" object="${demandante}" z="rnBxE+mFbLPogcBXGbSjmxTCVPw="/>
+        <field:display field="resumen" id="s_iw2016_ett_domain_Demandante_Resumen" object="${demandante}" z="XQnNEq95EqyPP78ObKBQFuveOdQ="/>
+        <field:display field="foto" id="s_iw2016_ett_domain_Demandante_Foto" object="${demandante}" z="u13KClfqLmSN+ByfBm3GZCFz12o="/>
+        <field:display field="curriculum" id="s_iw2016_ett_domain_Demandante_Curriculum" object="${demandante}" z="8AZGkvtb/dfq7wvXav+DwZFuhHs="/>
+        <field:display field="puesto" id="s_iw2016_ett_domain_Demandante_Puesto" object="${demandante}" z="i4hPrWlx+luFD4kgF+udES1t7Dg="/>
+    </page:show>
+</div>
