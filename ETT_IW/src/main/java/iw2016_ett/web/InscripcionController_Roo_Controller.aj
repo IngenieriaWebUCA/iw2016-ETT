@@ -3,8 +3,10 @@
 
 package iw2016_ett.web;
 
+import iw2016_ett.domain.Demandante;
 import iw2016_ett.domain.EstadoInsc;
 import iw2016_ett.domain.Inscripcion;
+import iw2016_ett.domain.Oferta;
 import iw2016_ett.web.InscripcionController;
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
@@ -29,7 +31,7 @@ privileged aspect InscripcionController_Roo_Controller {
         }
         uiModel.asMap().clear();
         inscripcion.persist();
-        return "redirect:/inscripcions/" + encodeUrlPathSegment(inscripcion.getId_().toString(), httpServletRequest);
+        return "redirect:/inscripcions/" + encodeUrlPathSegment(inscripcion.getId().toString(), httpServletRequest);
     }
     
     @RequestMapping(params = "form", produces = "text/html")
@@ -38,10 +40,10 @@ privileged aspect InscripcionController_Roo_Controller {
         return "inscripcions/create";
     }
     
-    @RequestMapping(value = "/{id_}", produces = "text/html")
-    public String InscripcionController.show(@PathVariable("id_") Long id_, Model uiModel) {
-        uiModel.addAttribute("inscripcion", Inscripcion.findInscripcion(id_));
-        uiModel.addAttribute("itemId", id_);
+    @RequestMapping(value = "/{id}", produces = "text/html")
+    public String InscripcionController.show(@PathVariable("id") Long id, Model uiModel) {
+        uiModel.addAttribute("inscripcion", Inscripcion.findInscripcion(id));
+        uiModel.addAttribute("itemId", id);
         return "inscripcions/show";
     }
     
@@ -67,18 +69,18 @@ privileged aspect InscripcionController_Roo_Controller {
         }
         uiModel.asMap().clear();
         inscripcion.merge();
-        return "redirect:/inscripcions/" + encodeUrlPathSegment(inscripcion.getId_().toString(), httpServletRequest);
+        return "redirect:/inscripcions/" + encodeUrlPathSegment(inscripcion.getId().toString(), httpServletRequest);
     }
     
-    @RequestMapping(value = "/{id_}", params = "form", produces = "text/html")
-    public String InscripcionController.updateForm(@PathVariable("id_") Long id_, Model uiModel) {
-        populateEditForm(uiModel, Inscripcion.findInscripcion(id_));
+    @RequestMapping(value = "/{id}", params = "form", produces = "text/html")
+    public String InscripcionController.updateForm(@PathVariable("id") Long id, Model uiModel) {
+        populateEditForm(uiModel, Inscripcion.findInscripcion(id));
         return "inscripcions/update";
     }
     
-    @RequestMapping(value = "/{id_}", method = RequestMethod.DELETE, produces = "text/html")
-    public String InscripcionController.delete(@PathVariable("id_") Long id_, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
-        Inscripcion inscripcion = Inscripcion.findInscripcion(id_);
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "text/html")
+    public String InscripcionController.delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+        Inscripcion inscripcion = Inscripcion.findInscripcion(id);
         inscripcion.remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());
@@ -88,7 +90,9 @@ privileged aspect InscripcionController_Roo_Controller {
     
     void InscripcionController.populateEditForm(Model uiModel, Inscripcion inscripcion) {
         uiModel.addAttribute("inscripcion", inscripcion);
+        uiModel.addAttribute("demandantes", Demandante.findAllDemandantes());
         uiModel.addAttribute("estadoinscs", Arrays.asList(EstadoInsc.values()));
+        uiModel.addAttribute("ofertas", Oferta.findAllOfertas());
     }
     
     String InscripcionController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

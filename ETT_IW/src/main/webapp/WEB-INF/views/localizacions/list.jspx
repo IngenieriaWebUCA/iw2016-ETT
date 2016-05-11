@@ -9,6 +9,7 @@
             <table:column id="c_iw2016_ett_domain_Localizacion_Provincia" property="provincia" z="9HuNIe3iIFrzrlX8f9zOcpXKEK8="/>
             <table:column id="c_iw2016_ett_domain_Localizacion_Localidad" property="localidad" z="LKQdUA5pAXEeVXfngdE3uJLNjds="/>
             <table:column id="c_iw2016_ett_domain_Localizacion_direccion" property="direccion" z="HMil4WaSw4CdUg1ztZ5UjxjGC9k="/>
+            <table:column id="c_iw2016_ett_domain_Localizacion_empresa" property="empresa" z="IJ5zD9l8ceYHopY8h5n3AZkAxko="/>
         </table:table>
     </page:list>
 </div>

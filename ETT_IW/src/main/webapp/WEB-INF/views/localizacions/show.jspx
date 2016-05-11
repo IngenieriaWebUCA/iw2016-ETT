@@ -8,5 +8,6 @@
         <field:display field="provincia" id="s_iw2016_ett_domain_Localizacion_Provincia" object="${localizacion}" z="BvrWJK7leQXyjMBPwoJoQMTQFZk="/>
         <field:display field="localidad" id="s_iw2016_ett_domain_Localizacion_Localidad" object="${localizacion}" z="BMRh88DiA7QiBESqtabaT++uUUU="/>
         <field:display field="direccion" id="s_iw2016_ett_domain_Localizacion_direccion" object="${localizacion}" z="7WUfm8xtbMqgWmj3CeBHLNWbGQ8="/>
+        <field:display field="empresa" id="s_iw2016_ett_domain_Localizacion_empresa" object="${localizacion}" z="II7YCB5TzZ+9Brs5Vo6XhbbGDiQ="/>
     </page:show>
 </div>

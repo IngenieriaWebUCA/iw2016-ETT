@@ -8,6 +8,8 @@
         <field:select field="Provincia" id="c_iw2016_ett_domain_Localizacion_Provincia" items="${provincias}" path="provincias" z="/QYPpcKJk4CnMJt1oXmQQP+wh+M="/>
         <field:select field="Localidad" id="c_iw2016_ett_domain_Localizacion_Localidad" items="${localidads}" path="localidads" z="aE629K0ciJtT0oCS8mIPg4QxeqA="/>
         <field:input field="direccion" id="c_iw2016_ett_domain_Localizacion_direccion" z="1ZKDSj8ZgAHwezse9LW1gMnIYPk="/>
+        <field:select field="empresa" id="c_iw2016_ett_domain_Localizacion_empresa" itemValue="id" items="${empresas}" path="/empresas" z="unrK6UPoOYHs9j9zmNoABYkl4rs="/>
+        <field:simple field="ofertas" id="c_iw2016_ett_domain_Localizacion_ofertas" messageCode="entity_reference_not_managed" messageCodeAttribute="Oferta" z="YypHDF3pVqp1gS6TpUtEwFr5Vdw="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_iw2016_ett_domain_Localizacion" render="${not empty dependencies}" z="WyO+DXBP8ZCJeGJkhmphv81fszk="/>
 </div>

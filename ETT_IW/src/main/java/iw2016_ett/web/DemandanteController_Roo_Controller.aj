@@ -4,6 +4,9 @@
 package iw2016_ett.web;
 
 import iw2016_ett.domain.Demandante;
+import iw2016_ett.domain.ExperienciaLaboral;
+import iw2016_ett.domain.Formacion;
+import iw2016_ett.domain.PuestoTrabajo;
 import iw2016_ett.domain.Sexo;
 import iw2016_ett.web.DemandanteController;
 import java.io.UnsupportedEncodingException;
@@ -31,7 +34,7 @@ privileged aspect DemandanteController_Roo_Controller {
         }
         uiModel.asMap().clear();
         demandante.persist();
-        return "redirect:/demandantes/" + encodeUrlPathSegment(demandante.getId_().toString(), httpServletRequest);
+        return "redirect:/demandantes/" + encodeUrlPathSegment(demandante.getId().toString(), httpServletRequest);
     }
     
     @RequestMapping(params = "form", produces = "text/html")
@@ -40,11 +43,11 @@ privileged aspect DemandanteController_Roo_Controller {
         return "demandantes/create";
     }
     
-    @RequestMapping(value = "/{id_}", produces = "text/html")
-    public String DemandanteController.show(@PathVariable("id_") Long id_, Model uiModel) {
+    @RequestMapping(value = "/{id}", produces = "text/html")
+    public String DemandanteController.show(@PathVariable("id") Long id, Model uiModel) {
         addDateTimeFormatPatterns(uiModel);
-        uiModel.addAttribute("demandante", Demandante.findDemandante(id_));
-        uiModel.addAttribute("itemId", id_);
+        uiModel.addAttribute("demandante", Demandante.findDemandante(id));
+        uiModel.addAttribute("itemId", id);
         return "demandantes/show";
     }
     
@@ -71,18 +74,18 @@ privileged aspect DemandanteController_Roo_Controller {
         }
         uiModel.asMap().clear();
         demandante.merge();
-        return "redirect:/demandantes/" + encodeUrlPathSegment(demandante.getId_().toString(), httpServletRequest);
+        return "redirect:/demandantes/" + encodeUrlPathSegment(demandante.getId().toString(), httpServletRequest);
     }
     
-    @RequestMapping(value = "/{id_}", params = "form", produces = "text/html")
-    public String DemandanteController.updateForm(@PathVariable("id_") Long id_, Model uiModel) {
-        populateEditForm(uiModel, Demandante.findDemandante(id_));
+    @RequestMapping(value = "/{id}", params = "form", produces = "text/html")
+    public String DemandanteController.updateForm(@PathVariable("id") Long id, Model uiModel) {
+        populateEditForm(uiModel, Demandante.findDemandante(id));
         return "demandantes/update";
     }
     
-    @RequestMapping(value = "/{id_}", method = RequestMethod.DELETE, produces = "text/html")
-    public String DemandanteController.delete(@PathVariable("id_") Long id_, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
-        Demandante demandante = Demandante.findDemandante(id_);
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "text/html")
+    public String DemandanteController.delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+        Demandante demandante = Demandante.findDemandante(id);
         demandante.remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());
@@ -97,6 +100,9 @@ privileged aspect DemandanteController_Roo_Controller {
     void DemandanteController.populateEditForm(Model uiModel, Demandante demandante) {
         uiModel.addAttribute("demandante", demandante);
         addDateTimeFormatPatterns(uiModel);
+        uiModel.addAttribute("experiencialaborals", ExperienciaLaboral.findAllExperienciaLaborals());
+        uiModel.addAttribute("formacions", Formacion.findAllFormacions());
+        uiModel.addAttribute("puestotrabajoes", PuestoTrabajo.findAllPuestoTrabajoes());
         uiModel.addAttribute("sexoes", Arrays.asList(Sexo.values()));
     }
     

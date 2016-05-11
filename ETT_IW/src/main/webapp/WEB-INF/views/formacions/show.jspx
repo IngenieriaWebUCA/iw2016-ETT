@@ -3,11 +3,12 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_iw2016_ett_domain_Formacion" object="${formacion}" path="/formacions" z="EjuUp1os5YpXwebX9R06efNRtgI=">
-        <field:display field="id" id="s_iw2016_ett_domain_Formacion_id" object="${formacion}" z="jp9udP69vWfQ7qZ9SOwlzyU8hoU="/>
         <field:display field="titulo" id="s_iw2016_ett_domain_Formacion_Titulo" object="${formacion}" z="vy4FOAg+HNBL0rehl7cjSxwbTsI="/>
         <field:display date="true" dateTimePattern="${formacion_fechainicio_date_format}" field="fechaInicio" id="s_iw2016_ett_domain_Formacion_FechaInicio" object="${formacion}" z="KNlYYTCO4I4zo1geLNyOkAl2Oxs="/>
         <field:display date="true" dateTimePattern="${formacion_fechafin_date_format}" field="fechaFin" id="s_iw2016_ett_domain_Formacion_FechaFin" object="${formacion}" z="33V7FweKYJ347x3tHcW/l9SdY1o="/>
         <field:display field="observaciones" id="s_iw2016_ett_domain_Formacion_Observaciones" object="${formacion}" z="dH3Gio+wmAP7072d3GnRKCgvFM4="/>
         <field:display field="formacion" id="s_iw2016_ett_domain_Formacion_Formacion" object="${formacion}" z="IC1G5FU+DwJ4vFYAmh0kfk+bnkM="/>
+        <field:display field="demandante" id="s_iw2016_ett_domain_Formacion_demandante" object="${formacion}" z="8TC9JmFPEcPtwLY29qhW+vf4GpU="/>
+        <field:display field="titulacion" id="s_iw2016_ett_domain_Formacion_titulacion" object="${formacion}" z="VHP/BVpdAFrNV/U5cJJdkUTNgPU="/>
     </page:show>
 </div>

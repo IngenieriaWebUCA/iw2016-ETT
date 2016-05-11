@@ -14,7 +14,7 @@ privileged aspect Inscripcion_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager Inscripcion.entityManager;
     
-    public static final List<String> Inscripcion.fieldNames4OrderClauseFilter = java.util.Arrays.asList("id", "Estado");
+    public static final List<String> Inscripcion.fieldNames4OrderClauseFilter = java.util.Arrays.asList("Estado", "oferta", "demandante");
     
     public static final EntityManager Inscripcion.entityManager() {
         EntityManager em = new Inscripcion().entityManager;
@@ -41,9 +41,9 @@ privileged aspect Inscripcion_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery(jpaQuery, Inscripcion.class).getResultList();
     }
     
-    public static Inscripcion Inscripcion.findInscripcion(Long id_) {
-        if (id_ == null) return null;
-        return entityManager().find(Inscripcion.class, id_);
+    public static Inscripcion Inscripcion.findInscripcion(Long id) {
+        if (id == null) return null;
+        return entityManager().find(Inscripcion.class, id);
     }
     
     public static List<Inscripcion> Inscripcion.findInscripcionEntries(int firstResult, int maxResults) {
@@ -73,7 +73,7 @@ privileged aspect Inscripcion_Roo_Jpa_ActiveRecord {
         if (this.entityManager.contains(this)) {
             this.entityManager.remove(this);
         } else {
-            Inscripcion attached = Inscripcion.findInscripcion(this.id_);
+            Inscripcion attached = Inscripcion.findInscripcion(this.id);
             this.entityManager.remove(attached);
         }
     }

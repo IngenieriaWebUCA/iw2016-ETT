@@ -3,19 +3,13 @@
 
 package iw2016_ett.domain;
 
+import iw2016_ett.domain.Demandante;
 import iw2016_ett.domain.Formacion;
 import iw2016_ett.domain.TipoFormacion;
+import iw2016_ett.domain.Titulaciones;
 import java.util.Date;
 
 privileged aspect Formacion_Roo_JavaBean {
-    
-    public int Formacion.getId() {
-        return this.id;
-    }
-    
-    public void Formacion.setId(int id) {
-        this.id = id;
-    }
     
     public String Formacion.getTitulo() {
         return this.Titulo;
@@ -55,6 +49,22 @@ privileged aspect Formacion_Roo_JavaBean {
     
     public void Formacion.setFormacion(TipoFormacion Formacion) {
         this.Formacion = Formacion;
+    }
+    
+    public Demandante Formacion.getDemandante() {
+        return this.demandante;
+    }
+    
+    public void Formacion.setDemandante(Demandante demandante) {
+        this.demandante = demandante;
+    }
+    
+    public Titulaciones Formacion.getTitulacion() {
+        return this.titulacion;
+    }
+    
+    public void Formacion.setTitulacion(Titulaciones titulacion) {
+        this.titulacion = titulacion;
     }
     
 }

@@ -3,12 +3,13 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_iw2016_ett_domain_Formacion" modelAttribute="formacion" path="/formacions" render="${empty dependencies}" z="RMwEUmbk8Hh5KTvZy5XT4F3NMtA=">
-        <field:input field="id" id="c_iw2016_ett_domain_Formacion_id" z="E29VF38HwqriXvFvQqwCqgXuFGo="/>
         <field:input field="Titulo" id="c_iw2016_ett_domain_Formacion_Titulo" z="OHtNDiF3oC5mFq2ebly4KFzrwaU="/>
         <field:datetime dateTimePattern="${formacion_fechainicio_date_format}" field="FechaInicio" id="c_iw2016_ett_domain_Formacion_FechaInicio" z="bFIElKRvH86smmXGsBLmUWBvF9Y="/>
         <field:datetime dateTimePattern="${formacion_fechafin_date_format}" field="FechaFin" id="c_iw2016_ett_domain_Formacion_FechaFin" z="RpiALQadhzh6HtE6cqJnuFcUq/E="/>
         <field:input field="Observaciones" id="c_iw2016_ett_domain_Formacion_Observaciones" z="hb7QMN9kjeI1Jmvr039ZlWyU79g="/>
         <field:select field="Formacion" id="c_iw2016_ett_domain_Formacion_Formacion" items="${tipoformacions}" path="tipoformacions" z="ZYxWKcq/y7NVOsVhT7a11peV0nk="/>
+        <field:select field="demandante" id="c_iw2016_ett_domain_Formacion_demandante" itemValue="id" items="${demandantes}" path="/demandantes" z="qRw8ya1h9gCpSGUZ6nqMQjnaIdg="/>
+        <field:select field="titulacion" id="c_iw2016_ett_domain_Formacion_titulacion" itemValue="id" items="${titulacioneses}" path="/titulacioneses" z="NQbZDs8LfQ7FUKMYsIAOUqpdTrE="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_iw2016_ett_domain_Formacion" render="${not empty dependencies}" z="H/AgotHMOj0MV+WDN6v9kYn7aKc="/>
 </div>

@@ -3,10 +3,14 @@
 
 package iw2016_ett.web;
 
-import iw2016_ett.domain.Empresa;
+import iw2016_ett.domain.Contrato;
 import iw2016_ett.domain.Estado;
+import iw2016_ett.domain.Inscripcion;
+import iw2016_ett.domain.Localizacion;
 import iw2016_ett.domain.Oferta;
 import iw2016_ett.domain.Perfil;
+import iw2016_ett.domain.PuestoTrabajo;
+import iw2016_ett.domain.Titulaciones;
 import iw2016_ett.web.OfertaController;
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
@@ -33,7 +37,7 @@ privileged aspect OfertaController_Roo_Controller {
         }
         uiModel.asMap().clear();
         oferta.persist();
-        return "redirect:/ofertas/" + encodeUrlPathSegment(oferta.getId_().toString(), httpServletRequest);
+        return "redirect:/ofertas/" + encodeUrlPathSegment(oferta.getId().toString(), httpServletRequest);
     }
     
     @RequestMapping(params = "form", produces = "text/html")
@@ -42,11 +46,11 @@ privileged aspect OfertaController_Roo_Controller {
         return "ofertas/create";
     }
     
-    @RequestMapping(value = "/{id_}", produces = "text/html")
-    public String OfertaController.show(@PathVariable("id_") Long id_, Model uiModel) {
+    @RequestMapping(value = "/{id}", produces = "text/html")
+    public String OfertaController.show(@PathVariable("id") Long id, Model uiModel) {
         addDateTimeFormatPatterns(uiModel);
-        uiModel.addAttribute("oferta", Oferta.findOferta(id_));
-        uiModel.addAttribute("itemId", id_);
+        uiModel.addAttribute("oferta", Oferta.findOferta(id));
+        uiModel.addAttribute("itemId", id);
         return "ofertas/show";
     }
     
@@ -73,18 +77,18 @@ privileged aspect OfertaController_Roo_Controller {
         }
         uiModel.asMap().clear();
         oferta.merge();
-        return "redirect:/ofertas/" + encodeUrlPathSegment(oferta.getId_().toString(), httpServletRequest);
+        return "redirect:/ofertas/" + encodeUrlPathSegment(oferta.getId().toString(), httpServletRequest);
     }
     
-    @RequestMapping(value = "/{id_}", params = "form", produces = "text/html")
-    public String OfertaController.updateForm(@PathVariable("id_") Long id_, Model uiModel) {
-        populateEditForm(uiModel, Oferta.findOferta(id_));
+    @RequestMapping(value = "/{id}", params = "form", produces = "text/html")
+    public String OfertaController.updateForm(@PathVariable("id") Long id, Model uiModel) {
+        populateEditForm(uiModel, Oferta.findOferta(id));
         return "ofertas/update";
     }
     
-    @RequestMapping(value = "/{id_}", method = RequestMethod.DELETE, produces = "text/html")
-    public String OfertaController.delete(@PathVariable("id_") Long id_, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
-        Oferta oferta = Oferta.findOferta(id_);
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "text/html")
+    public String OfertaController.delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+        Oferta oferta = Oferta.findOferta(id);
         oferta.remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());
@@ -94,15 +98,19 @@ privileged aspect OfertaController_Roo_Controller {
     
     void OfertaController.addDateTimeFormatPatterns(Model uiModel) {
         uiModel.addAttribute("oferta_fechainicio_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
-        uiModel.addAttribute("oferta_fechaaccesible_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("oferta_fechafin_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }
     
     void OfertaController.populateEditForm(Model uiModel, Oferta oferta) {
         uiModel.addAttribute("oferta", oferta);
         addDateTimeFormatPatterns(uiModel);
-        uiModel.addAttribute("empresas", Empresa.findAllEmpresas());
+        uiModel.addAttribute("contratoes", Arrays.asList(Contrato.values()));
         uiModel.addAttribute("estadoes", Arrays.asList(Estado.values()));
+        uiModel.addAttribute("inscripcions", Inscripcion.findAllInscripcions());
+        uiModel.addAttribute("localizacions", Localizacion.findAllLocalizacions());
         uiModel.addAttribute("perfils", Arrays.asList(Perfil.values()));
+        uiModel.addAttribute("puestotrabajoes", PuestoTrabajo.findAllPuestoTrabajoes());
+        uiModel.addAttribute("titulacioneses", Titulaciones.findAllTitulacioneses());
     }
     
     String OfertaController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

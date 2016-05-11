@@ -8,7 +8,7 @@
         <field:input field="actividad" id="c_iw2016_ett_domain_Empresa_actividad" z="B6uwssDUiPCdizUJJiQjHq4X7jM="/>
         <field:input field="n_Empleados" id="c_iw2016_ett_domain_Empresa_n_Empleados" z="RBEoeoeiOrq+WylXY5IHJHANdo0="/>
         <field:input field="email" id="c_iw2016_ett_domain_Empresa_email" validationMessageCode="field_invalid_email" z="UOJ+5NUi9Ot57OCeRfbGxNBII4A="/>
-        <field:simple field="ofertas" id="c_iw2016_ett_domain_Empresa_ofertas" messageCode="entity_reference_not_managed" messageCodeAttribute="Oferta" z="6p8W9p4YMC+tKIBStivx833EZLA="/>
+        <field:simple field="localizacion" id="c_iw2016_ett_domain_Empresa_localizacion" messageCode="entity_reference_not_managed" messageCodeAttribute="Localizacion" z="W279FJR/kznkjd2O+fioWwB+V84="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_iw2016_ett_domain_Empresa" render="${not empty dependencies}" z="Sd/CrlYf5H1byK+JGkjG+SInXbc="/>
 </div>

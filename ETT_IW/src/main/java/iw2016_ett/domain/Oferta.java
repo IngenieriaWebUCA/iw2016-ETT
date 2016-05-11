@@ -8,15 +8,16 @@ import javax.persistence.TemporalType;
 import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
+import java.util.HashSet;
+import java.util.Set;
+import javax.persistence.CascadeType;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @RooJavaBean
 @RooToString
 @RooJpaActiveRecord
 public class Oferta {
-
-    /**
-     */
-    private int id;
 
     /**
      */
@@ -40,7 +41,7 @@ public class Oferta {
      */
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(style = "M-")
-    private Date FechaAccesible;
+    private Date FechaFin;
 
     /**
      */
@@ -54,6 +55,30 @@ public class Oferta {
 
     /**
      */
+    @Enumerated
+    private Contrato Contrato;
+
+    /**
+     */
+    private float Sueldo;
+
+    /**
+     */
     @ManyToOne
-    private Empresa empresa;
+    private Localizacion localizacion;
+
+    /**
+     */
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "oferta")
+    private Set<Titulaciones> titulaciones = new HashSet<Titulaciones>();
+
+    /**
+     */
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "oferta")
+    private Set<Inscripcion> inscripcion = new HashSet<Inscripcion>();
+
+    /**
+     */
+    @OneToOne
+    private PuestoTrabajo puestotrabajo;
 }

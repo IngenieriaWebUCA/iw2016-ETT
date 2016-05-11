@@ -3,8 +3,10 @@
 
 package iw2016_ett.web;
 
+import iw2016_ett.domain.Demandante;
 import iw2016_ett.domain.Formacion;
 import iw2016_ett.domain.TipoFormacion;
+import iw2016_ett.domain.Titulaciones;
 import iw2016_ett.web.FormacionController;
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
@@ -31,7 +33,7 @@ privileged aspect FormacionController_Roo_Controller {
         }
         uiModel.asMap().clear();
         formacion.persist();
-        return "redirect:/formacions/" + encodeUrlPathSegment(formacion.getId_().toString(), httpServletRequest);
+        return "redirect:/formacions/" + encodeUrlPathSegment(formacion.getId().toString(), httpServletRequest);
     }
     
     @RequestMapping(params = "form", produces = "text/html")
@@ -40,11 +42,11 @@ privileged aspect FormacionController_Roo_Controller {
         return "formacions/create";
     }
     
-    @RequestMapping(value = "/{id_}", produces = "text/html")
-    public String FormacionController.show(@PathVariable("id_") Long id_, Model uiModel) {
+    @RequestMapping(value = "/{id}", produces = "text/html")
+    public String FormacionController.show(@PathVariable("id") Long id, Model uiModel) {
         addDateTimeFormatPatterns(uiModel);
-        uiModel.addAttribute("formacion", Formacion.findFormacion(id_));
-        uiModel.addAttribute("itemId", id_);
+        uiModel.addAttribute("formacion", Formacion.findFormacion(id));
+        uiModel.addAttribute("itemId", id);
         return "formacions/show";
     }
     
@@ -71,18 +73,18 @@ privileged aspect FormacionController_Roo_Controller {
         }
         uiModel.asMap().clear();
         formacion.merge();
-        return "redirect:/formacions/" + encodeUrlPathSegment(formacion.getId_().toString(), httpServletRequest);
+        return "redirect:/formacions/" + encodeUrlPathSegment(formacion.getId().toString(), httpServletRequest);
     }
     
-    @RequestMapping(value = "/{id_}", params = "form", produces = "text/html")
-    public String FormacionController.updateForm(@PathVariable("id_") Long id_, Model uiModel) {
-        populateEditForm(uiModel, Formacion.findFormacion(id_));
+    @RequestMapping(value = "/{id}", params = "form", produces = "text/html")
+    public String FormacionController.updateForm(@PathVariable("id") Long id, Model uiModel) {
+        populateEditForm(uiModel, Formacion.findFormacion(id));
         return "formacions/update";
     }
     
-    @RequestMapping(value = "/{id_}", method = RequestMethod.DELETE, produces = "text/html")
-    public String FormacionController.delete(@PathVariable("id_") Long id_, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
-        Formacion formacion = Formacion.findFormacion(id_);
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "text/html")
+    public String FormacionController.delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+        Formacion formacion = Formacion.findFormacion(id);
         formacion.remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());
@@ -98,7 +100,9 @@ privileged aspect FormacionController_Roo_Controller {
     void FormacionController.populateEditForm(Model uiModel, Formacion formacion) {
         uiModel.addAttribute("formacion", formacion);
         addDateTimeFormatPatterns(uiModel);
+        uiModel.addAttribute("demandantes", Demandante.findAllDemandantes());
         uiModel.addAttribute("tipoformacions", Arrays.asList(TipoFormacion.values()));
+        uiModel.addAttribute("titulacioneses", Titulaciones.findAllTitulacioneses());
     }
     
     String FormacionController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

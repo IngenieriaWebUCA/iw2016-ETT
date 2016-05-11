@@ -17,19 +17,19 @@ privileged aspect ExperienciaLaboral_Roo_Jpa_Entity {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id_")
-    private Long ExperienciaLaboral.id_;
+    @Column(name = "id")
+    private Long ExperienciaLaboral.id;
     
     @Version
     @Column(name = "version")
     private Integer ExperienciaLaboral.version;
     
-    public Long ExperienciaLaboral.getId_() {
-        return this.id_;
+    public Long ExperienciaLaboral.getId() {
+        return this.id;
     }
     
-    public void ExperienciaLaboral.setId_(Long id) {
-        this.id_ = id;
+    public void ExperienciaLaboral.setId(Long id) {
+        this.id = id;
     }
     
     public Integer ExperienciaLaboral.getVersion() {

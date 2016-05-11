@@ -14,7 +14,7 @@ privileged aspect Formacion_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager Formacion.entityManager;
     
-    public static final List<String> Formacion.fieldNames4OrderClauseFilter = java.util.Arrays.asList("id", "Titulo", "FechaInicio", "FechaFin", "Observaciones", "Formacion");
+    public static final List<String> Formacion.fieldNames4OrderClauseFilter = java.util.Arrays.asList("Titulo", "FechaInicio", "FechaFin", "Observaciones", "Formacion", "demandante", "titulacion");
     
     public static final EntityManager Formacion.entityManager() {
         EntityManager em = new Formacion().entityManager;
@@ -41,9 +41,9 @@ privileged aspect Formacion_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery(jpaQuery, Formacion.class).getResultList();
     }
     
-    public static Formacion Formacion.findFormacion(Long id_) {
-        if (id_ == null) return null;
-        return entityManager().find(Formacion.class, id_);
+    public static Formacion Formacion.findFormacion(Long id) {
+        if (id == null) return null;
+        return entityManager().find(Formacion.class, id);
     }
     
     public static List<Formacion> Formacion.findFormacionEntries(int firstResult, int maxResults) {
@@ -73,7 +73,7 @@ privileged aspect Formacion_Roo_Jpa_ActiveRecord {
         if (this.entityManager.contains(this)) {
             this.entityManager.remove(this);
         } else {
-            Formacion attached = Formacion.findFormacion(this.id_);
+            Formacion attached = Formacion.findFormacion(this.id);
             this.entityManager.remove(attached);
         }
     }

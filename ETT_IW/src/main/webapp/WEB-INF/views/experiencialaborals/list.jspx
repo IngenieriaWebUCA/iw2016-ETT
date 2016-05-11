@@ -3,12 +3,12 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_iw2016_ett_domain_ExperienciaLaboral" items="${experiencialaborals}" z="CXdes+vyyoF5vAHXYZNpRIjCqPA=">
-        <table:table data="${experiencialaborals}" id="l_iw2016_ett_domain_ExperienciaLaboral" path="/experiencialaborals" typeIdFieldName="id_" z="yXhRNiNj3IF7aYlr+AG+SlrD9xw=">
-            <table:column id="c_iw2016_ett_domain_ExperienciaLaboral_id" property="id" z="Jdj3fLdKkh6A3m15sWNf+sUnUW4="/>
+        <table:table data="${experiencialaborals}" id="l_iw2016_ett_domain_ExperienciaLaboral" path="/experiencialaborals" z="8ZY8DrpAh6Y42kxuG2Ak1zmmV9A=">
             <table:column id="c_iw2016_ett_domain_ExperienciaLaboral_Empresa" property="empresa" z="QTYj9XSt8IXBz/jwCnp1257/Iss="/>
             <table:column date="true" dateTimePattern="${experienciaLaboral_fechainicio_date_format}" id="c_iw2016_ett_domain_ExperienciaLaboral_FechaInicio" property="fechaInicio" z="R/YbUTVza/kW96IBzui+2Qk7fCM="/>
             <table:column date="true" dateTimePattern="${experienciaLaboral_fechafin_date_format}" id="c_iw2016_ett_domain_ExperienciaLaboral_FechaFin" property="fechaFin" z="KMGMZO9gRMx55vb5lAxFH2UjKpU="/>
-            <table:column id="c_iw2016_ett_domain_ExperienciaLaboral_ContrartoTrabajo" property="contrartoTrabajo" z="nxEZieoegOELox1pQ86yHukO+Ms="/>
+            <table:column id="c_iw2016_ett_domain_ExperienciaLaboral_demandante" property="demandante" z="mNz/XPIUeDpRdhuKtOvgKErM3No="/>
+            <table:column id="c_iw2016_ett_domain_ExperienciaLaboral_puestotrabajo" property="puestotrabajo" z="2wP/k1i6svhDVnH6gzhKwlBR158="/>
         </table:table>
     </page:list>
 </div>

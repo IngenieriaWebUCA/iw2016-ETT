@@ -3,21 +3,18 @@
 
 package iw2016_ett.domain;
 
-import iw2016_ett.domain.Empresa;
+import iw2016_ett.domain.Contrato;
 import iw2016_ett.domain.Estado;
+import iw2016_ett.domain.Inscripcion;
+import iw2016_ett.domain.Localizacion;
 import iw2016_ett.domain.Oferta;
 import iw2016_ett.domain.Perfil;
+import iw2016_ett.domain.PuestoTrabajo;
+import iw2016_ett.domain.Titulaciones;
 import java.util.Date;
+import java.util.Set;
 
 privileged aspect Oferta_Roo_JavaBean {
-    
-    public int Oferta.getId() {
-        return this.id;
-    }
-    
-    public void Oferta.setId(int id) {
-        this.id = id;
-    }
     
     public String Oferta.getTitulo() {
         return this.titulo;
@@ -51,12 +48,12 @@ privileged aspect Oferta_Roo_JavaBean {
         this.NumeroVacantes = NumeroVacantes;
     }
     
-    public Date Oferta.getFechaAccesible() {
-        return this.FechaAccesible;
+    public Date Oferta.getFechaFin() {
+        return this.FechaFin;
     }
     
-    public void Oferta.setFechaAccesible(Date FechaAccesible) {
-        this.FechaAccesible = FechaAccesible;
+    public void Oferta.setFechaFin(Date FechaFin) {
+        this.FechaFin = FechaFin;
     }
     
     public Perfil Oferta.getPerfil() {
@@ -75,12 +72,52 @@ privileged aspect Oferta_Roo_JavaBean {
         this.Estado = Estado;
     }
     
-    public Empresa Oferta.getEmpresa() {
-        return this.empresa;
+    public Contrato Oferta.getContrato() {
+        return this.Contrato;
     }
     
-    public void Oferta.setEmpresa(Empresa empresa) {
-        this.empresa = empresa;
+    public void Oferta.setContrato(Contrato Contrato) {
+        this.Contrato = Contrato;
+    }
+    
+    public float Oferta.getSueldo() {
+        return this.Sueldo;
+    }
+    
+    public void Oferta.setSueldo(float Sueldo) {
+        this.Sueldo = Sueldo;
+    }
+    
+    public Localizacion Oferta.getLocalizacion() {
+        return this.localizacion;
+    }
+    
+    public void Oferta.setLocalizacion(Localizacion localizacion) {
+        this.localizacion = localizacion;
+    }
+    
+    public Set<Titulaciones> Oferta.getTitulaciones() {
+        return this.titulaciones;
+    }
+    
+    public void Oferta.setTitulaciones(Set<Titulaciones> titulaciones) {
+        this.titulaciones = titulaciones;
+    }
+    
+    public Set<Inscripcion> Oferta.getInscripcion() {
+        return this.inscripcion;
+    }
+    
+    public void Oferta.setInscripcion(Set<Inscripcion> inscripcion) {
+        this.inscripcion = inscripcion;
+    }
+    
+    public PuestoTrabajo Oferta.getPuestotrabajo() {
+        return this.puestotrabajo;
+    }
+    
+    public void Oferta.setPuestotrabajo(PuestoTrabajo puestotrabajo) {
+        this.puestotrabajo = puestotrabajo;
     }
     
 }

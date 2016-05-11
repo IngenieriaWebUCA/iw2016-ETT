@@ -3,18 +3,12 @@
 
 package iw2016_ett.domain;
 
+import iw2016_ett.domain.Demandante;
 import iw2016_ett.domain.ExperienciaLaboral;
+import iw2016_ett.domain.PuestoTrabajo;
 import java.util.Date;
 
 privileged aspect ExperienciaLaboral_Roo_JavaBean {
-    
-    public int ExperienciaLaboral.getId() {
-        return this.id;
-    }
-    
-    public void ExperienciaLaboral.setId(int id) {
-        this.id = id;
-    }
     
     public String ExperienciaLaboral.getEmpresa() {
         return this.Empresa;
@@ -40,12 +34,20 @@ privileged aspect ExperienciaLaboral_Roo_JavaBean {
         this.FechaFin = FechaFin;
     }
     
-    public String ExperienciaLaboral.getContrartoTrabajo() {
-        return this.ContrartoTrabajo;
+    public Demandante ExperienciaLaboral.getDemandante() {
+        return this.demandante;
     }
     
-    public void ExperienciaLaboral.setContrartoTrabajo(String ContrartoTrabajo) {
-        this.ContrartoTrabajo = ContrartoTrabajo;
+    public void ExperienciaLaboral.setDemandante(Demandante demandante) {
+        this.demandante = demandante;
+    }
+    
+    public PuestoTrabajo ExperienciaLaboral.getPuestotrabajo() {
+        return this.puestotrabajo;
+    }
+    
+    public void ExperienciaLaboral.setPuestotrabajo(PuestoTrabajo puestotrabajo) {
+        this.puestotrabajo = puestotrabajo;
     }
     
 }

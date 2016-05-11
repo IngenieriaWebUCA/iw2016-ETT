@@ -4,7 +4,7 @@
 package iw2016_ett.domain;
 
 import iw2016_ett.domain.Empresa;
-import iw2016_ett.domain.Oferta;
+import iw2016_ett.domain.Localizacion;
 import java.util.Set;
 
 privileged aspect Empresa_Roo_JavaBean {
@@ -49,12 +49,12 @@ privileged aspect Empresa_Roo_JavaBean {
         this.email = email;
     }
     
-    public Set<Oferta> Empresa.getOfertas() {
-        return this.ofertas;
+    public Set<Localizacion> Empresa.getLocalizacion() {
+        return this.localizacion;
     }
     
-    public void Empresa.setOfertas(Set<Oferta> ofertas) {
-        this.ofertas = ofertas;
+    public void Empresa.setLocalizacion(Set<Localizacion> localizacion) {
+        this.localizacion = localizacion;
     }
     
 }

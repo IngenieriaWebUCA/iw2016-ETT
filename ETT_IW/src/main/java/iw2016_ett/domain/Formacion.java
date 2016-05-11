@@ -7,15 +7,13 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.Enumerated;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @RooJavaBean
 @RooToString
 @RooJpaActiveRecord
 public class Formacion {
-
-    /**
-     */
-    private int id;
 
     /**
      */
@@ -41,4 +39,14 @@ public class Formacion {
      */
     @Enumerated
     private TipoFormacion Formacion;
+
+    /**
+     */
+    @ManyToOne
+    private Demandante demandante;
+
+    /**
+     */
+    @OneToOne
+    private Titulaciones titulacion;
 }

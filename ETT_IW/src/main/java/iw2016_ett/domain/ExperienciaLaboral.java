@@ -6,15 +6,13 @@ import java.util.Date;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.springframework.format.annotation.DateTimeFormat;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @RooJavaBean
 @RooToString
 @RooJpaActiveRecord
 public class ExperienciaLaboral {
-
-    /**
-     */
-    private int id;
 
     /**
      */
@@ -34,5 +32,11 @@ public class ExperienciaLaboral {
 
     /**
      */
-    private String ContrartoTrabajo;
+    @ManyToOne
+    private Demandante demandante;
+
+    /**
+     */
+    @OneToOne
+    private PuestoTrabajo puestotrabajo;
 }

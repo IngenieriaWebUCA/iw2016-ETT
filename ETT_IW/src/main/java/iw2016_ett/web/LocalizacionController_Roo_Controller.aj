@@ -4,8 +4,10 @@
 package iw2016_ett.web;
 
 import iw2016_ett.domain.Comunidad;
+import iw2016_ett.domain.Empresa;
 import iw2016_ett.domain.Localidad;
 import iw2016_ett.domain.Localizacion;
+import iw2016_ett.domain.Oferta;
 import iw2016_ett.domain.Pais;
 import iw2016_ett.domain.Provincia;
 import iw2016_ett.web.LocalizacionController;
@@ -92,7 +94,9 @@ privileged aspect LocalizacionController_Roo_Controller {
     void LocalizacionController.populateEditForm(Model uiModel, Localizacion localizacion) {
         uiModel.addAttribute("localizacion", localizacion);
         uiModel.addAttribute("comunidads", Arrays.asList(Comunidad.values()));
+        uiModel.addAttribute("empresas", Empresa.findAllEmpresas());
         uiModel.addAttribute("localidads", Arrays.asList(Localidad.values()));
+        uiModel.addAttribute("ofertas", Oferta.findAllOfertas());
         uiModel.addAttribute("paises", Arrays.asList(Pais.values()));
         uiModel.addAttribute("provincias", Arrays.asList(Provincia.values()));
     }

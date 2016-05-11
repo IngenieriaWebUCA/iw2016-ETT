@@ -3,18 +3,12 @@
 
 package iw2016_ett.domain;
 
+import iw2016_ett.domain.Demandante;
 import iw2016_ett.domain.EstadoInsc;
 import iw2016_ett.domain.Inscripcion;
+import iw2016_ett.domain.Oferta;
 
 privileged aspect Inscripcion_Roo_JavaBean {
-    
-    public int Inscripcion.getId() {
-        return this.id;
-    }
-    
-    public void Inscripcion.setId(int id) {
-        this.id = id;
-    }
     
     public EstadoInsc Inscripcion.getEstado() {
         return this.Estado;
@@ -22,6 +16,22 @@ privileged aspect Inscripcion_Roo_JavaBean {
     
     public void Inscripcion.setEstado(EstadoInsc Estado) {
         this.Estado = Estado;
+    }
+    
+    public Oferta Inscripcion.getOferta() {
+        return this.oferta;
+    }
+    
+    public void Inscripcion.setOferta(Oferta oferta) {
+        this.oferta = oferta;
+    }
+    
+    public Demandante Inscripcion.getDemandante() {
+        return this.demandante;
+    }
+    
+    public void Inscripcion.setDemandante(Demandante demandante) {
+        this.demandante = demandante;
     }
     
 }

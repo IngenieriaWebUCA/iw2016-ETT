@@ -3,6 +3,11 @@ import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.tostring.RooToString;
 import javax.persistence.Enumerated;
+import java.util.HashSet;
+import java.util.Set;
+import javax.persistence.CascadeType;
+import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 
 @RooJavaBean
 @RooToString
@@ -11,10 +16,16 @@ public class Inscripcion {
 
     /**
      */
-    private int id;
+    @Enumerated
+    private EstadoInsc Estado;
 
     /**
      */
-    @Enumerated
-    private EstadoInsc Estado;
+    @ManyToOne
+    private Oferta oferta;
+
+    /**
+     */
+    @ManyToOne
+    private Demandante demandante;
 }

@@ -4,18 +4,14 @@
 package iw2016_ett.domain;
 
 import iw2016_ett.domain.Demandante;
+import iw2016_ett.domain.ExperienciaLaboral;
+import iw2016_ett.domain.Formacion;
+import iw2016_ett.domain.PuestoTrabajo;
 import iw2016_ett.domain.Sexo;
 import java.util.Date;
+import java.util.Set;
 
 privileged aspect Demandante_Roo_JavaBean {
-    
-    public int Demandante.getId() {
-        return this.id;
-    }
-    
-    public void Demandante.setId(int id) {
-        this.id = id;
-    }
     
     public String Demandante.getNombre() {
         return this.Nombre;
@@ -97,12 +93,28 @@ privileged aspect Demandante_Roo_JavaBean {
         this.Curriculum = Curriculum;
     }
     
-    public String Demandante.getPuesto() {
-        return this.Puesto;
+    public Set<ExperienciaLaboral> Demandante.getExperiencia() {
+        return this.experiencia;
     }
     
-    public void Demandante.setPuesto(String Puesto) {
-        this.Puesto = Puesto;
+    public void Demandante.setExperiencia(Set<ExperienciaLaboral> experiencia) {
+        this.experiencia = experiencia;
+    }
+    
+    public Set<Formacion> Demandante.getFormacion() {
+        return this.formacion;
+    }
+    
+    public void Demandante.setFormacion(Set<Formacion> formacion) {
+        this.formacion = formacion;
+    }
+    
+    public Set<PuestoTrabajo> Demandante.getPuestosInteresa() {
+        return this.puestosInteresa;
+    }
+    
+    public void Demandante.setPuestosInteresa(Set<PuestoTrabajo> puestosInteresa) {
+        this.puestosInteresa = puestosInteresa;
     }
     
 }

@@ -3,10 +3,10 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_iw2016_ett_domain_ExperienciaLaboral" object="${experiencialaboral}" path="/experiencialaborals" z="SyUMNEnof6ERWb+U7Ru0HIYaEDg=">
-        <field:display field="id" id="s_iw2016_ett_domain_ExperienciaLaboral_id" object="${experiencialaboral}" z="01gNFc/Xhs10+dvmMpLG3fSJ8lY="/>
         <field:display field="empresa" id="s_iw2016_ett_domain_ExperienciaLaboral_Empresa" object="${experiencialaboral}" z="CkpKydn9owhseIKfnILt6isCuVM="/>
         <field:display date="true" dateTimePattern="${experienciaLaboral_fechainicio_date_format}" field="fechaInicio" id="s_iw2016_ett_domain_ExperienciaLaboral_FechaInicio" object="${experiencialaboral}" z="C6ONuUySYphXagas73CT+NXLoRM="/>
         <field:display date="true" dateTimePattern="${experienciaLaboral_fechafin_date_format}" field="fechaFin" id="s_iw2016_ett_domain_ExperienciaLaboral_FechaFin" object="${experiencialaboral}" z="BRELYdwWiVliZEU2Z71AMML6ZZE="/>
-        <field:display field="contrartoTrabajo" id="s_iw2016_ett_domain_ExperienciaLaboral_ContrartoTrabajo" object="${experiencialaboral}" z="X1psErlJqjNdWJPEuQhL1VAlAsk="/>
+        <field:display field="demandante" id="s_iw2016_ett_domain_ExperienciaLaboral_demandante" object="${experiencialaboral}" z="qEMDqMIhQtVVUNeg9i+E4ZtficQ="/>
+        <field:display field="puestotrabajo" id="s_iw2016_ett_domain_ExperienciaLaboral_puestotrabajo" object="${experiencialaboral}" z="k/j+3MroevResUN2HQZxNnZVvbA="/>
     </page:show>
 </div>

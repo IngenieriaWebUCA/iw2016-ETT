@@ -3,13 +3,13 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_iw2016_ett_domain_Oferta" items="${ofertas}" z="QGNy5BM8Rll6wpEFyMcN7/RAP0k=">
-        <table:table data="${ofertas}" id="l_iw2016_ett_domain_Oferta" path="/ofertas" typeIdFieldName="id_" z="PnWDoV8t4sPds3VwJu92V5+OzXg=">
-            <table:column id="c_iw2016_ett_domain_Oferta_id" property="id" z="qdsm4+hHvN/qIbVrwLFsiOmDW3M="/>
+        <table:table data="${ofertas}" id="l_iw2016_ett_domain_Oferta" path="/ofertas" z="wFBC5htexpIdKbCbSGt+1UX6llM=">
             <table:column id="c_iw2016_ett_domain_Oferta_titulo" property="titulo" z="m6dTxdtiFwUtRxEqer+VrtaGGaM="/>
             <table:column id="c_iw2016_ett_domain_Oferta_TipoContrato" property="tipoContrato" z="462TIJ7bk86Yz9SplIJwbsdgWMg="/>
             <table:column date="true" dateTimePattern="${oferta_fechainicio_date_format}" id="c_iw2016_ett_domain_Oferta_FechaInicio" property="fechaInicio" z="qVhwCXTvSf4PVjMrqb95rGC9Ze4="/>
             <table:column id="c_iw2016_ett_domain_Oferta_NumeroVacantes" property="numeroVacantes" z="ZlFWLsLhm5DlstnVeCnieO7V7tY="/>
-            <table:column date="true" dateTimePattern="${oferta_fechaaccesible_date_format}" id="c_iw2016_ett_domain_Oferta_FechaAccesible" property="fechaAccesible" z="cZzjUf5PDO5C5PEeWUmJOvhNGOg="/>
+            <table:column id="c_iw2016_ett_domain_Oferta_Perfil" property="perfil" z="yYRv/HMmghzDVS81hrgEn0bdUYQ="/>
+            <table:column date="true" dateTimePattern="${oferta_fechafin_date_format}" id="c_iw2016_ett_domain_Oferta_FechaFin" property="fechaFin" z="/IvY2nwh7arp7NtS7XNwfHKKthk="/>
         </table:table>
     </page:list>
 </div>

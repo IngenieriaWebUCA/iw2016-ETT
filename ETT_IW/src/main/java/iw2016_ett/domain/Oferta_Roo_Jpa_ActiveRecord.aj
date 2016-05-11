@@ -14,7 +14,7 @@ privileged aspect Oferta_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager Oferta.entityManager;
     
-    public static final List<String> Oferta.fieldNames4OrderClauseFilter = java.util.Arrays.asList("id", "titulo", "TipoContrato", "FechaInicio", "NumeroVacantes", "FechaAccesible", "Perfil", "Estado", "empresa");
+    public static final List<String> Oferta.fieldNames4OrderClauseFilter = java.util.Arrays.asList("titulo", "TipoContrato", "FechaInicio", "NumeroVacantes", "FechaFin", "Perfil", "Estado", "Contrato", "Sueldo", "localizacion", "titulaciones", "inscripcion", "puestotrabajo");
     
     public static final EntityManager Oferta.entityManager() {
         EntityManager em = new Oferta().entityManager;
@@ -41,9 +41,9 @@ privileged aspect Oferta_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery(jpaQuery, Oferta.class).getResultList();
     }
     
-    public static Oferta Oferta.findOferta(Long id_) {
-        if (id_ == null) return null;
-        return entityManager().find(Oferta.class, id_);
+    public static Oferta Oferta.findOferta(Long id) {
+        if (id == null) return null;
+        return entityManager().find(Oferta.class, id);
     }
     
     public static List<Oferta> Oferta.findOfertaEntries(int firstResult, int maxResults) {
@@ -73,7 +73,7 @@ privileged aspect Oferta_Roo_Jpa_ActiveRecord {
         if (this.entityManager.contains(this)) {
             this.entityManager.remove(this);
         } else {
-            Oferta attached = Oferta.findOferta(this.id_);
+            Oferta attached = Oferta.findOferta(this.id);
             this.entityManager.remove(attached);
         }
     }

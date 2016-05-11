@@ -4,7 +4,7 @@
 package iw2016_ett.web;
 
 import iw2016_ett.domain.Empresa;
-import iw2016_ett.domain.Oferta;
+import iw2016_ett.domain.Localizacion;
 import iw2016_ett.web.EmpresaController;
 import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
@@ -87,7 +87,7 @@ privileged aspect EmpresaController_Roo_Controller {
     
     void EmpresaController.populateEditForm(Model uiModel, Empresa empresa) {
         uiModel.addAttribute("empresa", empresa);
-        uiModel.addAttribute("ofertas", Oferta.findAllOfertas());
+        uiModel.addAttribute("localizacions", Localizacion.findAllLocalizacions());
     }
     
     String EmpresaController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

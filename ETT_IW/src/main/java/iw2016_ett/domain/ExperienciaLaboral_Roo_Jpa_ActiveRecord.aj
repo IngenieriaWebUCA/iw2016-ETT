@@ -14,7 +14,7 @@ privileged aspect ExperienciaLaboral_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager ExperienciaLaboral.entityManager;
     
-    public static final List<String> ExperienciaLaboral.fieldNames4OrderClauseFilter = java.util.Arrays.asList("id", "Empresa", "FechaInicio", "FechaFin", "ContrartoTrabajo");
+    public static final List<String> ExperienciaLaboral.fieldNames4OrderClauseFilter = java.util.Arrays.asList("Empresa", "FechaInicio", "FechaFin", "demandante", "puestotrabajo");
     
     public static final EntityManager ExperienciaLaboral.entityManager() {
         EntityManager em = new ExperienciaLaboral().entityManager;
@@ -41,9 +41,9 @@ privileged aspect ExperienciaLaboral_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery(jpaQuery, ExperienciaLaboral.class).getResultList();
     }
     
-    public static ExperienciaLaboral ExperienciaLaboral.findExperienciaLaboral(Long id_) {
-        if (id_ == null) return null;
-        return entityManager().find(ExperienciaLaboral.class, id_);
+    public static ExperienciaLaboral ExperienciaLaboral.findExperienciaLaboral(Long id) {
+        if (id == null) return null;
+        return entityManager().find(ExperienciaLaboral.class, id);
     }
     
     public static List<ExperienciaLaboral> ExperienciaLaboral.findExperienciaLaboralEntries(int firstResult, int maxResults) {
@@ -73,7 +73,7 @@ privileged aspect ExperienciaLaboral_Roo_Jpa_ActiveRecord {
         if (this.entityManager.contains(this)) {
             this.entityManager.remove(this);
         } else {
-            ExperienciaLaboral attached = ExperienciaLaboral.findExperienciaLaboral(this.id_);
+            ExperienciaLaboral attached = ExperienciaLaboral.findExperienciaLaboral(this.id);
             this.entityManager.remove(attached);
         }
     }

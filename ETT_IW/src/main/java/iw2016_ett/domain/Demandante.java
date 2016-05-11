@@ -7,15 +7,15 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.Enumerated;
+import java.util.HashSet;
+import java.util.Set;
+import javax.persistence.CascadeType;
+import javax.persistence.OneToMany;
 
 @RooJavaBean
 @RooToString
 @RooJpaActiveRecord
 public class Demandante {
-
-    /**
-     */
-    private int id;
 
     /**
      */
@@ -62,5 +62,16 @@ public class Demandante {
 
     /**
      */
-    private String Puesto;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "demandante")
+    private Set<ExperienciaLaboral> experiencia = new HashSet<ExperienciaLaboral>();
+
+    /**
+     */
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "demandante")
+    private Set<Formacion> formacion = new HashSet<Formacion>();
+
+    /**
+     */
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "demandante")
+    private Set<PuestoTrabajo> puestosInteresa = new HashSet<PuestoTrabajo>();
 }

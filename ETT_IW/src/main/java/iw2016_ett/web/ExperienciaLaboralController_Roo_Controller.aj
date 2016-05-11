@@ -3,7 +3,9 @@
 
 package iw2016_ett.web;
 
+import iw2016_ett.domain.Demandante;
 import iw2016_ett.domain.ExperienciaLaboral;
+import iw2016_ett.domain.PuestoTrabajo;
 import iw2016_ett.web.ExperienciaLaboralController;
 import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
@@ -29,7 +31,7 @@ privileged aspect ExperienciaLaboralController_Roo_Controller {
         }
         uiModel.asMap().clear();
         experienciaLaboral.persist();
-        return "redirect:/experiencialaborals/" + encodeUrlPathSegment(experienciaLaboral.getId_().toString(), httpServletRequest);
+        return "redirect:/experiencialaborals/" + encodeUrlPathSegment(experienciaLaboral.getId().toString(), httpServletRequest);
     }
     
     @RequestMapping(params = "form", produces = "text/html")
@@ -38,11 +40,11 @@ privileged aspect ExperienciaLaboralController_Roo_Controller {
         return "experiencialaborals/create";
     }
     
-    @RequestMapping(value = "/{id_}", produces = "text/html")
-    public String ExperienciaLaboralController.show(@PathVariable("id_") Long id_, Model uiModel) {
+    @RequestMapping(value = "/{id}", produces = "text/html")
+    public String ExperienciaLaboralController.show(@PathVariable("id") Long id, Model uiModel) {
         addDateTimeFormatPatterns(uiModel);
-        uiModel.addAttribute("experiencialaboral", ExperienciaLaboral.findExperienciaLaboral(id_));
-        uiModel.addAttribute("itemId", id_);
+        uiModel.addAttribute("experiencialaboral", ExperienciaLaboral.findExperienciaLaboral(id));
+        uiModel.addAttribute("itemId", id);
         return "experiencialaborals/show";
     }
     
@@ -69,18 +71,18 @@ privileged aspect ExperienciaLaboralController_Roo_Controller {
         }
         uiModel.asMap().clear();
         experienciaLaboral.merge();
-        return "redirect:/experiencialaborals/" + encodeUrlPathSegment(experienciaLaboral.getId_().toString(), httpServletRequest);
+        return "redirect:/experiencialaborals/" + encodeUrlPathSegment(experienciaLaboral.getId().toString(), httpServletRequest);
     }
     
-    @RequestMapping(value = "/{id_}", params = "form", produces = "text/html")
-    public String ExperienciaLaboralController.updateForm(@PathVariable("id_") Long id_, Model uiModel) {
-        populateEditForm(uiModel, ExperienciaLaboral.findExperienciaLaboral(id_));
+    @RequestMapping(value = "/{id}", params = "form", produces = "text/html")
+    public String ExperienciaLaboralController.updateForm(@PathVariable("id") Long id, Model uiModel) {
+        populateEditForm(uiModel, ExperienciaLaboral.findExperienciaLaboral(id));
         return "experiencialaborals/update";
     }
     
-    @RequestMapping(value = "/{id_}", method = RequestMethod.DELETE, produces = "text/html")
-    public String ExperienciaLaboralController.delete(@PathVariable("id_") Long id_, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
-        ExperienciaLaboral experienciaLaboral = ExperienciaLaboral.findExperienciaLaboral(id_);
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "text/html")
+    public String ExperienciaLaboralController.delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+        ExperienciaLaboral experienciaLaboral = ExperienciaLaboral.findExperienciaLaboral(id);
         experienciaLaboral.remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());
@@ -96,6 +98,8 @@ privileged aspect ExperienciaLaboralController_Roo_Controller {
     void ExperienciaLaboralController.populateEditForm(Model uiModel, ExperienciaLaboral experienciaLaboral) {
         uiModel.addAttribute("experienciaLaboral", experienciaLaboral);
         addDateTimeFormatPatterns(uiModel);
+        uiModel.addAttribute("demandantes", Demandante.findAllDemandantes());
+        uiModel.addAttribute("puestotrabajoes", PuestoTrabajo.findAllPuestoTrabajoes());
     }
     
     String ExperienciaLaboralController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

@@ -3,14 +3,16 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_iw2016_ett_domain_Oferta" object="${oferta}" path="/ofertas" z="m2djjjsroyUOBWjPSyv9uCmUknA=">
-        <field:display field="id" id="s_iw2016_ett_domain_Oferta_id" object="${oferta}" z="8rYg9Q/VQF2KjZiA0la0tPm24qA="/>
         <field:display field="titulo" id="s_iw2016_ett_domain_Oferta_titulo" object="${oferta}" z="nKWRjErDl5qzhIwsIOLchfsNy+0="/>
         <field:display field="tipoContrato" id="s_iw2016_ett_domain_Oferta_TipoContrato" object="${oferta}" z="A2gAbifBcafEiyhz3PlHkI/hGSQ="/>
         <field:display date="true" dateTimePattern="${oferta_fechainicio_date_format}" field="fechaInicio" id="s_iw2016_ett_domain_Oferta_FechaInicio" object="${oferta}" z="kuqqMNiZrlSUP7URIi7lKGRkBrU="/>
         <field:display field="numeroVacantes" id="s_iw2016_ett_domain_Oferta_NumeroVacantes" object="${oferta}" z="zXlSvKODMBAEAA8snEkALXndc0Y="/>
-        <field:display date="true" dateTimePattern="${oferta_fechaaccesible_date_format}" field="fechaAccesible" id="s_iw2016_ett_domain_Oferta_FechaAccesible" object="${oferta}" z="N4XOEkgJKINyYJC3IHfCRT2lDqw="/>
         <field:display field="perfil" id="s_iw2016_ett_domain_Oferta_Perfil" object="${oferta}" z="H7uKMKK7R3WdTT8Tj6LGW6Pdbu4="/>
         <field:display field="estado" id="s_iw2016_ett_domain_Oferta_Estado" object="${oferta}" z="O/I5/BfJAe9LlA4NE1eza8gHO/8="/>
-        <field:display field="empresa" id="s_iw2016_ett_domain_Oferta_empresa" object="${oferta}" z="1fv1z/QWvpnVjBEfGm6gXoDitj0="/>
+        <field:display date="true" dateTimePattern="${oferta_fechafin_date_format}" field="fechaFin" id="s_iw2016_ett_domain_Oferta_FechaFin" object="${oferta}" z="en5cJID83VmE14E3TQmd0EiWBq0="/>
+        <field:display field="contrato" id="s_iw2016_ett_domain_Oferta_Contrato" object="${oferta}" z="dWBjqO+vBbG7cit3SkbLSSrYU2Y="/>
+        <field:display field="sueldo" id="s_iw2016_ett_domain_Oferta_Sueldo" object="${oferta}" z="uNLFtMQYAp2aLQYyFNhm2bLNl84="/>
+        <field:display field="localizacion" id="s_iw2016_ett_domain_Oferta_localizacion" object="${oferta}" z="QSaGpNkiAVb3d6ooM8gwuw1SOvY="/>
+        <field:display field="puestotrabajo" id="s_iw2016_ett_domain_Oferta_puestotrabajo" object="${oferta}" z="3tuRKp4aWmIIC1RG4G+jZKJmzgk="/>
     </page:show>
 </div>

@@ -31,5 +31,13 @@
             <menu:item id="i_experiencialaboral_new" messageCode="global_menu_new" url="/experiencialaborals?form" z="VCGM1SfAGKp5guKBMmAUVldXXvQ="/>
             <menu:item id="i_experiencialaboral_list" messageCode="global_menu_list" url="/experiencialaborals?page=1&amp;size=${empty param.size ? 10 : param.size}" z="KO3333t4C0fI0NpOor1wzfud1dw="/>
         </menu:category>
+        <menu:category id="c_puestotrabajo" z="viKTUjCDR54+S8uFjaudoOlDDD0=">
+            <menu:item id="i_puestotrabajo_new" messageCode="global_menu_new" url="/puestotrabajoes?form" z="TipaxtGyEO7ADKNKE2fsyNiudB8="/>
+            <menu:item id="i_puestotrabajo_list" messageCode="global_menu_list" url="/puestotrabajoes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="4FwGaWwFuSrh4qpaRL3mV7g9bTQ="/>
+        </menu:category>
+        <menu:category id="c_titulaciones" z="QezE9KDE8z1/Cf8qoH7oMZL9Imw=">
+            <menu:item id="i_titulaciones_new" messageCode="global_menu_new" url="/titulacioneses?form" z="iWUr5eyJw+FntqLd1I1rQjQh4Sw="/>
+            <menu:item id="i_titulaciones_list" messageCode="global_menu_list" url="/titulacioneses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="v0HyixSyFciGHrNajorDw346gyU="/>
+        </menu:category>
     </menu:menu>
 </div>

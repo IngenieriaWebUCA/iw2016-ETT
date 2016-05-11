@@ -4,10 +4,13 @@
 package iw2016_ett.domain;
 
 import iw2016_ett.domain.Comunidad;
+import iw2016_ett.domain.Empresa;
 import iw2016_ett.domain.Localidad;
 import iw2016_ett.domain.Localizacion;
+import iw2016_ett.domain.Oferta;
 import iw2016_ett.domain.Pais;
 import iw2016_ett.domain.Provincia;
+import java.util.Set;
 
 privileged aspect Localizacion_Roo_JavaBean {
     
@@ -49,6 +52,22 @@ privileged aspect Localizacion_Roo_JavaBean {
     
     public void Localizacion.setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+    
+    public Empresa Localizacion.getEmpresa() {
+        return this.empresa;
+    }
+    
+    public void Localizacion.setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
+    }
+    
+    public Set<Oferta> Localizacion.getOfertas() {
+        return this.ofertas;
+    }
+    
+    public void Localizacion.setOfertas(Set<Oferta> ofertas) {
+        this.ofertas = ofertas;
     }
     
 }

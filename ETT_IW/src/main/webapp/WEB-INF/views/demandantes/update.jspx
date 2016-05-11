@@ -2,8 +2,7 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <form:update id="fu_iw2016_ett_domain_Demandante" idField="id_" modelAttribute="demandante" path="/demandantes" versionField="Version" z="/3l4prq/+SD+w84oiCVGGBHftvE=">
-        <field:input field="id" id="c_iw2016_ett_domain_Demandante_id" z="UuteCLDJ4V5xDCOsQYuxU4GVbes="/>
+    <form:update id="fu_iw2016_ett_domain_Demandante" modelAttribute="demandante" path="/demandantes" versionField="Version" z="kIDkNxHSKTVTKgzGzpkKRHSBOos=">
         <field:input field="Nombre" id="c_iw2016_ett_domain_Demandante_Nombre" z="oF32Mpn3U9coEifdu4Dj9SvLwxo="/>
         <field:input field="Apellidos" id="c_iw2016_ett_domain_Demandante_Apellidos" z="Pvw5v8Ll6MOLzMme9niFuUQvRwM="/>
         <field:datetime dateTimePattern="${demandante_fechanacimiento_date_format}" field="FechaNacimiento" id="c_iw2016_ett_domain_Demandante_FechaNacimiento" z="OVnCnqvDuDydWpsX2x9q8WwHYHE="/>
@@ -14,6 +13,8 @@
         <field:input field="Resumen" id="c_iw2016_ett_domain_Demandante_Resumen" z="wzU1mhiozFuT9f3YdZPQ6Qu6iWg="/>
         <field:input field="Foto" id="c_iw2016_ett_domain_Demandante_Foto" z="dLlTtHPVFSsGFXuGfPmvtf3JhA8="/>
         <field:input field="Curriculum" id="c_iw2016_ett_domain_Demandante_Curriculum" z="0/UDWH/GWKEwZaIfxO4SQsksby0="/>
-        <field:input field="Puesto" id="c_iw2016_ett_domain_Demandante_Puesto" z="D5IC3HT8SLw3EZ5os+VM2FChU7Q="/>
+        <field:simple field="experiencia" id="c_iw2016_ett_domain_Demandante_experiencia" messageCode="entity_reference_not_managed" messageCodeAttribute="Experiencia Laboral" z="S/DpKt9uJuItdzINK8sG57YEQEE="/>
+        <field:simple field="formacion" id="c_iw2016_ett_domain_Demandante_formacion" messageCode="entity_reference_not_managed" messageCodeAttribute="Formacion" z="6ZptwqIt2eLC/0FTMVqLETo+86I="/>
+        <field:simple field="puestosInteresa" id="c_iw2016_ett_domain_Demandante_puestosInteresa" messageCode="entity_reference_not_managed" messageCodeAttribute="Puesto Trabajo" z="hh3NTaTNepsOjVGRxrXbcagxqh4="/>
     </form:update>
 </div>
