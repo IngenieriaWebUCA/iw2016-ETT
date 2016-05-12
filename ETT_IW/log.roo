@@ -175,3 +175,4 @@ field reference --fieldName puestotrabajo --type PuestoTrabajo --cardinality ONE
 focus --class iw2016_ett.domain.ExperienciaLaboral
 field reference --fieldName puestotrabajo --type PuestoTrabajo --cardinality ONE_TO_ONE 
 web mvc all --package iw2016_ett.web
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-12 16:47:42
