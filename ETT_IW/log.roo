@@ -119,7 +119,3 @@ field reference --fieldName empresa --type Empresa --cardinality MANY_TO_ONE
 web mvc all --package iw2016_ett.web
 jpa setup --provider HIBERNATE --database MYSQL 
 // Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-05-10 12:20:58
-// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-12 16:14:41
-security setup
-hint
-hint logging
