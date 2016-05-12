@@ -43,12 +43,12 @@ privileged aspect Formacion_Roo_JavaBean {
         this.Observaciones = Observaciones;
     }
     
-    public TipoFormacion Formacion.getFormacion() {
-        return this.Formacion;
+    public TipoFormacion Formacion.getTipoFormacion() {
+        return this.tipoFormacion;
     }
     
-    public void Formacion.setFormacion(TipoFormacion Formacion) {
-        this.Formacion = Formacion;
+    public void Formacion.setTipoFormacion(TipoFormacion tipoFormacion) {
+        this.tipoFormacion = tipoFormacion;
     }
     
     public Demandante Formacion.getDemandante() {

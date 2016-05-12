@@ -14,7 +14,7 @@ privileged aspect Formacion_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager Formacion.entityManager;
     
-    public static final List<String> Formacion.fieldNames4OrderClauseFilter = java.util.Arrays.asList("Titulo", "FechaInicio", "FechaFin", "Observaciones", "Formacion", "demandante", "titulacion");
+    public static final List<String> Formacion.fieldNames4OrderClauseFilter = java.util.Arrays.asList("Titulo", "FechaInicio", "FechaFin", "Observaciones", "tipoFormacion", "demandante", "titulacion");
     
     public static final EntityManager Formacion.entityManager() {
         EntityManager em = new Formacion().entityManager;

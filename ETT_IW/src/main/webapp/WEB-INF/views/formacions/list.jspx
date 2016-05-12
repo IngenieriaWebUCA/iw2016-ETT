@@ -8,8 +8,8 @@
             <table:column date="true" dateTimePattern="${formacion_fechainicio_date_format}" id="c_iw2016_ett_domain_Formacion_FechaInicio" property="fechaInicio" z="Gf2S6LTFXZqF3g2yuFZfJXGBqsg="/>
             <table:column date="true" dateTimePattern="${formacion_fechafin_date_format}" id="c_iw2016_ett_domain_Formacion_FechaFin" property="fechaFin" z="nQo2yAJoNEtKT95OvjvJNMQt4WI="/>
             <table:column id="c_iw2016_ett_domain_Formacion_Observaciones" property="observaciones" z="ZX0aRsidMCG6osIqsVjlBL357qA="/>
-            <table:column id="c_iw2016_ett_domain_Formacion_Formacion" property="formacion" z="VhJFDknDkSyYYmXANivE17CPrEc="/>
             <table:column id="c_iw2016_ett_domain_Formacion_demandante" property="demandante" z="IFvF29lZKSvtXxfAVzdo8WaGRzI="/>
+            <table:column id="c_iw2016_ett_domain_Formacion_tipoFormacion" property="tipoFormacion" z="j3NgkX22KRCPobAgppRIoeFoICM="/>
         </table:table>
     </page:list>
 </div>

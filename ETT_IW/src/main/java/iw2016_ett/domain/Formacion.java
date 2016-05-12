@@ -38,7 +38,7 @@ public class Formacion {
     /**
      */
     @Enumerated
-    private TipoFormacion Formacion;
+    private TipoFormacion tipoFormacion;
 
     /**
      */
