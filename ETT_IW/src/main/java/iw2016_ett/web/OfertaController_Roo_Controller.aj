@@ -10,7 +10,6 @@ import iw2016_ett.domain.Localizacion;
 import iw2016_ett.domain.Oferta;
 import iw2016_ett.domain.Perfil;
 import iw2016_ett.domain.PuestoTrabajo;
-import iw2016_ett.domain.Titulaciones;
 import iw2016_ett.web.OfertaController;
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
@@ -110,7 +109,6 @@ privileged aspect OfertaController_Roo_Controller {
         uiModel.addAttribute("localizacions", Localizacion.findAllLocalizacions());
         uiModel.addAttribute("perfils", Arrays.asList(Perfil.values()));
         uiModel.addAttribute("puestotrabajoes", PuestoTrabajo.findAllPuestoTrabajoes());
-        uiModel.addAttribute("titulacioneses", Titulaciones.findAllTitulacioneses());
     }
     
     String OfertaController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {
