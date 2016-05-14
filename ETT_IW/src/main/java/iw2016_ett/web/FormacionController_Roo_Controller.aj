@@ -6,6 +6,7 @@ package iw2016_ett.web;
 import iw2016_ett.domain.Demandante;
 import iw2016_ett.domain.Formacion;
 import iw2016_ett.domain.TipoFormacion;
+import iw2016_ett.domain.Titulaciones;
 import iw2016_ett.web.FormacionController;
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
@@ -101,6 +102,7 @@ privileged aspect FormacionController_Roo_Controller {
         addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("demandantes", Demandante.findAllDemandantes());
         uiModel.addAttribute("tipoformacions", Arrays.asList(TipoFormacion.values()));
+        uiModel.addAttribute("titulacioneses", Titulaciones.findAllTitulacioneses());
     }
     
     String FormacionController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

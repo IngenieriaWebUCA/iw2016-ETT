@@ -48,6 +48,7 @@
 <aspect name="iw2016_ett.domain.Demandante_Roo_Jpa_Entity"/>
 <aspect name="iw2016_ett.web.InscripcionController_Roo_Controller"/>
 <aspect name="iw2016_ett.domain.Titulaciones_Roo_Jpa_ActiveRecord"/>
+<aspect name="iw2016_ett.web.TitulacionesController_Roo_Controller"/>
 <aspect name="iw2016_ett.domain.Formacion_Roo_Configurable"/>
 <aspect name="iw2016_ett.web.PuestoTrabajoController_Roo_Controller"/>
 <aspect name="iw2016_ett.web.OfertaController_Roo_Controller"/>

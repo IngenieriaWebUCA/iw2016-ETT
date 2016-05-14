@@ -4,6 +4,6 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_iw2016_ett_domain_PuestoTrabajo" modelAttribute="puestoTrabajo" path="/puestotrabajoes" versionField="Version" z="rJBdke//abHPF2GOxhJdak8HxmQ=">
         <field:input field="Nombre" id="c_iw2016_ett_domain_PuestoTrabajo_Nombre" z="DaEMH4aBKQRRzbKFlWRgYVeNMPY="/>
-        <field:select field="demandante" id="c_iw2016_ett_domain_PuestoTrabajo_demandante" itemValue="id_" items="${demandantes}" path="/demandantes" z="fql870doW9WA1UuqzO857MN0Vqc="/>
+        <field:select field="demandante" id="c_iw2016_ett_domain_PuestoTrabajo_demandante" itemValue="id" items="${demandantes}" path="/demandantes" z="wQPViGGLE9+P9kf3EQY+HWBStUI="/>
     </form:update>
 </div>

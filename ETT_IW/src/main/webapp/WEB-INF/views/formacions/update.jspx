@@ -7,14 +7,8 @@
         <field:datetime dateTimePattern="${formacion_fechainicio_date_format}" field="FechaInicio" id="c_iw2016_ett_domain_Formacion_FechaInicio" z="bFIElKRvH86smmXGsBLmUWBvF9Y="/>
         <field:datetime dateTimePattern="${formacion_fechafin_date_format}" field="FechaFin" id="c_iw2016_ett_domain_Formacion_FechaFin" z="RpiALQadhzh6HtE6cqJnuFcUq/E="/>
         <field:input field="Observaciones" id="c_iw2016_ett_domain_Formacion_Observaciones" z="hb7QMN9kjeI1Jmvr039ZlWyU79g="/>
-<<<<<<< Updated upstream
         <field:select field="demandante" id="c_iw2016_ett_domain_Formacion_demandante" itemValue="id" items="${demandantes}" path="/demandantes" z="qRw8ya1h9gCpSGUZ6nqMQjnaIdg="/>
         <field:select field="titulacion" id="c_iw2016_ett_domain_Formacion_titulacion" itemValue="id" items="${titulacioneses}" path="/titulacioneses" z="NQbZDs8LfQ7FUKMYsIAOUqpdTrE="/>
         <field:select field="tipoFormacion" id="c_iw2016_ett_domain_Formacion_tipoFormacion" items="${tipoformacions}" path="tipoformacions" z="gXIsTRZLC4PbYhsF7O0ddc3HUkQ="/>
-=======
-        <field:select field="Formacion" id="c_iw2016_ett_domain_Formacion_Formacion" items="${tipoformacions}" path="tipoformacions" z="ZYxWKcq/y7NVOsVhT7a11peV0nk="/>
-        <field:select field="demandante" id="c_iw2016_ett_domain_Formacion_demandante" itemValue="id_" items="${demandantes}" path="/demandantes" z="szl3Gr00xb65cvTFxXkqHNdK1KI="/>
-        <field:input field="titulacion" id="c_iw2016_ett_domain_Formacion_titulacion" z="aSN9G2rpticfmMIpklHke6xD9N4="/>
->>>>>>> Stashed changes
     </form:update>
 </div>

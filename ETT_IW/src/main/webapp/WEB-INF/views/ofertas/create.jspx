@@ -13,6 +13,7 @@
         <field:select field="Contrato" id="c_iw2016_ett_domain_Oferta_Contrato" items="${contratoes}" path="contratoes" z="AJTOmHGJzRFA8AHMw9Leia3xCu0="/>
         <field:input field="Sueldo" id="c_iw2016_ett_domain_Oferta_Sueldo" z="0L0tdY8cd9/xC3LVQsd0tBunHtc="/>
         <field:select field="localizacion" id="c_iw2016_ett_domain_Oferta_localizacion" itemValue="id" items="${localizacions}" path="/localizacions" z="lrjZEU8hAaBzqHh2QxCEoox3O08="/>
+        <field:simple field="titulaciones" id="c_iw2016_ett_domain_Oferta_titulaciones" messageCode="entity_reference_not_managed" messageCodeAttribute="Titulaciones" z="d0q47KuIB/OdOQZcvLj0l3IxfL4="/>
         <field:simple field="inscripcion" id="c_iw2016_ett_domain_Oferta_inscripcion" messageCode="entity_reference_not_managed" messageCodeAttribute="Inscripcion" z="R/WGhViNIYzGkd9u8OMoPZuHgKc="/>
         <field:select field="puestotrabajo" id="c_iw2016_ett_domain_Oferta_puestotrabajo" itemValue="id" items="${puestotrabajoes}" path="/puestotrabajoes" z="YElUdbbQqPLFoD6nXqjpONHITH0="/>
     </form:create>
