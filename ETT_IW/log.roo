@@ -184,3 +184,24 @@ hint field set
 // Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-05-12 17:58:41
 // Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-14 10:12:20
 // Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-05-14 10:30:55
+// Spring Roo 2.0.0.M2 [rev 003b42c] log opened at 2016-05-17 23:46:09
+addon repository add --url http://repository.gvnix.org/index.xml
+addon repository introspect
+addon suite install name --symbolicName org.gvnix.roo.addon.suite
+// [failed] addon suite list
+addon repository add --url http://repository.gvnix.org/index.xml
+addon repository introspect
+addon suite install name --symbolicName org.gvnix.roo.addon.suite
+hint nt
+hint
+// Spring Roo 2.0.0.M2 [rev 003b42c] log closed at 2016-05-18 00:05:10
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-18 00:06:06
+addon list 
+web mvc jquery setup
+web mvc jquery all
+web mvc datatables setup 
+web mvc bootstrap setup
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-05-18 00:26:55
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-18 00:27:53
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-05-18 11:14:40
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-18 11:57:51
