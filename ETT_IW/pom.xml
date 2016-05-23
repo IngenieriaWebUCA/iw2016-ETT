@@ -14,7 +14,7 @@
         <slf4j.version>1.7.5</slf4j.version>
         <spring.version>3.2.8.RELEASE</spring.version>
     <tomcat.version>7.0.63</tomcat.version>
-    <querydsl.version>3.6.3</querydsl.version>
+    <querydsl.version>3.6.5</querydsl.version>
     <gvnix.version>1.5.1.RC3</gvnix.version>
     <spring-security.version>3.2.5.RELEASE</spring-security.version>
     </properties>
@@ -73,7 +73,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
+            <version>1.7.21</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -119,6 +119,17 @@
             <scope>provided</scope>
         </dependency>
         <!-- Spring dependencies -->
+        <!-- http://mvnrepository.com/artifact/org.springframework.roo/org.springframework.roo.addon.dbre -->
+		<dependency>
+		    <groupId>org.springframework.roo</groupId>
+		    <artifactId>org.springframework.roo.addon.dbre</artifactId>
+		    <version>1.3.2.RELEASE</version>
+		</dependency>
+		<dependency>
+   			<groupId>org.slf4j</groupId>
+  			<artifactId>jcl-over-slf4j</artifactId>
+   			<version>1.6.1</version>
+		</dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
@@ -359,6 +370,22 @@
             <artifactId>spring-security-taglibs</artifactId>
             <version>${spring-security.version}</version>
         </dependency>
+    <dependency>
+            <groupId>org.gvnix</groupId>
+            <artifactId>org.gvnix.addon.jpa.annotations</artifactId>
+            <version>${gvnix.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    <dependency>
+            <groupId>org.gvnix</groupId>
+            <artifactId>org.gvnix.web.json.binding</artifactId>
+            <version>1.5.1.RC3</version>
+        </dependency>
+    <dependency>
+    	<groupId>org.slf4j</groupId>
+    	<artifactId>slf4j-nop</artifactId>
+    	<version>1.7.21</version>
+    </dependency>
     </dependencies>
     <build>
         <plugins>

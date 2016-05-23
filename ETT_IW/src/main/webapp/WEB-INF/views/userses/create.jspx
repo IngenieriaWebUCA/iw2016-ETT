@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_iw2016_ett_domain_Users" modelAttribute="users" path="/userses" render="${empty dependencies}" z="0smwskj0xpg8kAWWels4E4/AxRM=">
+        <field:input field="username" id="c_iw2016_ett_domain_Users_username" required="true" z="KLBj/aW9PdvQfaONe7vS1uXa0QE="/>
+        <field:input field="password" id="c_iw2016_ett_domain_Users_password" required="true" z="MxsKaZ6geXOdSfJXYKr/Umsmnog="/>
+        <field:input field="enable" id="c_iw2016_ett_domain_Users_enable" z="FUCwn1hzp+8tqSxSLi7mClzCEi0="/>
+        <field:input field="rol" id="c_iw2016_ett_domain_Users_rol" required="true" z="rEDxqV1F86iT5NLpdgCGJnYeLKo="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_iw2016_ett_domain_Users" render="${not empty dependencies}" z="bZAPHFVzDUKslXK++kZM3npTdag="/>
+</div>

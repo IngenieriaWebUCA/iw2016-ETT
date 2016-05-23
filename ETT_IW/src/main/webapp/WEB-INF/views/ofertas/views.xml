@@ -13,4 +13,10 @@
 <definition extends="default" name="ofertas/update">
         <put-attribute name="body" value="/WEB-INF/views/ofertas/update.jspx"/>
     </definition>
+<definition extends="default" name="ofertas/findOfertasByEstado">
+        <put-attribute name="body" value="/WEB-INF/views/ofertas/findOfertasByEstado.jspx"/>
+    </definition>
+<definition extends="default" name="ofertas/findOfertasByPuestotrabajo">
+        <put-attribute name="body" value="/WEB-INF/views/ofertas/findOfertasByPuestotrabajo.jspx"/>
+    </definition>
 </tiles-definitions>

@@ -208,3 +208,155 @@ web mvc bootstrap setup
 hint
 web mvc install language --code es 
 web mvc install language --code de
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-19 11:39:55
+menu update tags
+hint 
+download status
+menu tree
+menu entry add --label Administracion --category Admin
+web mvc bootstrap update
+menu entry move --id c_empresa --into c_admin
+web mvc bootstrap update
+menu entry move --id c_localizacion --into c_admin
+web mvc bootstrap update
+jpa gvnix setup
+jpa batch all --package iw2016_ett.domain.batch
+web mvc batch setup
+web mvc batch all
+web mvc bootstrap update
+web mvc bootstrap update
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-05-19 14:06:07
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-19 17:10:21
+finder add --finderName busquedaPuestoTrabajoByOferta --class ~.domain.Oferta
+finder list 
+finder add --finderName findOfertasByEstado --class ~.domain.Oferta
+finder add --finderName findOfertasByPuestotrabajo
+web mvc all --package iw2016_ett.web
+web mvc scaffold --class ~.web.OfertaController --backingType ~.domain.Oferta --path Ofertalist
+web mvc finder all
+web mvc finder all
+web mvc scaffold --class ~.web.OfertaController --backingType ~.domain.Oferta
+web mvc finder all
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-05-19 18:03:04
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-19 18:28:20
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-05-19 19:44:42
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-19 20:26:18
+web mvc datatables add --type ~.web.EmpresaController 
+web mvc datatables detail add --type ~.web.EmpresaController --property localizacion
+web mvc datatables add --type ~.web.LocalizacionController
+menu entry roles --id i_oferta_list --roles ROLE_USER
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-05-20 04:02:01
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-20 13:01:22
+da
+// [failed] database reverse engineer --package iw2016_ett.domain --schema unable-to-obtain-connection 
+// [failed] database reverse engineer --package iw2016_ett.domain --schema ett
+// [failed] database introspect --schema unable-to-obtain-connection 
+// [failed] database introspect --schema no-shema-requiered
+// [failed] database reverse engineer --package iw2016_ett.domain --schema no-shema-requiered
+database properties list 
+// [failed] database introspect --schema no-shema-requiered
+// [failed] database introspect --schema ett
+// [failed] database introspect --schema ett
+// [failed] database introspect --schema no-schema-required
+// [failed] database introspect --schema no-schema-required
+osgi start --url src/main/webapp/WEB-INF/lib/mysql-connector-java-5.1.38-bin.jar
+// [failed] database introspect --schema no-schema-required
+osgi start --url file:///C:\Users\alum\Documents\GitHub\iw2016-ETT\ETT_IW\src\main\webapp\WEB-INF\libmysql-connector-java-5.1.38-bin.jar
+osgi start --url file:///C:\Users\alum\Documents\GitHub\iw2016-ETT\ETT_IW\src\main\webapp\WEB-INF\lib\mysql-connector-java-5.1.38-bin.jar
+osgi start --url C:\Users\alum\Documents\GitHub\iw2016-ETT\ETT_IW\src\main\webapp\WEB-INF\lib\mysql-connector-java-5.1.38-bin.jar
+// [failed] database introspect --schema no-schema-required
+// [failed] database introspect --schema no-schema-required
+// [failed] database reverse engineer --package iw2016_ett.domain --schema no-shema-requiered
+// [failed] database introspect --schema no-shema-requiered
+osgi obr url add --url http://spring-roo-repository.springsource.org/repository.xml
+osgi obr deploy --bundleSymbolicName org.springframework.roo.wrapping.mysql-connector-java
+// [failed] database introspect --schema no-shema-requiered
+// [failed] database reverse engineer --schema unable-to-obtain-connection --package iw2016_ett.domain
+// [failed] database reverse engineer --schema ett --package iw2016_ett.domain
+addon info id --searchResultId 01
+ addon install id --searchResultId 01
+addon install bundle --bundleSymbolicName org.springframework.roo.wrapping.mysql-connector-java
+// [failed] database introspect --schema root --file
+addon install id --searchResultId 01
+addon install bundle --bundleSymbolicName org.springframework.roo.wrapping.mysql-connector-java
+// [failed] database introspect --schema no-schema-required
+// [failed] database introspect --schema no-schema-required --enableViews false
+addon search --requiresDescription driverclass
+download status 
+download accept terms of use
+// [failed] database introspect --schema no-schema-required
+addon info id --searchResultId 01
+osgi obr url add --url http://spring-roo-repository.springsource.org/repository.xml
+osgi obr deploy --bundleSymbolicName org.springframework.roo.wrapping.mysql-connector-java
+osgi obr url remove --url http://spring-roo-repository.springsource.org/repository.xml
+addon install id --searchResultId 01
+// [failed] database introspect --schema no-schema-required
+// [failed] database reverse engineer --schema ett --package iw2016_ett.domain
+addon info id --searchResultId 01
+addon info id --searchResultId 02
+osgi obr url add --url http://spring-roo-repository.springsource.org/repository.xml
+osgi obr deploy --bundleSymbolicName org.springframework.roo.wrapping.mysql-connector-java
+osgi obr url remove --url http://spring-roo-repository.springsource.org/repository.xml
+addon install bundle --bundleSymbolicName org.springframework.roo.wrapping.mysql-connector-java
+osgi obr url add --url http://spring-roo-repository.springsource.org/repository.xml
+osgi obr deploy --bundleSymbolicName org.springframework.roo.wrapping.mysql-connector-java
+osgi obr url remove --url http://spring-roo-repository.springsource.org/repository.xml
+addon install id --searchResultId 01
+addon install bundle --bundleSymbolicName jcl-over-slf4j-1.6.1.jar
+osgi obr url add --url http://spring-roo-repository.springsource.org/repository.xml
+osgi obr deploy --bundleSymbolicName org.springframework.roo.wrapping.mysql-connector-java
+osgi obr url remove --url http://spring-roo-repository.springsource.org/repository.xml
+addon install id --searchResultId 01
+// [failed] database introspect --schema no-schema-required
+// [failed] database introspect --schema no-schema-required
+addon info id --searchResultId 01
+osgi obr url add --url http://spring-roo-repository.springsource.org/repository.xml
+osgi obr deploy --bundleSymbolicName org.springframework.roo.wrapping.mysql-connector-java
+osgi obr url remove --url http://spring-roo-repository.springsource.org/repository.xml
+addon install id --searchResultId 01
+osgi obr url add --url http://spring-roo-repository.springsource.org/repository.xml
+osgi obr deploy --bundleSymbolicName org.springframework.roo.wrapping.mysql-connector-java
+osgi obr url remove --url http://spring-roo-repository.springsource.org/repository.xml
+addon install id --searchResultId 01
+// [failed] database introspect --schema no-schema-required
+hint
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-05-20 16:28:48
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-20 18:39:17
+// [failed] database introspect --schema no-schema-required
+// [failed] database reverse engineer --schema no-shema-requiered --package iw2016_ett.domain
+addon info id --searchResultId 01
+osgi obr url add --url http://spring-roo-repository.springsource.org/repository.xml
+osgi obr deploy --bundleSymbolicName org.springframework.roo.wrapping.mysql-connector-java
+osgi obr url remove --url http://spring-roo-repository.springsource.org/repository.xml
+addon install id --searchResultId 01
+// [failed] database introspect --schema no-schema-required
+// [failed] database reverse engineer --schema no-shema-requiered --package iw2016_ett.domain
+addon list 
+addon list 
+// [failed] database reverse engineer --schema no-shema-requiered --package iw2016_ett.domain
+entity jpa --class iw2016_ett.domain.users 
+field string --fieldName username --notNull --unique
+field string --fieldName password --notNull 
+field number --fieldName enable --type int --value 1
+entity jpa --class iw2016_ett.domain.user_roles
+field string --fieldName username --notNull 
+focus --class iw2016_ett.domain.users
+// [failed] field string --fieldName role --notNull
+field string --fieldName rol --notNull
+// [failed] entity jpa --class iw2016_ett.domain.users --identifierField username --identifierType java.lang.String
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-20 21:03:08
+// [failed] entity jpa --class iw2016_ett.domain.users --identifierField username --identifierType java.lang.String
+// [failed] entity jpa --class iw2016_ett.domain.users --identifierField username --identifierType java.lang.String
+// [failed] entity jpa --class iw2016_ett.domain.users --identifierField username --identifierType java.lang.String
+// [failed] entity jpa --class iw2016_ett.domain.user --identifierField username --identifierType java.lang.String
+// [failed] entity jpa --class iw2016_ett.domain.users --identifierField username --identifierType java.lang.String
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-05-20 21:20:07
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-20 21:21:06
+entity jpa --class iw2016_ett.domain.users --identifierField username --identifierType java.lang.String
+field string --fieldName username --notNull 
+field string --fieldName password --notNull 
+field number --fieldName enable --type int --value 1
+field string --fieldName rol --notNull
+web mvc all --package iw2016_ett.web
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-05-20 21:59:45
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-23 17:41:19
