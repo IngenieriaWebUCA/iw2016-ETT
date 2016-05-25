@@ -12,6 +12,9 @@
         <intercept-url pattern="/choices/**" access="hasRole('ROLE_ADMIN')" />
         <intercept-url pattern="/member/**" access="isAuthenticated()" />
         <intercept-url pattern="/ofertas/**" access="hasRole('ROLE_EMPRESA')" />
+        <intercept-url pattern="/inscripcions/**" access="hasRole('ROLE_EMPRESA')" />
+        <intercept-url pattern="/demandante/**" access="hasRole('ROLE_DEMANDANTE')" />
+        <intercept-url pattern="/empresas/**" access="hasRole('ROLE_EMPRESA')" />
         <intercept-url pattern="/resources/**" access="permitAll" />
         <intercept-url pattern="/login/**" access="permitAll" />
         <intercept-url pattern="/**" access="permitAll" />
