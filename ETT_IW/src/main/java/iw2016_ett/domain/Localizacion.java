@@ -16,23 +16,19 @@ public class Localizacion {
 
     /**
      */
-    @Enumerated
-    private Pais Pais;
+    private String Pais;
 
     /**
      */
-    @Enumerated
-    private Comunidad comunidad;
+    private String comunidad;
 
     /**
      */
-    @Enumerated
-    private Provincia Provincia;
+    private String Provincia;
 
     /**
      */
-    @Enumerated
-    private Localidad Localidad;
+    private String Localidad;
 
     /**
      */

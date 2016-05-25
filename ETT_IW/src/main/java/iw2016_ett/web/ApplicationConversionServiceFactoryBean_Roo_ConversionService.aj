@@ -145,7 +145,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Localizacion, String> ApplicationConversionServiceFactoryBean.getLocalizacionToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<iw2016_ett.domain.Localizacion, java.lang.String>() {
             public String convert(Localizacion localizacion) {
-                return new StringBuilder().append(localizacion.getDireccion()).toString();
+                return new StringBuilder().append(localizacion.getPais()).append(' ').append(localizacion.getComunidad()).append(' ').append(localizacion.getProvincia()).append(' ').append(localizacion.getLocalidad()).toString();
             }
         };
     }

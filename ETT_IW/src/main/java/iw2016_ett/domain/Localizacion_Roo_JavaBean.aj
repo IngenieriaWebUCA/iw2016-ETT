@@ -3,46 +3,42 @@
 
 package iw2016_ett.domain;
 
-import iw2016_ett.domain.Comunidad;
 import iw2016_ett.domain.Empresa;
-import iw2016_ett.domain.Localidad;
 import iw2016_ett.domain.Localizacion;
 import iw2016_ett.domain.Oferta;
-import iw2016_ett.domain.Pais;
-import iw2016_ett.domain.Provincia;
 import java.util.Set;
 
 privileged aspect Localizacion_Roo_JavaBean {
     
-    public Pais Localizacion.getPais() {
+    public String Localizacion.getPais() {
         return this.Pais;
     }
     
-    public void Localizacion.setPais(Pais Pais) {
+    public void Localizacion.setPais(String Pais) {
         this.Pais = Pais;
     }
     
-    public Comunidad Localizacion.getComunidad() {
+    public String Localizacion.getComunidad() {
         return this.comunidad;
     }
     
-    public void Localizacion.setComunidad(Comunidad comunidad) {
+    public void Localizacion.setComunidad(String comunidad) {
         this.comunidad = comunidad;
     }
     
-    public Provincia Localizacion.getProvincia() {
+    public String Localizacion.getProvincia() {
         return this.Provincia;
     }
     
-    public void Localizacion.setProvincia(Provincia Provincia) {
+    public void Localizacion.setProvincia(String Provincia) {
         this.Provincia = Provincia;
     }
     
-    public Localidad Localizacion.getLocalidad() {
+    public String Localizacion.getLocalidad() {
         return this.Localidad;
     }
     
-    public void Localizacion.setLocalidad(Localidad Localidad) {
+    public void Localizacion.setLocalidad(String Localidad) {
         this.Localidad = Localidad;
     }
     

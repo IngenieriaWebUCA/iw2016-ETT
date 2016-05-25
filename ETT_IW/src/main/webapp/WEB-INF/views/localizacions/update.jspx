@@ -3,12 +3,12 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_iw2016_ett_domain_Localizacion" modelAttribute="localizacion" path="/localizacions" versionField="Version" z="CKoas7D2WxXtMvseKOLZ+IaI0PM=">
-        <field:select field="Pais" id="c_iw2016_ett_domain_Localizacion_Pais" items="${paises}" path="paises" z="U9HmTNKkTGaGZdGEA7wEvSHwBv8="/>
-        <field:select field="comunidad" id="c_iw2016_ett_domain_Localizacion_comunidad" items="${comunidads}" path="comunidads" z="x2pZr1gPCjWlmI/flVT3mh2Jxdo="/>
-        <field:select field="Provincia" id="c_iw2016_ett_domain_Localizacion_Provincia" items="${provincias}" path="provincias" z="/QYPpcKJk4CnMJt1oXmQQP+wh+M="/>
-        <field:select field="Localidad" id="c_iw2016_ett_domain_Localizacion_Localidad" items="${localidads}" path="localidads" z="aE629K0ciJtT0oCS8mIPg4QxeqA="/>
         <field:input field="direccion" id="c_iw2016_ett_domain_Localizacion_direccion" z="1ZKDSj8ZgAHwezse9LW1gMnIYPk="/>
         <field:select field="empresa" id="c_iw2016_ett_domain_Localizacion_empresa" itemValue="id" items="${empresas}" path="/empresas" z="unrK6UPoOYHs9j9zmNoABYkl4rs="/>
         <field:simple field="ofertas" id="c_iw2016_ett_domain_Localizacion_ofertas" messageCode="entity_reference_not_managed" messageCodeAttribute="Oferta" z="YypHDF3pVqp1gS6TpUtEwFr5Vdw="/>
+        <field:input field="Pais" id="c_iw2016_ett_domain_Localizacion_Pais" z="R2dUpEeqLSPYfBf2SC6tKoWMRS0="/>
+        <field:input field="comunidad" id="c_iw2016_ett_domain_Localizacion_comunidad" z="81om5BQlHBtO+3HfNIQipJLCC7o="/>
+        <field:input field="Provincia" id="c_iw2016_ett_domain_Localizacion_Provincia" z="9UvOaD/NxEqKJ4u6sugtmjX9CDE="/>
+        <field:input field="Localidad" id="c_iw2016_ett_domain_Localizacion_Localidad" z="gDMIh6FN5pe7NSJQcxnQRM5rWbw="/>
     </form:update>
 </div>
