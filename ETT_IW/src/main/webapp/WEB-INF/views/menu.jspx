@@ -4,8 +4,7 @@
   <jsp:output omit-xml-declaration="yes"/>
 
   <menu:menu id="_menu" z="user-managed">
-  <sec:authorize ifAllGranted="ROLE_EMPRESA">
+  
 	<menu:gvnixmenu/>
-	</sec:authorize>
   </menu:menu>
 </div>
