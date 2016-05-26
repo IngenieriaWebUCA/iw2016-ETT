@@ -65,7 +65,7 @@ body {
 
 #menu h2 {
 	color: #fff;
-	background: #648C1D;
+	background: #000080;
 	text-transform: uppercase;
 	font-weight:bold;
 	font-size: 12px;
@@ -79,7 +79,7 @@ body {
 }
 
 #menu a:hover {
-	color: #648C1D;
+	color: #000080;
 	background: #fff;
 }
 
@@ -200,7 +200,7 @@ a:link {
 }
 
 a:hover {
-	color: #456314;
+	color: #000080;
 }
 
 a:active {
