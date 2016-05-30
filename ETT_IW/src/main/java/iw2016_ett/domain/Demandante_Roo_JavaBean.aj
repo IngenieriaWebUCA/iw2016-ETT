@@ -14,11 +14,11 @@ import java.util.Set;
 privileged aspect Demandante_Roo_JavaBean {
     
     public String Demandante.getNombre() {
-        return this.Nombre;
+        return this.nombre;
     }
     
-    public void Demandante.setNombre(String Nombre) {
-        this.Nombre = Nombre;
+    public void Demandante.setNombre(String nombre) {
+        this.nombre = nombre;
     }
     
     public String Demandante.getApellidos() {

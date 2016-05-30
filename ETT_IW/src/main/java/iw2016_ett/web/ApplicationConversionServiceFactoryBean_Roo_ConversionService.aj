@@ -25,7 +25,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Demandante, String> ApplicationConversionServiceFactoryBean.getDemandanteToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<iw2016_ett.domain.Demandante, java.lang.String>() {
             public String convert(Demandante demandante) {
-                return new StringBuilder().append(demandante.getNombre()).append(' ').append(demandante.getApellidos()).append(' ').append(demandante.getFechaNacimiento()).append(' ').append(demandante.getDireccion()).toString();
+                return new StringBuilder().append(demandante.getUsername()).append(' ').append(demandante.getPassword()).append(' ').append(demandante.getEnable()).append(' ').append(demandante.getRol()).toString();
             }
         };
     }
@@ -49,7 +49,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Empresa, String> ApplicationConversionServiceFactoryBean.getEmpresaToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<iw2016_ett.domain.Empresa, java.lang.String>() {
             public String convert(Empresa empresa) {
-                return new StringBuilder().append(empresa.getCIF()).append(' ').append(empresa.getNombre()).append(' ').append(empresa.getActividad()).append(' ').append(empresa.getN_Empleados()).toString();
+                return new StringBuilder().append(empresa.getUsername()).append(' ').append(empresa.getPassword()).append(' ').append(empresa.getEnable()).append(' ').append(empresa.getRol()).toString();
             }
         };
     }

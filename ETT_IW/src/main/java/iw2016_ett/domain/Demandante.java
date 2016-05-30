@@ -15,11 +15,11 @@ import javax.persistence.OneToMany;
 @RooJavaBean
 @RooToString
 @RooJpaActiveRecord
-public class Demandante {
+public class Demandante extends Users{
 
     /**
      */
-    private String Nombre;
+    private String nombre;
 
     /**
      */

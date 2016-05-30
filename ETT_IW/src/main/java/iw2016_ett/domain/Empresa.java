@@ -10,7 +10,7 @@ import javax.persistence.OneToMany;
 @RooJavaBean
 @RooToString
 @RooJpaActiveRecord
-public class Empresa {
+public class Empresa extends Users{
 
     /**
      */

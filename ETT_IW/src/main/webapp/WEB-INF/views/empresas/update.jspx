@@ -9,5 +9,9 @@
         <field:input field="n_Empleados" id="c_iw2016_ett_domain_Empresa_n_Empleados" z="RBEoeoeiOrq+WylXY5IHJHANdo0="/>
         <field:input field="email" id="c_iw2016_ett_domain_Empresa_email" validationMessageCode="field_invalid_email" z="UOJ+5NUi9Ot57OCeRfbGxNBII4A="/>
         <field:simple field="localizacion" id="c_iw2016_ett_domain_Empresa_localizacion" messageCode="entity_reference_not_managed" messageCodeAttribute="Localizacion" z="W279FJR/kznkjd2O+fioWwB+V84="/>
+        <field:input field="username" id="c_iw2016_ett_domain_Empresa_username" required="true" z="gPMmVH7SoLNrhDcxqmFeqIDeqcA="/>
+        <field:input field="password" id="c_iw2016_ett_domain_Empresa_password" required="true" z="7b2hzaYsg+HoY26mJ7Cyl96XsJI="/>
+        <field:input field="enable" id="c_iw2016_ett_domain_Empresa_enable" z="uCcIBknLdPpDWGR97fGsO8UGc0g="/>
+        <field:input field="rol" id="c_iw2016_ett_domain_Empresa_rol" required="true" z="/LNKkj771RICDr5qNPrla0j8xMA="/>
     </form:update>
 </div>

@@ -16,7 +16,7 @@
         <intercept-url pattern="\A/demandantes\?form.*\Z" access="permitAll" />
         <intercept-url pattern="\A/demandantes.*\Z" access="hasRole('ROLE_ADMIN')" />
         <intercept-url pattern="\A/empresas\?form.*\Z" access="hasAnyRole('ROLE_GESTOR', 'ROLE_ADMIN')" />
-        <intercept-url pattern="\A/empresas.*\Z" access="hasRole('ROLE_EMPRESA')" />
+        <intercept-url pattern="\A/empresas.*\Z" access="hasAnyRole('ROLE_GESTOR', 'ROLE_ADMIN', 'ROLE_EMPRESA')" />
         <intercept-url pattern="/resources/.*" access="permitAll" />
         <intercept-url pattern="\A/login.*\Z" access="permitAll" />
         <intercept-url pattern="/.*\Z" access="permitAll" />

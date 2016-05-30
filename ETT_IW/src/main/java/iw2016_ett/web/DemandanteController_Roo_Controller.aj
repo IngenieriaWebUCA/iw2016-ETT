@@ -26,17 +26,6 @@ import org.springframework.web.util.WebUtils;
 
 privileged aspect DemandanteController_Roo_Controller {
     
-    @RequestMapping(method = RequestMethod.POST, produces = "text/html")
-    public String DemandanteController.create(@Valid Demandante demandante, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
-        if (bindingResult.hasErrors()) {
-            populateEditForm(uiModel, demandante);
-            return "demandantes/create";
-        }
-        uiModel.asMap().clear();
-        demandante.persist();
-        return "redirect:/demandantes/" + encodeUrlPathSegment(demandante.getId().toString(), httpServletRequest);
-    }
-    
     @RequestMapping(params = "form", produces = "text/html")
     public String DemandanteController.createForm(Model uiModel) {
         populateEditForm(uiModel, new Demandante());

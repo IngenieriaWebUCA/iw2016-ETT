@@ -30,6 +30,5 @@ public class Users {
 
     /**
      */
-    @NotNull
     private String rol;
 }

@@ -20,17 +20,6 @@ import org.springframework.web.util.WebUtils;
 
 privileged aspect EmpresaController_Roo_Controller {
     
-    @RequestMapping(method = RequestMethod.POST, produces = "text/html")
-    public String EmpresaController.create(@Valid Empresa empresa, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
-        if (bindingResult.hasErrors()) {
-            populateEditForm(uiModel, empresa);
-            return "empresas/create";
-        }
-        uiModel.asMap().clear();
-        empresa.persist();
-        return "redirect:/empresas/" + encodeUrlPathSegment(empresa.getId().toString(), httpServletRequest);
-    }
-    
     @RequestMapping(params = "form", produces = "text/html")
     public String EmpresaController.createForm(Model uiModel) {
         populateEditForm(uiModel, new Empresa());

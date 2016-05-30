@@ -3,7 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_iw2016_ett_domain_Demandante" object="${demandante}" path="/demandantes" z="JsqHQWck/5yw6SFuQt43fvRpxJQ=">
-        <field:display field="nombre" id="s_iw2016_ett_domain_Demandante_Nombre" object="${demandante}" z="PH6ZO+4C1NAXPVO+B+j/5sdq7m0="/>
         <field:display field="apellidos" id="s_iw2016_ett_domain_Demandante_Apellidos" object="${demandante}" z="ShgJvzV5SKEmP+w21YGCpm9bY/g="/>
         <field:display date="true" dateTimePattern="${demandante_fechanacimiento_date_format}" field="fechaNacimiento" id="s_iw2016_ett_domain_Demandante_FechaNacimiento" object="${demandante}" z="l8NxNt3nzo6/t4W51JR82Gge8HM="/>
         <field:display field="direccion" id="s_iw2016_ett_domain_Demandante_direccion" object="${demandante}" z="zuWZq/+/BgvFn8jGTmPyVgOmm8A="/>
@@ -13,5 +12,10 @@
         <field:display field="resumen" id="s_iw2016_ett_domain_Demandante_Resumen" object="${demandante}" z="XQnNEq95EqyPP78ObKBQFuveOdQ="/>
         <field:display field="foto" id="s_iw2016_ett_domain_Demandante_Foto" object="${demandante}" z="u13KClfqLmSN+ByfBm3GZCFz12o="/>
         <field:display field="curriculum" id="s_iw2016_ett_domain_Demandante_Curriculum" object="${demandante}" z="8AZGkvtb/dfq7wvXav+DwZFuhHs="/>
+        <field:display field="nombre" id="s_iw2016_ett_domain_Demandante_nombre" object="${demandante}" z="3B8A+hBXGmH78nPp577w7AeIqKI="/>
+        <field:display field="username" id="s_iw2016_ett_domain_Demandante_username" object="${demandante}" z="VP5+YUQwWwdQ3fq7s3qAGA0wfvY="/>
+        <field:display field="password" id="s_iw2016_ett_domain_Demandante_password" object="${demandante}" z="977NUVXvfB2zHLttuB3L1OGzw78="/>
+        <field:display field="enable" id="s_iw2016_ett_domain_Demandante_enable" object="${demandante}" z="RHFLkaVfFLWaRJTX9iAGVBCXU5E="/>
+        <field:display field="rol" id="s_iw2016_ett_domain_Demandante_rol" object="${demandante}" z="KZoJMnvNv7zjtB99/4newUcogf4="/>
     </page:show>
 </div>
