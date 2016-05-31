@@ -5,6 +5,6 @@
     <form:update id="fu_iw2016_ett_domain_Inscripcion" modelAttribute="inscripcion" path="/inscripcions" versionField="Version" z="hvQ/QML/kqPAmmcYwzdhiORJGtA=">
         <field:select field="Estado" id="c_iw2016_ett_domain_Inscripcion_Estado" items="${estadoinscs}" path="estadoinscs" z="ujvCZmT60aDS7eSd9mE8prIrJMY="/>
         <field:select field="oferta" id="c_iw2016_ett_domain_Inscripcion_oferta" itemValue="id" items="${ofertas}" path="/ofertas" z="Si2u65ajePPrCEbBPYE30gBijL8="/>
-        <field:select field="demandante" id="c_iw2016_ett_domain_Inscripcion_demandante" itemValue="id" items="${demandantes}" path="/demandantes" z="6ElxVMYugQTVXYnm/4TmT5R7FQY=" render="false"/>
+        <field:select field="demandante" id="c_iw2016_ett_domain_Inscripcion_demandante" itemValue="id" items="${demandantes}" path="/demandantes" z="6ElxVMYugQTVXYnm/4TmT5R7FQY="/>
     </form:update>
 </div>
