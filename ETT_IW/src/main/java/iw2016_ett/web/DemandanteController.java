@@ -1,5 +1,7 @@
 package iw2016_ett.web;
 import iw2016_ett.domain.Demandante;
+import iw2016_ett.domain.Empresa;
+
 import org.springframework.roo.addon.web.mvc.controller.scaffold.RooWebScaffold;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,6 +27,8 @@ public class DemandanteController {
             populateEditForm(uiModel, demandante);
             return "demandantes/create";
         }
+        if(Demandante.countFindUsersesByUsernameEquals(demandante.getUsername())>0)
+        	return "demandantes/create";
         uiModel.asMap().clear();
         demandante.setRol("ROLE_USER");
         demandante.persist();

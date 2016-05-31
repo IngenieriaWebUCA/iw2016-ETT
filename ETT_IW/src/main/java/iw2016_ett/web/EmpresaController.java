@@ -1,5 +1,7 @@
 package iw2016_ett.web;
 import iw2016_ett.domain.Empresa;
+import iw2016_ett.domain.Oferta;
+
 import org.springframework.roo.addon.web.mvc.controller.scaffold.RooWebScaffold;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -42,10 +44,13 @@ public class EmpresaController {
             populateEditForm(uiModel, empresa);
             return "empresas/create";
         }
+        if(Empresa.countFindUsersesByUsernameEquals(empresa.getUsername())>0)
+        	return "empresas/create";
+        
         uiModel.asMap().clear();
         empresa.setRol("ROLE_EMPRESA");
-        empresa.persist();
         
+        empresa.persist();
         return "redirect:/empresas/" + encodeUrlPathSegment(empresa.getId().toString(), httpServletRequest);
     }
 }

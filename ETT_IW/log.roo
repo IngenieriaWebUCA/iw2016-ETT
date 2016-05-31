@@ -382,3 +382,14 @@ web mvc all --package iw2016_ett.web
 // Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-28 21:16:21
 // Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-30 11:53:05
 // Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-05-30 19:54:11
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-31 00:42:59
+focus --class ~.domain.Users
+finder list
+finder add --finderName findUsersesByUsernameEquals
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-31 01:20:33
+focus --class ~.domain.Users
+finder list
+finder add --finderName findUsersesByUsernameLike
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-05-31 03:39:14
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-31 10:15:53
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-31 11:32:38

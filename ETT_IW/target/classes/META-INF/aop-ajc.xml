@@ -6,6 +6,7 @@
 <aspect name="iw2016_ett.web.OfertaController_Roo_Controller_Finder"/>
 <aspect name="iw2016_ett.domain.Demandante_Roo_Jpa_ActiveRecord"/>
 <aspect name="iw2016_ett.domain.Empresa_Roo_Jpa_ActiveRecord"/>
+<aspect name="iw2016_ett.domain.Users_Roo_Finder"/>
 <aspect name="iw2016_ett.domain.batch.EmpresaBatchService_Roo_GvNIXJpaBatch"/>
 <aspect name="iw2016_ett.web.DemandanteController_Roo_GvNIXWebJpaBatch"/>
 <aspect name="iw2016_ett.domain.Localizacion_Roo_Jpa_ActiveRecord"/>

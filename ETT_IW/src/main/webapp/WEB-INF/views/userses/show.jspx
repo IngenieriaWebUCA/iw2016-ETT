@@ -4,7 +4,7 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_iw2016_ett_domain_Users" object="${users}" path="/userses" z="XUKZUpFoShx+uO/eNuefLtuAWiU=">
         <field:display field="username" id="s_iw2016_ett_domain_Users_username" object="${users}" z="AXLl5naqL/gp5pGNPcNYZdTHp84="/>
-        <field:display field="password" id="s_iw2016_ett_domain_Users_password" object="${users}" z="mqZ9tz9Kc17SrUv4gC90PVmI6Lk="/>
+        <field:display field="password" id="s_iw2016_ett_domain_Users_password" object="${users}" render="false" z="user-managed"/>
         <field:display field="enable" id="s_iw2016_ett_domain_Users_enable" object="${users}" z="ckGrQkPuvdV6JSsQF0u+C+LKOiw="/>
         <field:display field="rol" id="s_iw2016_ett_domain_Users_rol" object="${users}" z="pWlQzswHUZpXAln7VJ8HMSUw9jo="/>
     </page:show>

@@ -7,7 +7,7 @@
             <table:column id="c_iw2016_ett_domain_Demandante_Apellidos" property="apellidos" z="jjmeelgaP6/GoJqjaDKwH+RXzRM="/>
             <table:column id="c_iw2016_ett_domain_Demandante_nombre" property="nombre" z="lk9/PbGjLGrHxO9USuC69B+5Trc="/>
             <table:column id="c_iw2016_ett_domain_Demandante_username" property="username" z="5ND/pMziuzP2udOdVxspKBKtGEI="/>
-            <table:column id="c_iw2016_ett_domain_Demandante_password" property="password" z="DhrAB+EDjGrWIvK/hqPc1byctLM="/>
+            <table:column id="c_iw2016_ett_domain_Demandante_password" property="password" render="false" z="user-managed"/>
             <table:column id="c_iw2016_ett_domain_Demandante_enable" property="enable" z="p767HFkNnDvor3Xmz5v0R8H4guI="/>
             <table:column id="c_iw2016_ett_domain_Demandante_rol" property="rol" z="IYntfAYpI6J+8QOgxexZllcAYQM="/>
         </table:table>

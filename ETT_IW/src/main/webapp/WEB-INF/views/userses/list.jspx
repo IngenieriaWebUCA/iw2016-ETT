@@ -5,7 +5,7 @@
     <page:list id="pl_iw2016_ett_domain_Users" items="${userses}" z="ZzNlcGnspHQbYrV76ojwmIlXwpU=">
         <table:table data="${userses}" id="l_iw2016_ett_domain_Users" path="/userses" z="u6HX1kFgTvnceKXMQotCcrryNs8=">
             <table:column id="c_iw2016_ett_domain_Users_username" property="username" z="GMB5PcPAI0/yHUdL9+VhvFTUmjo="/>
-            <table:column id="c_iw2016_ett_domain_Users_password" property="password" z="rpsPAhdwG2s8JP5+gHFIHSwvWJw="/>
+            <table:column id="c_iw2016_ett_domain_Users_password" property="password" render="false" z="user-managed"/>
             <table:column id="c_iw2016_ett_domain_Users_enable" property="enable" z="7uGfCnYKLZgShtnBp7PTDzYcQn0="/>
             <table:column id="c_iw2016_ett_domain_Users_rol" property="rol" z="skf3M+7uw+lHQPTTBBWNPcPp+aw="/>
         </table:table>

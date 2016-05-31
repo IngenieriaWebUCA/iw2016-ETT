@@ -19,17 +19,6 @@ import org.springframework.web.util.WebUtils;
 
 privileged aspect UsersController_Roo_Controller {
     
-    @RequestMapping(method = RequestMethod.POST, produces = "text/html")
-    public String UsersController.create(@Valid Users users, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
-        if (bindingResult.hasErrors()) {
-            populateEditForm(uiModel, users);
-            return "userses/create";
-        }
-        uiModel.asMap().clear();
-        users.persist();
-        return "redirect:/userses/" + encodeUrlPathSegment(users.getId().toString(), httpServletRequest);
-    }
-    
     @RequestMapping(params = "form", produces = "text/html")
     public String UsersController.createForm(Model uiModel) {
         populateEditForm(uiModel, new Users());

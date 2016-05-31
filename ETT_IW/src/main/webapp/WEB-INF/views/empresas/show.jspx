@@ -9,7 +9,7 @@
         <field:display field="n_Empleados" id="s_iw2016_ett_domain_Empresa_n_Empleados" object="${empresa}" z="72g4WeMvqZaFjkUR4sJdMdHpPvc="/>
         <field:display field="email" id="s_iw2016_ett_domain_Empresa_email" object="${empresa}" z="93Oq+/EEfnHzLbqzb0l4C/NKSvw="/>
         <field:display field="username" id="s_iw2016_ett_domain_Empresa_username" object="${empresa}" z="HyQVBXdbfmE13HNPiqs2a6ggRDE="/>
-        <field:display field="password" id="s_iw2016_ett_domain_Empresa_password" object="${empresa}" z="K9HgxfyJBcHeoSOe/oy2zaKy99M="/>
+        <field:display field="password" id="s_iw2016_ett_domain_Empresa_password" object="${empresa}" render="false" z="user-managed"/>
         <field:display field="enable" id="s_iw2016_ett_domain_Empresa_enable" object="${empresa}" z="YboS7KTt7RXHK2ArQIWaUeRiH74="/>
         <field:display field="rol" id="s_iw2016_ett_domain_Empresa_rol" object="${empresa}" z="xU7Tdjaq6xJRb7iWHUpyAY7yzs0="/>
     </page:show>
