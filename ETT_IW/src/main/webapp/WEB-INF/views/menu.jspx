@@ -43,7 +43,9 @@
         </menu:category>
         </sec:authorize>
 
-        <sec:authorize access="hasAnyRole('ROLE_DEMANDANTE', 'ROLE_ADMIN')">
+        <sec:authorize access="hasAnyRole('ROLE_DEMANDANTE', 'ROLE_EMPRESA','ROLE_ADMIN')">
+        	<sec:authorize access="hasAnyRole('ROLE_DEMANDANTE','ROLE_ADMIN')">
+        	</sec:authorize>
             <menu:category id="c_inscripcion" z="WGH6UGn8Xk1BCQvYxOLO3zhO32w=">
             <menu:item id="i_inscripcion_new" messageCode="global_menu_new" url="/inscripcions?form" z="c/fKPa6XZ8IWr+NnUZsDmwBVAoo="/>
             <menu:item id="i_inscripcion_list" messageCode="global_menu_list" url="/inscripcions?page=1&amp;size=${empty param.size ? 10 : param.size}" z="EtJRFL7zVP9IpwmuzMtP1k1M0P0="/>
