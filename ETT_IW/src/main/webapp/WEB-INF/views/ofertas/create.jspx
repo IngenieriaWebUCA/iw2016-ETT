@@ -10,7 +10,7 @@
         <field:select field="Perfil" id="c_iw2016_ett_domain_Oferta_Perfil" items="${perfils}" path="perfils" z="WVPGJCLYY2qo40xDb7JLRk64tU8="/>
         <field:select field="Estado" id="c_iw2016_ett_domain_Oferta_Estado" items="${estadoes}" path="estadoes" z="HMhDMhJyd6z6JuK2XM+F3Utmrhs="/>
         <field:datetime dateTimePattern="${oferta_fechafin_date_format}" field="FechaFin" id="c_iw2016_ett_domain_Oferta_FechaFin" z="FQ/z15x/Schf5PBPamhZ8lyRbaI="/>
-        <field:input field="Contrato" id="c_iw2016_ett_domain_Oferta_Contrato" z="lZZsLlgv8PPCtdLKjpnVTc/nio8="/>
+        <field:select field="Contrato" id="c_iw2016_ett_domain_Oferta_Contrato" items="${contratoes}" path="contratoes" z="AJTOmHGJzRFA8AHMw9Leia3xCu0="/>
         <field:input field="Sueldo" id="c_iw2016_ett_domain_Oferta_Sueldo" z="0L0tdY8cd9/xC3LVQsd0tBunHtc="/>
         <field:select field="localizacion" id="c_iw2016_ett_domain_Oferta_localizacion" itemValue="id" items="${localizacions}" path="/localizacions" z="lrjZEU8hAaBzqHh2QxCEoox3O08="/>
         <field:simple field="titulaciones" id="c_iw2016_ett_domain_Oferta_titulaciones" messageCode="entity_reference_not_managed" messageCodeAttribute="Titulaciones" z="d0q47KuIB/OdOQZcvLj0l3IxfL4="/>
