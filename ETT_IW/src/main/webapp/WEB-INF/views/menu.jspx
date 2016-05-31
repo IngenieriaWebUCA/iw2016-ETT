@@ -43,17 +43,7 @@
         </menu:category>
         </sec:authorize>
 
-        <sec:authorize access="hasAnyRole('ROLE_EMPRESA', 'ROLE_ADMIN')">
-         <menu:category id="c_oferta" z="hAFpA26H1SoEOzHx9qIuh9xoiFY=">
-            <menu:item id="i_oferta_new" messageCode="global_menu_new" url="/ofertas?form" z="XL2la3mMU88KBAljrX+q6go8ogw="/>
-            <menu:item id="i_oferta_list" messageCode="global_menu_list" url="/ofertas?page=1&amp;size=${empty param.size ? 10 : param.size}" z="YFpuok8se1icruycVP1Ngny6x3c="/>
-            <menu:item id="fi_oferta_estado" messageCode="global_menu_find" url="/ofertas?find=ByEstado&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="zm1TgkQaCA7A5vmrF3bq/uOkkrA="/>
-            <menu:item id="fi_oferta_puestotrabajo" messageCode="global_menu_find" url="/ofertas?find=ByPuestotrabajo&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="ZNlcq9D77F7ElQfuj15xom4ej+I="/>
-        </menu:category>
-            </sec:authorize>
-
-
-        <sec:authorize access="hasAnyRole('ROLE_EMPRESA', 'ROLE_ADMIN')">
+        <sec:authorize access="hasAnyRole('ROLE_DEMANDANTE', 'ROLE_ADMIN')">
             <menu:category id="c_inscripcion" z="WGH6UGn8Xk1BCQvYxOLO3zhO32w=">
             <menu:item id="i_inscripcion_new" messageCode="global_menu_new" url="/inscripcions?form" z="c/fKPa6XZ8IWr+NnUZsDmwBVAoo="/>
             <menu:item id="i_inscripcion_list" messageCode="global_menu_list" url="/inscripcions?page=1&amp;size=${empty param.size ? 10 : param.size}" z="EtJRFL7zVP9IpwmuzMtP1k1M0P0="/>
