@@ -104,7 +104,7 @@ privileged aspect OfertaController_Roo_Controller {
     void OfertaController.populateEditForm(Model uiModel, Oferta oferta) {
         uiModel.addAttribute("oferta", oferta);
         addDateTimeFormatPatterns(uiModel);
-        uiModel.addAttribute("contratoes", Arrays.asList(Contrato.values()));
+        uiModel.addAttribute("contratoes", Contrato.findAllContratoes());
         uiModel.addAttribute("estadoes", Arrays.asList(Estado.values()));
         uiModel.addAttribute("inscripcions", Inscripcion.findAllInscripcions());
         uiModel.addAttribute("localizacions", Localizacion.findAllLocalizacions());

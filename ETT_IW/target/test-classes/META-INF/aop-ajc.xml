@@ -1,5 +1,53 @@
 <aspectj>
 <aspects>
+<aspect name="iw2016_ett.domain.FormacionDataOnDemand_Roo_Configurable"/>
+<aspect name="iw2016_ett.domain.UsersIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="iw2016_ett.domain.ContratoIntegrationTest_Roo_Configurable"/>
+<aspect name="iw2016_ett.domain.PuestoTrabajoIntegrationTest_Roo_Configurable"/>
+<aspect name="iw2016_ett.domain.LocalizacionDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="iw2016_ett.domain.InscripcionIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="iw2016_ett.domain.DemandanteIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="iw2016_ett.domain.ComunidadDataOnDemand_Roo_Configurable"/>
+<aspect name="iw2016_ett.domain.LocalizacionDataOnDemand_Roo_Configurable"/>
+<aspect name="iw2016_ett.domain.ExperienciaLaboralIntegrationTest_Roo_Configurable"/>
+<aspect name="iw2016_ett.domain.ComunidadDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="iw2016_ett.domain.FormacionIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="iw2016_ett.domain.EmpresaDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="iw2016_ett.domain.PuestoTrabajoDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="iw2016_ett.domain.EmpresaDataOnDemand_Roo_Configurable"/>
+<aspect name="iw2016_ett.domain.PuestoTrabajoIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="iw2016_ett.domain.OfertaIntegrationTest_Roo_Configurable"/>
+<aspect name="iw2016_ett.domain.UsersDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="iw2016_ett.domain.UsersIntegrationTest_Roo_Configurable"/>
+<aspect name="iw2016_ett.domain.PuestoTrabajoDataOnDemand_Roo_Configurable"/>
+<aspect name="iw2016_ett.domain.ExperienciaLaboralDataOnDemand_Roo_Configurable"/>
+<aspect name="iw2016_ett.domain.InscripcionDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="iw2016_ett.domain.ComunidadIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="iw2016_ett.domain.OfertaDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="iw2016_ett.domain.ContratoDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="iw2016_ett.domain.DemandanteDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="iw2016_ett.domain.ExperienciaLaboralDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="iw2016_ett.domain.EmpresaIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="iw2016_ett.domain.FormacionIntegrationTest_Roo_Configurable"/>
+<aspect name="iw2016_ett.domain.TitulacionesIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="iw2016_ett.domain.DemandanteIntegrationTest_Roo_Configurable"/>
+<aspect name="iw2016_ett.domain.LocalizacionIntegrationTest_Roo_Configurable"/>
+<aspect name="iw2016_ett.domain.DemandanteDataOnDemand_Roo_Configurable"/>
+<aspect name="iw2016_ett.domain.ContratoDataOnDemand_Roo_Configurable"/>
+<aspect name="iw2016_ett.domain.TitulacionesIntegrationTest_Roo_Configurable"/>
+<aspect name="iw2016_ett.domain.InscripcionDataOnDemand_Roo_Configurable"/>
+<aspect name="iw2016_ett.domain.TitulacionesDataOnDemand_Roo_Configurable"/>
+<aspect name="iw2016_ett.domain.EmpresaIntegrationTest_Roo_Configurable"/>
+<aspect name="iw2016_ett.domain.LocalizacionIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="iw2016_ett.domain.ComunidadIntegrationTest_Roo_Configurable"/>
+<aspect name="iw2016_ett.domain.OfertaDataOnDemand_Roo_Configurable"/>
+<aspect name="iw2016_ett.domain.OfertaIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="iw2016_ett.domain.InscripcionIntegrationTest_Roo_Configurable"/>
+<aspect name="iw2016_ett.domain.FormacionDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="iw2016_ett.domain.UsersDataOnDemand_Roo_Configurable"/>
+<aspect name="iw2016_ett.domain.ExperienciaLaboralIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="iw2016_ett.domain.TitulacionesDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="iw2016_ett.domain.ContratoIntegrationTest_Roo_IntegrationTest"/>
 </aspects>
 </aspectj>
 

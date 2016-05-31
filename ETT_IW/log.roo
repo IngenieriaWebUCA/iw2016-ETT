@@ -399,4 +399,73 @@ finder add --finderName findUsersesByUsernameLike
 // Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-31 16:04:17
 // [failed] test mock --entity iw2016_ett
 test mock --entity ~.domain.Comunidad
+<<<<<<< Updated upstream
 // Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-31 20:28:45
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-31 20:35:04
+// [failed] test integration --entity ~.domain.Comunidad
+// [failed] test integration --entity iw2016_ett
+// [failed] test integration --entity ~.domain.ComunidadTest
+// [failed] test integration --entity ~.web.menu.MenuLoader
+hint 
+hint test
+// [failed] test integration --entity ~.domain.Comunidad
+// [failed] test integration --entity ~.domain.ComunidadTest
+entity jpa --class ~.domain.Comunidad --testAutomatically 
+entity jpa --class ~.domain.Contrato
+// [failed] entity jpa --class ~.domain.Contrato --testAutomatically 
+// [failed] entity jpa --class ~.domain.Demandante --testAutomatically 
+test integration --entity ~.domain.Comunidad
+// [failed] test integration --entity ~.domain.ComunidadIntegrationTest
+test integration 
+test integration --entity ~.domain.Comunidad
+test integration --entity ~.domain.Contrato
+ test integration --entity ~.domain.Users
+
+test integration --entity ~.domain.Titulaciones
+
+// [failed] test integration --entity ~.domain.TipoFormacion
+
+// [failed] test integration --entity ~.domain.Sexo
+
+test integration --entity ~.domain.PuestoTrabajo
+
+// [failed] test integration --entity ~.domain.Perfil
+
+test integration --entity ~.domain.Oferta
+
+test integration --entity ~.domain.Localizacion
+
+test integration --entity ~.domain.Inscripcion
+
+test integration --entity ~.domain.Inscripcion
+
+test integration --entity ~.domain.Formacion
+
+test integration --entity ~.domain.ExperienciaLaboral
+
+// [failed] test integration --entity ~.domain.EstadoInsc
+
+// [failed] test integration --entity ~.domain.Estado
+
+test integration --entity ~.domain.Empresa
+
+test integration --entity ~.domain.Demandante
+
+test integration --entity ~.domain.Contrato
+
+test integration --entity ~.domain.Contrato
+
+test integration --entity ~.domain.Contrato
+
+test integration --entity ~.domain.Comunidad
+
+=======
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-31 20:28:45
+>>>>>>> origin/development
+=======
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-31 20:28:45
+>>>>>>> origin/development
+>>>>>>> Stashed changes
