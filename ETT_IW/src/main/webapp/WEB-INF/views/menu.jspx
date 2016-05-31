@@ -1,10 +1,103 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
 <div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" xmlns:sec="http://www.springframework.org/security/tags" id="menu" version="2.0">
-  <jsp:output omit-xml-declaration="yes"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="user-managed">
+        
 
-  <menu:menu id="_menu" z="user-managed">
-  
-	<menu:gvnixmenu/>
-  </menu:menu>
+
+		<sec:authorize access="hasAnyRole('ROLE_DEMANDANTE', 'ROLE_ADMIN')">
+			<menu:category id="c_formacion" z="IeUE1qUB60SvsVjUpyu3CKjAwcQ=">
+				<menu:item id="i_formacion_new" messageCode="global_menu_new"
+					url="/formacions?form" z="J5LIhWh+qugo3BonD7DqT+MNhdk=" />
+				<menu:item id="i_formacion_list" messageCode="global_menu_list"
+					url="/formacions?page=1&amp;size=${empty param.size ? 10 : param.size}"
+					z="HUwg6eWuyi/+bXE5Mnr+igrwIkc=" />
+			</menu:category>
+		</sec:authorize>
+
+
+		<sec:authorize access="hasAnyRole('ROLE_DEMANDANTE', 'ROLE_ADMIN')">
+        <menu:category id="c_titulaciones" z="QezE9KDE8z1/Cf8qoH7oMZL9Imw=">
+            <menu:item id="i_titulaciones_new" messageCode="global_menu_new" url="/titulacioneses?form" z="iWUr5eyJw+FntqLd1I1rQjQh4Sw="/>
+            <menu:item id="i_titulaciones_list" messageCode="global_menu_list" url="/titulacioneses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="v0HyixSyFciGHrNajorDw346gyU="/>
+        </menu:category>
+        </sec:authorize>
+
+        <sec:authorize access="hasAnyRole('ROLE_DEMANDANTE', 'ROLE_ADMIN')">
+         <menu:category id="c_experiencialaboral" z="/kYnujHesO7pz7ZhgACbsQWUGUY=">
+            <menu:item id="i_experiencialaboral_new" messageCode="global_menu_new" url="/experiencialaborals?form" z="VCGM1SfAGKp5guKBMmAUVldXXvQ="/>
+            <menu:item id="i_experiencialaboral_list" messageCode="global_menu_list" url="/experiencialaborals?page=1&amp;size=${empty param.size ? 10 : param.size}" z="KO3333t4C0fI0NpOor1wzfud1dw="/>
+        </menu:category>
+
+        </sec:authorize>
+
+        <sec:authorize access="hasAnyRole('ROLE_ADMIN')">
+        
+        <menu:category id="c_demandante" z="ap7hcwTTE7QpwHyV1OnSKrPHdQc=">
+            
+            <menu:item id="i_demandante_new" messageCode="global_menu_new" url="/demandantes?form" z="8+S2ulD0VSXmoyyhDfXJ+CNxgh8="/>
+            
+             <sec:authorize access="hasRole('ROLE_ADMIN')">
+            <menu:item id="i_demandante_list" messageCode="global_menu_list" url="/demandantes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="1MtvqFaAsZmIa4hZR8pApwIOdDY="/>
+             </sec:authorize>
+        </menu:category>
+        </sec:authorize>
+
+        <sec:authorize access="hasAnyRole('ROLE_EMPRESA', 'ROLE_ADMIN')">
+         <menu:category id="c_oferta" z="hAFpA26H1SoEOzHx9qIuh9xoiFY=">
+            <menu:item id="i_oferta_new" messageCode="global_menu_new" url="/ofertas?form" z="XL2la3mMU88KBAljrX+q6go8ogw="/>
+            <menu:item id="i_oferta_list" messageCode="global_menu_list" url="/ofertas?page=1&amp;size=${empty param.size ? 10 : param.size}" z="YFpuok8se1icruycVP1Ngny6x3c="/>
+            <menu:item id="fi_oferta_estado" messageCode="global_menu_find" url="/ofertas?find=ByEstado&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="zm1TgkQaCA7A5vmrF3bq/uOkkrA="/>
+            <menu:item id="fi_oferta_puestotrabajo" messageCode="global_menu_find" url="/ofertas?find=ByPuestotrabajo&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="ZNlcq9D77F7ElQfuj15xom4ej+I="/>
+        </menu:category>
+            </sec:authorize>
+
+
+        <sec:authorize access="hasAnyRole('ROLE_EMPRESA', 'ROLE_ADMIN')">
+            <menu:category id="c_inscripcion" z="WGH6UGn8Xk1BCQvYxOLO3zhO32w=">
+            <menu:item id="i_inscripcion_new" messageCode="global_menu_new" url="/inscripcions?form" z="c/fKPa6XZ8IWr+NnUZsDmwBVAoo="/>
+            <menu:item id="i_inscripcion_list" messageCode="global_menu_list" url="/inscripcions?page=1&amp;size=${empty param.size ? 10 : param.size}" z="EtJRFL7zVP9IpwmuzMtP1k1M0P0="/>
+        </menu:category>
+        </sec:authorize>
+
+
+        <sec:authorize access="hasRole('ROLE_EMPRESA')">
+        <menu:category id="c_localizacion" z="Xz23btBvQalu0fOfODfDsPk458k=">
+            <menu:item id="i_localizacion_new" messageCode="global_menu_new" url="/localizacions?form" z="zkpqXsv93tOCNQokTOLb8lKILmQ="/>
+            <menu:item id="i_localizacion_list" messageCode="global_menu_list" url="/localizacions?page=1&amp;size=${empty param.size ? 10 : param.size}" z="InM8yKFoMAdXifon78tQEBD/Y28="/>
+        </menu:category>
+        </sec:authorize>
+        <sec:authorize access="hasAnyRole('ROLE_GESTOR','ROLE_GESTOR', 'ROLE_ADMIN')" >
+        <menu:category id="c_empresa" z="Xy2UIEQBwGL74OghlgyDNqDXG44=">
+            <sec:authorize access="hasAnyRole('ROLE_GESTOR', 'ROLE_ADMIN')" >
+            <menu:item id="i_empresa_new" messageCode="global_menu_new" url="/empresas?form" z="TBXez8QM+aB2tzcjHN1lQJYrewc="/>
+            </sec:authorize>
+            <sec:authorize access="hasAnyRole('ROLE_EMPRESA', 'ROLE_ADMIN')" >
+            <menu:item id="i_empresa_list" messageCode="global_menu_list" url="/empresas?page=1&amp;size=${empty param.size ? 10 : param.size}" z="/YQYlSdehDz3lrOGSSpWZYe++Zk="/>
+             </sec:authorize>
+        </menu:category>
+         </sec:authorize>
+        
+
+        <menu:category id="c_oferta" z="hAFpA26H1SoEOzHx9qIuh9xoiFY=">
+            <sec:authorize access="hasAnyRole('ROLE_EMPRESA', 'ROLE_ADMIN')">
+            <menu:item id="i_oferta_new" messageCode="global_menu_new" url="/ofertas?form" z="XL2la3mMU88KBAljrX+q6go8ogw="/>
+            </sec:authorize>
+            <menu:item id="i_oferta_list" messageCode="global_menu_list" url="/ofertas?page=1&amp;size=${empty param.size ? 10 : param.size}" z="YFpuok8se1icruycVP1Ngny6x3c="/>
+            <menu:item id="fi_oferta_estado" messageCode="global_menu_find" url="/ofertas?find=ByEstado&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="zm1TgkQaCA7A5vmrF3bq/uOkkrA="/>
+            <menu:item id="fi_oferta_puestotrabajo" messageCode="global_menu_find" url="/ofertas?find=ByPuestotrabajo&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="ZNlcq9D77F7ElQfuj15xom4ej+I="/>
+        </menu:category>
+
+        
+
+        
+        <sec:authorize access="hasRole('ROLE_ADMIN')">
+
+        <menu:category id="c_users" z="Ysam8XVhG5uotPoUGGxkia1RE/s=">
+            <menu:item id="i_users_new" messageCode="global_menu_new" url="/userses?form" z="utrdLkYms6xk5f4IDxc9zrg5FWs="/>
+            <menu:item id="i_users_list" messageCode="global_menu_list" url="/userses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="tqSwojZmRduyx4xtHWcJzgbgtJk="/>
+        </menu:category>
+        </sec:authorize>
+    </menu:menu>
+   
 </div>

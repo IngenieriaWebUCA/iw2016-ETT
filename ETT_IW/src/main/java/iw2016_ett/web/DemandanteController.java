@@ -30,7 +30,7 @@ public class DemandanteController {
         if(Demandante.countFindUsersesByUsernameEquals(demandante.getUsername())>0)
         	return "demandantes/create";
         uiModel.asMap().clear();
-        demandante.setRol("ROLE_USER");
+        demandante.setRol("ROLE_DEMANDANTE");
         demandante.persist();
         return "redirect:/demandantes/" + encodeUrlPathSegment(demandante.getId().toString(), httpServletRequest);
     }
