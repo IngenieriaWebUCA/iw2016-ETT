@@ -11,9 +11,8 @@
         <!-- Configure these elements to secure URIs in your application -->
         <intercept-url pattern="/choices/.*" access="hasRole('ROLE_ADMIN')" />
         <intercept-url pattern="/member/.*" access="isAuthenticated()" />
-        <intercept-url pattern="\A/ofertas?find=ByPuestotrabajo.*\Z" access="permitAll" />
-        <intercept-url pattern="\A/ofertas?find=ByEstado.*\Z" access="permitAll" />
-        <intercept-url pattern="\A/ofertas.*\Z" access="hasAnyRole('ROLE_EMPRESA', 'ROLE_ADMIN')" />
+        <intercept-url pattern="\A/ofertas\?form.*\Z" access="hasAnyRole('ROLE_EMPRESA', 'ROLE_ADMIN')" />
+        <intercept-url pattern="\A/ofertas.*\Z" access="permitAll" />
         <intercept-url pattern="\A/demandantes\?form.*\Z" access="permitAll" />
         <intercept-url pattern="\A/demandantes.*\Z" access="hasRole('ROLE_ADMIN')" />
         <intercept-url pattern="\A/empresas\?form.*\Z" access="hasAnyRole('ROLE_GESTOR', 'ROLE_ADMIN')" />
