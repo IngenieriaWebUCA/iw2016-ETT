@@ -423,3 +423,11 @@ focus --class ~.domain.Demandante
 finder add --finderName findDemandantesByExperiencia
 finder list
 finder add --finderName findDemandantesByFormacion
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-06-01 20:36:27
+// [failed] menu setup
+menu setup
+menu setup
+menu setup
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-06-01 20:47:32
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-06-01 20:48:08
+menu setup

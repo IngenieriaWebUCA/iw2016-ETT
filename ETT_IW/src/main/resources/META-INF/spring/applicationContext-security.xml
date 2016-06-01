@@ -11,18 +11,18 @@
         <!-- Configure these elements to secure URIs in your application -->
         <intercept-url pattern="/choices/.*" access="hasRole('ROLE_ADMIN')" />
         <intercept-url pattern="/member/.*" access="isAuthenticated()" />
-        <intercept-url pattern="\A/ofertas\?form.*\Z" access="hasAnyRole('ROLE_EMPRESA', 'ROLE_ADMIN')" />
+        <intercept-url pattern="\A/ofertas\?form.*\Z" access="hasAnyRole('ROLE_EMPRESA', 'ROLE_ADMIN','ROLE_GESTOR')" />
         <intercept-url pattern="\A/ofertas.*\Z" access="permitAll" />
-        <intercept-url pattern="\A/demandantes\?page=\d*.*\Z" access="hasRole('ROLE_ADMIN')" />
+        <intercept-url pattern="\A/demandantes\?page=\d*.*\Z" access="hasAnyRole('ROLE_EMPRESA', 'ROLE_ADMIN','ROLE_GESTOR')" />
         <intercept-url pattern="\A/demandantes\?form.*\Z" access="permitAll" />
         <intercept-url pattern="\A/empresas\?form.*\Z" access="hasAnyRole('ROLE_GESTOR', 'ROLE_ADMIN')" />
         <intercept-url pattern="\A/empresas.*\Z" access="permitAll" />
         <intercept-url pattern="\A/users.*\Z" access="hasRole('ROLE_ADMIN')" />
         <intercept-url pattern="\A/formacions\?form.*\Z" access="hasAnyRole('ROLE_DEMANDANTE', 'ROLE_ADMIN')" />
-        <intercept-url pattern="\A/formacions.*\Z" access="hasAnyRole('ROLE_EMPRESA', 'ROLE_ADMIN')" />
-        <intercept-url pattern="\A/titulacions.*\Z" access="hasAnyRole('ROLE_EMPRESA', 'ROLE_ADMIN')" />
+        <intercept-url pattern="\A/formacions.*\Z" access="hasAnyRole('ROLE_EMPRESA', 'ROLE_ADMIN','ROLE_GESTOR')" />
+        <intercept-url pattern="\A/titulacions.*\Z" access="hasAnyRole('ROLE_EMPRESA', 'ROLE_ADMIN','ROLE_GESTOR')" />
         <intercept-url pattern="\A/experiencialaborals.*\Z" access="hasAnyRole('ROLE_DEMANDANTE', 'ROLE_ADMIN')" />
-        <intercept-url pattern="\A/inscripcions.*\Z" access="hasAnyRole('ROLE_EMPRESA','ROLE_DEMANDANTE', 'ROLE_ADMIN')" />
+        <intercept-url pattern="\A/inscripcions.*\Z" access="hasAnyRole('ROLE_EMPRESA','ROLE_DEMANDANTE', 'ROLE_ADMIN','ROLE_GESTOR')" />
         <intercept-url pattern="/resources/.*" access="permitAll" />
         <intercept-url pattern="\A/login.*\Z" access="permitAll" />
         <intercept-url pattern="/.*\Z" access="permitAll" />

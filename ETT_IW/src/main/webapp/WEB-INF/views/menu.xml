@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <gvnix-menu id="_menu" rooMenuBasePath="/">
-<menu-item id="c_demandante" labelCode="menu_category_demandante_label" name="Demandante">
-        <menu-item hidden="false" id="i_demandante_new" labelCode="menu_item_demandante_new_label" messageCode="global_menu_new" roles="" url="/demandantes?form"/>
-    <menu-item hidden="false" id="i_demandante_list" labelCode="menu_item_demandante_list_label" messageCode="global_menu_list" roles="" url="/demandantes?page=1&amp;size=${empty param.size ? 10 : param.size}"/>
-    </menu-item>
-<menu-item id="c_experiencialaboral" labelCode="menu_category_experiencialaboral_label" name="ExperienciaLaboral">
-        <menu-item hidden="false" id="i_experiencialaboral_new" labelCode="menu_item_experiencialaboral_new_label" messageCode="global_menu_new" roles="" url="/experiencialaborals?form"/>
-    <menu-item hidden="false" id="i_experiencialaboral_list" labelCode="menu_item_experiencialaboral_list_label" messageCode="global_menu_list" roles="" url="/experiencialaborals?page=1&amp;size=${empty param.size ? 10 : param.size}"/>
-    </menu-item>
-<menu-item id="c_users" labelCode="menu_category_users_label" name="Users">
-        <menu-item hidden="false" id="i_users_new" labelCode="menu_item_users_new_label" messageCode="global_menu_new" roles="" url="/userses?form"/>
-    <menu-item hidden="false" id="i_users_list" labelCode="menu_item_users_list_label" messageCode="global_menu_list" roles="" url="/userses?page=1&amp;size=${empty param.size ? 10 : param.size}"/>
-    </menu-item>
-<menu-item id="c_puestotrabajo" labelCode="menu_category_puestotrabajo_label" name="PuestoTrabajo">
+<menu-item id="c_puestotrabajo" labelCode="menu_category_puestotrabajo_label" name="Puestotrabajo">
         <menu-item hidden="false" id="i_puestotrabajo_new" labelCode="menu_item_puestotrabajo_new_label" messageCode="global_menu_new" roles="" url="/puestotrabajoes?form"/>
     <menu-item hidden="false" id="i_puestotrabajo_list" labelCode="menu_item_puestotrabajo_list_label" messageCode="global_menu_list" roles="" url="/puestotrabajoes?page=1&amp;size=${empty param.size ? 10 : param.size}"/>
-    </menu-item>
-<menu-item id="c_localizacion" labelCode="menu_category_localizacion_label" name="Localizacion">
-        <menu-item hidden="false" id="i_localizacion_new" labelCode="menu_item_localizacion_new_label" messageCode="global_menu_new" roles="" url="/localizacions?form"/>
-    <menu-item hidden="false" id="i_localizacion_list" labelCode="menu_item_localizacion_list_label" messageCode="global_menu_list" roles="" url="/localizacions?page=1&amp;size=${empty param.size ? 10 : param.size}"/>
-    </menu-item>
-<menu-item id="c_inscripcion" labelCode="menu_category_inscripcion_label" name="Inscripcion">
-        <menu-item hidden="false" id="i_inscripcion_new" labelCode="menu_item_inscripcion_new_label" messageCode="global_menu_new" roles="" url="/inscripcions?form"/>
-    <menu-item hidden="false" id="i_inscripcion_list" labelCode="menu_item_inscripcion_list_label" messageCode="global_menu_list" roles="" url="/inscripcions?page=1&amp;size=${empty param.size ? 10 : param.size}"/>
-    </menu-item>
-<menu-item id="c_titulaciones" labelCode="menu_category_titulaciones_label" name="Titulaciones">
-        <menu-item hidden="false" id="i_titulaciones_new" labelCode="menu_item_titulaciones_new_label" messageCode="global_menu_new" roles="" url="/titulacioneses?form"/>
-    <menu-item hidden="false" id="i_titulaciones_list" labelCode="menu_item_titulaciones_list_label" messageCode="global_menu_list" roles="" url="/titulacioneses?page=1&amp;size=${empty param.size ? 10 : param.size}"/>
-    </menu-item>
-<menu-item id="c_empresa" labelCode="menu_category_empresa_label" name="Empresa">
-        <menu-item hidden="false" id="i_empresa_new" labelCode="menu_item_empresa_new_label" messageCode="global_menu_new" roles="" url="/empresas?form"/>
-    <menu-item hidden="false" id="i_empresa_list" labelCode="menu_item_empresa_list_label" messageCode="global_menu_list" roles="" url="/empresas?page=1&amp;size=${empty param.size ? 10 : param.size}"/>
     </menu-item>
 <menu-item id="c_formacion" labelCode="menu_category_formacion_label" name="Formacion">
         <menu-item hidden="false" id="i_formacion_new" labelCode="menu_item_formacion_new_label" messageCode="global_menu_new" roles="" url="/formacions?form"/>
     <menu-item hidden="false" id="i_formacion_list" labelCode="menu_item_formacion_list_label" messageCode="global_menu_list" roles="" url="/formacions?page=1&amp;size=${empty param.size ? 10 : param.size}"/>
     </menu-item>
+<menu-item id="c_demandante" labelCode="menu_category_demandante_label" name="Demandante">
+        <menu-item hidden="false" id="i_demandante_new" labelCode="menu_item_demandante_new_label" messageCode="global_menu_new" roles="" url="/demandantes?form"/>
+    <menu-item hidden="false" id="i_demandante_list" labelCode="menu_item_demandante_list_label" messageCode="global_menu_list" roles="" url="/demandantes?page=1&amp;size=${empty param.size ? 10 : param.size}"/>
+    </menu-item>
+<menu-item id="c_titulaciones" labelCode="menu_category_titulaciones_label" name="Titulaciones">
+        <menu-item hidden="false" id="i_titulaciones_new" labelCode="menu_item_titulaciones_new_label" messageCode="global_menu_new" roles="" url="/titulacioneses?form"/>
+    <menu-item hidden="false" id="i_titulaciones_list" labelCode="menu_item_titulaciones_list_label" messageCode="global_menu_list" roles="" url="/titulacioneses?page=1&amp;size=${empty param.size ? 10 : param.size}"/>
+    </menu-item>
+<menu-item id="c_localizacion" labelCode="menu_category_localizacion_label" name="Localizacion">
+        <menu-item hidden="false" id="i_localizacion_new" labelCode="menu_item_localizacion_new_label" messageCode="global_menu_new" roles="" url="/localizacions?form"/>
+    <menu-item hidden="false" id="i_localizacion_list" labelCode="menu_item_localizacion_list_label" messageCode="global_menu_list" roles="" url="/localizacions?page=1&amp;size=${empty param.size ? 10 : param.size}"/>
+    </menu-item>
+<menu-item id="c_empresa" labelCode="menu_category_empresa_label" name="Empresa">
+        <menu-item hidden="false" id="i_empresa_new" labelCode="menu_item_empresa_new_label" messageCode="global_menu_new" roles="" url="/empresas?form"/>
+    <menu-item hidden="false" id="i_empresa_list" labelCode="menu_item_empresa_list_label" messageCode="global_menu_list" roles="" url="/empresas?page=1&amp;size=${empty param.size ? 10 : param.size}"/>
+    </menu-item>
+<menu-item id="c_experiencialaboral" labelCode="menu_category_experiencialaboral_label" name="Experiencialaboral">
+        <menu-item hidden="false" id="i_experiencialaboral_new" labelCode="menu_item_experiencialaboral_new_label" messageCode="global_menu_new" roles="" url="/experiencialaborals?form"/>
+    <menu-item hidden="false" id="i_experiencialaboral_list" labelCode="menu_item_experiencialaboral_list_label" messageCode="global_menu_list" roles="" url="/experiencialaborals?page=1&amp;size=${empty param.size ? 10 : param.size}"/>
+    </menu-item>
+<menu-item id="c_inscripcion" labelCode="menu_category_inscripcion_label" name="Inscripcion">
+        <menu-item hidden="false" id="i_inscripcion_new" labelCode="menu_item_inscripcion_new_label" messageCode="global_menu_new" roles="" url="/inscripcions?form"/>
+    <menu-item hidden="false" id="i_inscripcion_list" labelCode="menu_item_inscripcion_list_label" messageCode="global_menu_list" roles="" url="/inscripcions?page=1&amp;size=${empty param.size ? 10 : param.size}"/>
+    </menu-item>
 <menu-item id="c_oferta" labelCode="menu_category_oferta_label" name="Oferta">
         <menu-item hidden="false" id="i_oferta_new" labelCode="menu_item_oferta_new_label" messageCode="global_menu_new" roles="" url="/ofertas?form"/>
     <menu-item hidden="false" id="i_oferta_list" labelCode="menu_item_oferta_list_label" messageCode="global_menu_list" roles="" url="/ofertas?page=1&amp;size=${empty param.size ? 10 : param.size}"/>
     <menu-item hidden="false" id="fi_oferta_estado" labelCode="menu_item_oferta_estado_label" messageCode="global_menu_find" roles="" url="/ofertas?find=ByEstado&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}"/>
-    <menu-item hidden="false" id="fi_oferta_puestotrabajo" labelCode="menu_item_oferta_puestotrabajo_label" messageCode="global_menu_find" roles="" url="/ofertas?find=ByPuestotrabajo&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}"/>
     <menu-item hidden="false" id="fi_oferta_localizacion" labelCode="menu_item_oferta_localizacion_label" messageCode="global_menu_find" roles="" url="/ofertas?find=ByLocalizacion&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}"/>
+    <menu-item hidden="false" id="fi_oferta_puestotrabajo" labelCode="menu_item_oferta_puestotrabajo_label" messageCode="global_menu_find" roles="" url="/ofertas?find=ByPuestotrabajo&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}"/>
     <menu-item hidden="false" id="fi_oferta_titulaciones" labelCode="menu_item_oferta_titulaciones_label" messageCode="global_menu_find" roles="" url="/ofertas?find=ByTitulaciones&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}"/>
+    </menu-item>
+<menu-item id="c_users" labelCode="menu_category_users_label" name="Users">
+        <menu-item hidden="false" id="i_users_new" labelCode="menu_item_users_new_label" messageCode="global_menu_new" roles="" url="/userses?form"/>
+    <menu-item hidden="false" id="i_users_list" labelCode="menu_item_users_list_label" messageCode="global_menu_list" roles="" url="/userses?page=1&amp;size=${empty param.size ? 10 : param.size}"/>
     </menu-item>
 </gvnix-menu>
