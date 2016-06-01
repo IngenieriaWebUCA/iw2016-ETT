@@ -13,4 +13,13 @@
 <definition extends="default" name="demandantes/update">
         <put-attribute name="body" value="/WEB-INF/views/demandantes/update.jspx"/>
     </definition>
+<definition extends="default" name="demandantes/findDemandantesByExperiencia">
+        <put-attribute name="body" value="/WEB-INF/views/demandantes/findDemandantesByExperiencia.jspx"/>
+    </definition>
+<definition extends="default" name="demandantes/findDemandantesByFormacion">
+        <put-attribute name="body" value="/WEB-INF/views/demandantes/findDemandantesByFormacion.jspx"/>
+    </definition>
+<definition extends="default" name="demandantes/findDemandantesByPuestosInteresa">
+        <put-attribute name="body" value="/WEB-INF/views/demandantes/findDemandantesByPuestosInteresa.jspx"/>
+    </definition>
 </tiles-definitions>
