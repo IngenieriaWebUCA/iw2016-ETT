@@ -3,6 +3,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_iw2016_ett_domain_Demandante" modelAttribute="demandante" path="/demandantes" versionField="Version" z="kIDkNxHSKTVTKgzGzpkKRHSBOos=">
+        <field:input field="nombre" id="c_iw2016_ett_domain_Demandante_nombre" z="3fZb2ZEDw5JyxRntrtLB6qjJqYQ="/>
         <field:input field="Apellidos" id="c_iw2016_ett_domain_Demandante_Apellidos" z="Pvw5v8Ll6MOLzMme9niFuUQvRwM="/>
         <field:datetime dateTimePattern="${demandante_fechanacimiento_date_format}" field="FechaNacimiento" id="c_iw2016_ett_domain_Demandante_FechaNacimiento" z="OVnCnqvDuDydWpsX2x9q8WwHYHE="/>
         <field:input field="direccion" id="c_iw2016_ett_domain_Demandante_direccion" z="Gr/8FRGOjeu7JqebbwgqH8NZQ38="/>
@@ -15,7 +16,6 @@
         <field:simple field="experiencia" id="c_iw2016_ett_domain_Demandante_experiencia" messageCode="entity_reference_not_managed" messageCodeAttribute="Experiencia Laboral" z="S/DpKt9uJuItdzINK8sG57YEQEE="/>
         <field:simple field="formacion" id="c_iw2016_ett_domain_Demandante_formacion" messageCode="entity_reference_not_managed" messageCodeAttribute="Formacion" z="6ZptwqIt2eLC/0FTMVqLETo+86I="/>
         <field:simple field="puestosInteresa" id="c_iw2016_ett_domain_Demandante_puestosInteresa" messageCode="entity_reference_not_managed" messageCodeAttribute="Puesto Trabajo" z="hh3NTaTNepsOjVGRxrXbcagxqh4="/>
-        <field:input field="nombre" id="c_iw2016_ett_domain_Demandante_nombre" z="3fZb2ZEDw5JyxRntrtLB6qjJqYQ="/>
         <field:input field="username" id="c_iw2016_ett_domain_Demandante_username" required="true" z="1vdsNL/0WD7Z1szlmUqz5wSZgVM="/>
         <field:input field="password" id="c_iw2016_ett_domain_Demandante_password" required="true" type="password" z="user-managed"/>
         <field:input field="enable" id="c_iw2016_ett_domain_Demandante_enable" render="false" z="user-managed"/>
