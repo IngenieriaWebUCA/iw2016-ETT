@@ -68,21 +68,24 @@
         <property name="persistenceUnitName" value="persistenceUnit"/>
         <property name="dataSource" ref="dataSource"/>
     </bean>
-    
-    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
-		<property name="host" value="smtp.gmail.com" />
-		<property name="port" value="587" />
-		<property name="username" value="juangarpe94@gmail.com" />
-		<property name="password" value="albero01" />
- 
-		<!-- The name of the property, following JavaBean naming conventions -->
-		<property name="javaMailProperties">
-			<props>
-				<prop key="mail.transport.protocol">smtp</prop>
-				<prop key="mail.smtp.auth">true</prop>
-				<prop key="mail.smtp.starttls.enable">true</prop>
-				<prop key="mail.debug">true</prop>
-			</props>
-		</property>
-	</bean>
+    <bean class="org.springframework.mail.javamail.JavaMailSenderImpl" id="mailSender">
+        <property name="host" value="${email.host}"/>
+        <property name="protocol" value="${email.protocol}"/>
+        <property name="port" value="${email.port}"/>
+        <property name="username" value="${email.username}"/>
+        <property name="password" value="${email.password}"/>
+        
+        <property name="javaMailProperties">
+	    <props>
+	        <prop key="mail.smtp.auth">true</prop>
+	        <prop key="mail.smtp.starttls.enable">true</prop>
+	    </props>
+	</property>
+    </bean>
+    <bean class="org.springframework.mail.SimpleMailMessage" id="templateMessage">
+        <property name="from" value="${email.from}"/>
+        <property name="subject" value="${email.subject}"/>
+    </bean>
+	 
+	
 </beans>
