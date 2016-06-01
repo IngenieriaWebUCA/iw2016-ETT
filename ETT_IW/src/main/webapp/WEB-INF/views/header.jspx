@@ -7,6 +7,7 @@
       <spring:url var="login" value="/login" />
       <spring:url var="perfil" value="/demandantes/${id}" />
       <spring:url var="perfil" value="/empresas/${id}" />
+      <spring:url var="cerrarsesion" value="/resources/j_spring_security_logout" />
       <spring:url var="registrar" value="/demandantes?form" />
       <spring:message code="button_home" var="home_label" htmlEscape="false" />
 
@@ -26,6 +27,9 @@
 				title="${fn:escapeXml(home_label)}">${fn:escapeXml(project_name)}</a>-->
 		<sec:authorize access="hasRole('ROLE_ANONYMOUS')">
         <a class="navbar-brand nav navbar-right" href="${login}">Login</a>
+        </sec:authorize>
+        <sec:authorize access="hasAnyRole('ROLE_ADMIN', 'ROLE_DEMANDANTE', 'ROLE_EMPRESA', 'ROLE_GESTOR')">
+        <a class="navbar-brand nav navbar-right" href="${cerrarsesion}">Cerrar Sesión</a>
         </sec:authorize>
         <sec:authorize access="hasRole('ROLE_ANONYMOUS')">
         <a class="navbar-brand nav navbar-right" href="${registrar}">Registrarse</a>
