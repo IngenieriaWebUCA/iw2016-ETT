@@ -6,6 +6,7 @@
       <spring:url var="home" value="/" />
       <spring:url var="login" value="/login" />
       <spring:url var="perfil" value="/demandantes/${id}" />
+      <spring:url var="perfil" value="/empresas/${id}" />
       <spring:url var="registrar" value="/demandantes?form" />
       <spring:message code="button_home" var="home_label" htmlEscape="false" />
 
@@ -23,11 +24,16 @@
 				<a class="navbar-brand nav navbar-right" href="${home}"
 				name="${fn:escapeXml(home_label)}"
 				title="${fn:escapeXml(home_label)}">${fn:escapeXml(project_name)}</a>-->
-				<a class="navbar-brand nav navbar-right" href="${login}">Login</a>
+		<sec:authorize access="hasRole('ROLE_ANONYMOUS')">
+        <a class="navbar-brand nav navbar-right" href="${login}">Login</a>
+        </sec:authorize>
         <sec:authorize access="hasRole('ROLE_ANONYMOUS')">
         <a class="navbar-brand nav navbar-right" href="${registrar}">Registrarse</a>
         </sec:authorize>
         <sec:authorize access="hasRole('ROLE_DEMANDANTE')">
+        <a class="navbar-brand nav navbar-right" href="${perfil}">Perfil</a>
+        </sec:authorize>
+        <sec:authorize access="hasRole('ROLE_EMPRESA')">
         <a class="navbar-brand nav navbar-right" href="${perfil}">Perfil</a>
         </sec:authorize>
 			</div>
