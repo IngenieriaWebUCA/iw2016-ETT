@@ -5,7 +5,7 @@
       <spring:url var="logo" value="/resources/images/logo.png" />
       <spring:url var="home" value="/" />
       <spring:url var="login" value="/login" />
-      <spring:url var="perfil" value="/demandantes/${id}?form" />
+      <spring:url var="perfil" value="/demandantes/${id}" />
       <spring:url var="registrar" value="/demandantes?form" />
       <spring:message code="button_home" var="home_label" htmlEscape="false" />
 
