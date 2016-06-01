@@ -19,4 +19,10 @@
 <definition extends="default" name="ofertas/findOfertasByPuestotrabajo">
         <put-attribute name="body" value="/WEB-INF/views/ofertas/findOfertasByPuestotrabajo.jspx"/>
     </definition>
+<definition extends="default" name="ofertas/findOfertasByLocalizacion">
+        <put-attribute name="body" value="/WEB-INF/views/ofertas/findOfertasByLocalizacion.jspx"/>
+    </definition>
+<definition extends="default" name="ofertas/findOfertasByTitulaciones">
+        <put-attribute name="body" value="/WEB-INF/views/ofertas/findOfertasByTitulaciones.jspx"/>
+    </definition>
 </tiles-definitions>

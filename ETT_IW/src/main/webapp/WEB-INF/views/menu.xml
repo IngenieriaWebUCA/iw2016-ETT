@@ -41,5 +41,7 @@
     <menu-item hidden="false" id="i_oferta_list" labelCode="menu_item_oferta_list_label" messageCode="global_menu_list" roles="" url="/ofertas?page=1&amp;size=${empty param.size ? 10 : param.size}"/>
     <menu-item hidden="false" id="fi_oferta_estado" labelCode="menu_item_oferta_estado_label" messageCode="global_menu_find" roles="" url="/ofertas?find=ByEstado&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}"/>
     <menu-item hidden="false" id="fi_oferta_puestotrabajo" labelCode="menu_item_oferta_puestotrabajo_label" messageCode="global_menu_find" roles="" url="/ofertas?find=ByPuestotrabajo&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}"/>
+    <menu-item hidden="false" id="fi_oferta_localizacion" labelCode="menu_item_oferta_localizacion_label" messageCode="global_menu_find" roles="" url="/ofertas?find=ByLocalizacion&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}"/>
+    <menu-item hidden="false" id="fi_oferta_titulaciones" labelCode="menu_item_oferta_titulaciones_label" messageCode="global_menu_find" roles="" url="/ofertas?find=ByTitulaciones&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}"/>
     </menu-item>
 </gvnix-menu>

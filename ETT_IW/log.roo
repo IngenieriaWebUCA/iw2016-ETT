@@ -403,3 +403,23 @@ test mock --entity ~.domain.Comunidad
 // Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-06-01 00:42:27
 // Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-06-01 00:46:58
 // Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-06-01 16:00:43
+// [failed] focus --class demandante
+focus --class ~.domain.Demandante
+finder list 
+focus --class ~.domain.Oferta
+finder list
+finder add --finderName findOfertasByLocalizacion 
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-06-01 19:54:32
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-06-01 19:59:25
+focus --class ~.domain.Oferta
+finder list
+finder add --finderName findOfertasByTitulaciones
+focus --class ~.domain.Demandante
+finder list
+finder add --finderName findDemandantesByPuestosInteresa
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-06-01 20:09:23
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-06-01 20:12:10
+focus --class ~.domain.Demandante
+finder add --finderName findDemandantesByExperiencia
+finder list
+finder add --finderName findDemandantesByFormacion

@@ -14,8 +14,8 @@ import javax.persistence.OneToMany;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord
-public class Demandante extends Users{
+@RooJpaActiveRecord(finders = { "findDemandantesByPuestosInteresa", "findDemandantesByExperiencia", "findDemandantesByFormacion" })
+public class Demandante extends Users {
 
     /**
      */
