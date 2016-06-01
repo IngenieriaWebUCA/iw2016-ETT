@@ -6,6 +6,7 @@
 	version="2.0">
     <jsp:output omit-xml-declaration="yes"/>
     <menu:menu id="_menu" z="user-managed">
+        
         <sec:authorize access="hasAnyRole('ROLE_EMPRESA','ROLE_ANONYMOUS', 'ROLE_ADMIN','ROLE_GESTOR')">
         <menu:category id="c_oferta" z="hAFpA26H1SoEOzHx9qIuh9xoiFY=">
             <sec:authorize access="hasAnyRole('ROLE_EMPRESA', 'ROLE_ADMIN','ROLE_GESTOR')">
@@ -27,9 +28,7 @@
 					z="HUwg6eWuyi/+bXE5Mnr+igrwIkc=" />
 			</menu:category>
 		</sec:authorize>
-
-
-		<sec:authorize access="hasAnyRole('ROLE_DEMANDANTE', 'ROLE_ADMIN')">
+        <sec:authorize access="hasAnyRole('ROLE_DEMANDANTE', 'ROLE_ADMIN')">
 			<menu:category id="c_titulaciones" z="QezE9KDE8z1/Cf8qoH7oMZL9Imw=">
 				<menu:item id="i_titulaciones_new" messageCode="global_menu_new"
 					url="/titulacioneses?form" z="iWUr5eyJw+FntqLd1I1rQjQh4Sw=" />
@@ -38,8 +37,7 @@
 					z="v0HyixSyFciGHrNajorDw346gyU=" />
 			</menu:category>
 		</sec:authorize>
-
-		<sec:authorize access="hasAnyRole('ROLE_DEMANDANTE', 'ROLE_ADMIN')">
+        <sec:authorize access="hasAnyRole('ROLE_DEMANDANTE', 'ROLE_ADMIN')">
 			<menu:category id="c_experiencialaboral"
 				z="/kYnujHesO7pz7ZhgACbsQWUGUY=">
 				<menu:item id="i_experiencialaboral_new"
@@ -63,9 +61,11 @@
 					<menu:item id="i_demandante_list" messageCode="global_menu_list"
 						url="/demandantes?page=1&amp;size=${empty param.size ? 10 : param.size}"
 						z="1MtvqFaAsZmIa4hZR8pApwIOdDY=" />
-				</sec:authorize>
-			</menu:category>
-		</sec:authorize>
+				</sec:authorize><menu:item id="fi_demandante_experiencia" messageCode="global_menu_find" url="/demandantes?find=ByExperiencia&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="GuN1HRDItbCjjoWEhI78S+DEwNg="/>
+            <menu:item id="fi_demandante_formacion" messageCode="global_menu_find" url="/demandantes?find=ByFormacion&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="XVvzmkX61XZZ35q0YacbBWbxMvk="/>
+            <menu:item id="fi_demandante_puestosinteresa" messageCode="global_menu_find" url="/demandantes?find=ByPuestosInteresa&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="jISKbqc2bdJ7935CP6uVL5pWofA="/>
+        </menu:category>
+       </sec:authorize>
        
         <sec:authorize access="hasAnyRole('ROLE_EMPRESA','ROLE_GESTOR')">
 			<menu:category id="c_localizacion" z="Xz23btBvQalu0fOfODfDsPk458k=">
@@ -109,6 +109,6 @@
 					z="tqSwojZmRduyx4xtHWcJzgbgtJk=" />
 			</menu:category>
 		</sec:authorize>
-        
+		
     </menu:menu>
 </div>
