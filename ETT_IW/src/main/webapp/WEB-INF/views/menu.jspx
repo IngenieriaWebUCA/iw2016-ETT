@@ -7,7 +7,7 @@
     <jsp:output omit-xml-declaration="yes"/>
     <menu:menu id="_menu" z="user-managed">
         
-        <sec:authorize access="hasAnyRole('ROLE_EMPRESA','ROLE_ANONYMOUS', 'ROLE_ADMIN','ROLE_GESTOR')">
+        <sec:authorize access="hasAnyRole('ROLE_EMPRESA',,'ROLE_DEMANDANTE','ROLE_ANONYMOUS', 'ROLE_ADMIN','ROLE_GESTOR')">
         <menu:category id="c_oferta" z="hAFpA26H1SoEOzHx9qIuh9xoiFY=">
             <sec:authorize access="hasAnyRole('ROLE_EMPRESA', 'ROLE_ADMIN','ROLE_GESTOR')">
             <menu:item id="i_oferta_new" messageCode="global_menu_new" url="/ofertas?form" z="XL2la3mMU88KBAljrX+q6go8ogw="/>
