@@ -8,10 +8,10 @@
         <put-attribute name="body" value="/WEB-INF/views/demandantes/show.jspx"/>
     </definition>
 <definition extends="default" name="demandantes/create">
-        <put-attribute name="body" value="/WEB-INF/views/demandantes/create.jspx"/>
+        <put-attribute name="body" value="/WEB-INF/views/demandantes/create.jspx" role="ROLE_ADMIN"/>
     </definition>
 <definition extends="default" name="demandantes/update">
-        <put-attribute name="body" value="/WEB-INF/views/demandantes/update.jspx"/>
+        <put-attribute name="body" value="/WEB-INF/views/demandantes/update.jspx" role="ROLE_ADMIN"/>
     </definition>
 <definition extends="default" name="demandantes/findDemandantesByExperiencia">
         <put-attribute name="body" value="/WEB-INF/views/demandantes/findDemandantesByExperiencia.jspx"/>

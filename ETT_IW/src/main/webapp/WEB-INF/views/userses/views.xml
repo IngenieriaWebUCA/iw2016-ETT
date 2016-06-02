@@ -8,10 +8,10 @@
         <put-attribute name="body" value="/WEB-INF/views/userses/show.jspx"/>
     </definition>
 <definition extends="default" name="userses/create">
-        <put-attribute name="body" value="/WEB-INF/views/userses/create.jspx"/>
+        <put-attribute name="body" value="/WEB-INF/views/userses/create.jspx" role="ROLE_ADMIN"/>
     </definition>
 <definition extends="default" name="userses/update">
-        <put-attribute name="body" value="/WEB-INF/views/userses/update.jspx"/>
+        <put-attribute name="body" value="/WEB-INF/views/userses/update.jspx" role="ROLE_ADMIN"/>
     </definition>
 <definition extends="default" name="userses/findUsersesByUsernameEquals">
         <put-attribute name="body" value="/WEB-INF/views/userses/findUsersesByUsernameEquals.jspx"/>

@@ -5,12 +5,12 @@
         <put-attribute name="body" value="/WEB-INF/views/inscripcions/list.jspx"/>
     </definition>
 <definition extends="default" name="inscripcions/show">
-        <put-attribute name="body" value="/WEB-INF/views/inscripcions/show.jspx"/>
+        <put-attribute name="body" value="/WEB-INF/views/inscripcions/show.jspx" />
     </definition>
 <definition extends="default" name="inscripcions/create">
-        <put-attribute name="body" value="/WEB-INF/views/inscripcions/create.jspx"/>
+        <put-attribute name="body" value="/WEB-INF/views/inscripcions/create.jspx" role="ROLE_ADMIN"/>
     </definition>
 <definition extends="default" name="inscripcions/update">
-        <put-attribute name="body" value="/WEB-INF/views/inscripcions/update.jspx"/>
+        <put-attribute name="body" value="/WEB-INF/views/inscripcions/update.jspx" role="ROLE_ADMIN"/>
     </definition>
 </tiles-definitions>

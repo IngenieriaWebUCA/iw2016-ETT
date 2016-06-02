@@ -8,8 +8,8 @@
             <table:column id="c_iw2016_ett_domain_Empresa_nombre" property="nombre" z="LkJ4T6Hapb72/5/72nSwt0PTl3M="/>
             <table:column id="c_iw2016_ett_domain_Empresa_username" property="username" z="FjDV889ojx63A/+caPhJSUWyl8Q="/>
             <table:column id="c_iw2016_ett_domain_Empresa_password" property="password" render="false" z="user-managed"/>
-            <table:column id="c_iw2016_ett_domain_Empresa_enable" property="enable" z="yPN+f/Mgxa0FREYCGCi50D2k9/0="/>
-            <table:column id="c_iw2016_ett_domain_Empresa_rol" property="rol" z="gs2gTAWcB8q4nUe6DstNgE1j+Vs="/>
+            <table:column id="c_iw2016_ett_domain_Empresa_enable" property="enable" render="false" z="user-managed"/>
+            <table:column id="c_iw2016_ett_domain_Empresa_rol" property="rol" render="false" z="user-managed"/>
         </table:table>
     </page:list>
 </div>
