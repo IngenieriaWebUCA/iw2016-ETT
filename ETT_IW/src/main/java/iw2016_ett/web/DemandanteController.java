@@ -43,14 +43,14 @@ public class DemandanteController {
  
 		// @Service("crunchifyEmail") <-- same annotation you specified in CrunchifyEmailAPI.java
 		NotificationServiceImpl mail = (NotificationServiceImpl) context.getBean("crunchifyEmail");
-		String toAddr = "juangarpe94@gmail.com";
+		String toAddr = demandante.getEmail();
 		String fromAddr = "ett.iw2016@gmail.com";
  
 		// email subject
-		String subject = "Hey.. This email sent by Crunchify's Spring MVC Tutorial";
+		String subject = "Registro exitoso";
  
 		// email body
-		String body = "There you go.. You got an email.. Let's understand details on how Spring MVC works -- By Crunchify Admin";
+		String body = "Bienvenido "+demandante.getNombre() +" a ETT";
 		mail.SendEmail(toAddr, fromAddr, subject, body);
         
         return "redirect:/demandantes/" + encodeUrlPathSegment(demandante.getId().toString(), httpServletRequest);
