@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 @Controller
 @Service("crunchifyEmail")
 public class NotificationServiceImpl {
-	//@Autowired
+	@Autowired
 	private MailSender crunchifymail; // MailSender interface defines a strategy
 										// for sending simple mails
  

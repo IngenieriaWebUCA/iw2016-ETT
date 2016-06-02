@@ -13,4 +13,5 @@ import org.gvnix.addon.web.mvc.annotations.batch.GvNIXWebJpaBatch;
 @GvNIXWebJQuery
 @GvNIXWebJpaBatch(service = InscripcionBatchService.class)
 public class InscripcionController {
+	
 }

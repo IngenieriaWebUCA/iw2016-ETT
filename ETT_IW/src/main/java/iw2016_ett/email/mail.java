@@ -2,14 +2,17 @@ package iw2016_ett.email;
 
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 
 public class mail {
+	
+	@RequestMapping("/send")
 	@SuppressWarnings("resource")
 	public static void main(String args[]) {
  
 		// Spring Bean file you specified in /src/main/resources folder
-		String crunchifyConfFile = "crunchify-bean.xml";
+		String crunchifyConfFile = "META-INF/spring/applicationContext.xml";
 		ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(crunchifyConfFile);
  
 		// @Service("crunchifyEmail") <-- same annotation you specified in CrunchifyEmailAPI.java
