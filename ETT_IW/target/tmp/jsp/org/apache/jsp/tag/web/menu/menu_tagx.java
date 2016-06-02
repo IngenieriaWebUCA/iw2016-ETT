@@ -125,12 +125,27 @@ static {
     int _jspx_eval_c_if_0 = _jspx_th_c_if_0.doStartTag();
     if (_jspx_eval_c_if_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
-        out.write("<ul id=\"" + (java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${fn:escapeXml(id)}", java.lang.String.class, (PageContext)this.getJspContext(), _jspx_fnmap_0) + "\">");
+        out.write("<div class=\"navbar-header pull-left\">");
+        out.write("<button data-target=\".navbar-collapse\" data-toggle=\"collapse\" class=\"navbar-toggle\" type=\"button\">");
+        out.write("<span class=\"icon-bar\">");
+        out.write(' ');
+        out.write("</span>");
+        out.write("<span class=\"icon-bar\">");
+        out.write(' ');
+        out.write("</span>");
+        out.write("<span class=\"icon-bar\">");
+        out.write(' ');
+        out.write("</span>");
+        out.write("</button>");
+        out.write("</div>");
+        out.write("<div class=\"navbar-collapse collapse\">");
+        out.write("<ul class=\"nav navbar-nav\" id=\"" + (java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${fn:escapeXml(id)}", java.lang.String.class, (PageContext)this.getJspContext(), _jspx_fnmap_0) + "\">");
         ((org.apache.jasper.runtime.JspContextWrapper) this.jspContext).syncBeforeInvoke();
         _jspx_sout = null;
         if (getJspBody() != null)
           getJspBody().invoke(_jspx_sout);
         out.write("</ul>");
+        out.write("</div>");
         int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;

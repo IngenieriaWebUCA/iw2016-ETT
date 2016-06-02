@@ -16,10 +16,10 @@ public class NotificationServiceImpl {
 	private MailSender crunchifymail; // MailSender interface defines a strategy
 										// for sending simple mails
  
-	public void SendEmail(String toAddress, String fromAddress, String subject, String msgBody) {
+	public void SendEmail(String toAddress, String subject, String msgBody) {
  
 		SimpleMailMessage crunchifyMsg = new SimpleMailMessage();
-		crunchifyMsg.setFrom(fromAddress);
+		crunchifyMsg.setFrom("ett.iw2016@gmail.com");
 		crunchifyMsg.setTo(toAddress);
 		crunchifyMsg.setSubject(subject);
 		crunchifyMsg.setText(msgBody);

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.gvnix.addon.web.mvc.annotations.jquery.GvNIXWebJQuery;
 import iw2016_ett.domain.batch.DemandanteBatchService;
 import iw2016_ett.email.NotificationServiceImpl;
+import iw2016_ett.email.mail;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -38,12 +39,12 @@ public class DemandanteController {
         demandante.setRol("ROLE_DEMANDANTE");
         demandante.persist();
         
-        String crunchifyConfFile = "META-INF/spring/applicationContext.xml";
+        /*String crunchifyConfFile = "META-INF/spring/applicationContext.xml";
 		ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(crunchifyConfFile);
  
 		// @Service("crunchifyEmail") <-- same annotation you specified in CrunchifyEmailAPI.java
 		NotificationServiceImpl mail = (NotificationServiceImpl) context.getBean("crunchifyEmail");
-		String toAddr = demandante.getEmail();
+		*/String toAddr = demandante.getEmail();
 		String fromAddr = "ett.iw2016@gmail.com";
  
 		// email subject
@@ -51,7 +52,8 @@ public class DemandanteController {
  
 		// email body
 		String body = "Bienvenido "+demandante.getNombre() +" a ETT";
-		mail.SendEmail(toAddr, fromAddr, subject, body);
+		mail m = new mail();
+		m.send(toAddr, subject, body);
         
         return "redirect:/demandantes/" + encodeUrlPathSegment(demandante.getId().toString(), httpServletRequest);
     }

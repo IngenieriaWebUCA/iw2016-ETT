@@ -12,8 +12,11 @@ public final class default_jspx extends org.apache.jasper.runtime.HttpJspBase
   private static java.util.List<String> _jspx_dependants;
 
   static {
-    _jspx_dependants = new java.util.ArrayList<String>(1);
+    _jspx_dependants = new java.util.ArrayList<String>(4);
+    _jspx_dependants.add("/WEB-INF/tags/bootstrap/util/load-styles-bootstrap.tagx");
     _jspx_dependants.add("/WEB-INF/tags/util/load-scripts.tagx");
+    _jspx_dependants.add("/WEB-INF/tags/bootstrap/util/load-scripts-bootstrap.tagx");
+    _jspx_dependants.add("/WEB-INF/tags/bootstrap/dialog/modal/message-box.tagx");
   }
 
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_spring_message_var_htmlEscape_code_nobody;
@@ -62,9 +65,14 @@ public final class default_jspx extends org.apache.jasper.runtime.HttpJspBase
       out.write("<!DOCTYPE HTML SYSTEM \"about:legacy-compat\">\n");
       out.write("<html>");
       out.write("<head>");
-      out.write("<meta content=\"text/html; charset=UTF-8\" http-equiv=\"Content-Type\" />");
-      out.write("<meta content=\"IE=8\" http-equiv=\"X-UA-Compatible\" />");
+      out.write("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />");
+      out.write("<meta http-equiv=\"X-UA-Compatible\" content=\"IE=8\" />");
+      out.write("<meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\" />");
+      if (_jspx_meth_bootstrap$1util_load$1styles$1bootstrap_0(_jspx_page_context))
+        return;
       if (_jspx_meth_util_load$1scripts_0(_jspx_page_context))
+        return;
+      if (_jspx_meth_bootstrap$1util_load$1scripts$1bootstrap_0(_jspx_page_context))
         return;
       if (_jspx_meth_spring_message_0(_jspx_page_context))
         return;
@@ -74,18 +82,26 @@ public final class default_jspx extends org.apache.jasper.runtime.HttpJspBase
       out.write("</title>");
       out.write("</head>");
       out.write("<body class=\"tundra spring\">");
-      out.write("<div id=\"wrapper\">");
+      out.write("<header class=\"navbar navbar-inverse navbar-fixed-top\">");
+      out.write("<div class=\"container\">");
       if (_jspx_meth_tiles_insertAttribute_0(_jspx_page_context))
         return;
       if (_jspx_meth_tiles_insertAttribute_1(_jspx_page_context))
         return;
+      out.write("</div>");
+      out.write("</header>");
+      out.write("<div class=\"container\">");
       out.write("<div id=\"main\">");
+      if (_jspx_meth_dialog_message$1box_0(_jspx_page_context))
+        return;
       if (_jspx_meth_tiles_insertAttribute_2(_jspx_page_context))
         return;
+      out.write("</div>");
+      out.write("</div>");
+      out.write("<footer role=\"contentinfo\" class=\"bs-footer\">");
       if (_jspx_meth_tiles_insertAttribute_3(_jspx_page_context))
         return;
-      out.write("</div>");
-      out.write("</div>");
+      out.write("</footer>");
       out.write("</body>");
       out.write("</html>");
     } catch (Throwable t) {
@@ -101,6 +117,17 @@ public final class default_jspx extends org.apache.jasper.runtime.HttpJspBase
     }
   }
 
+  private boolean _jspx_meth_bootstrap$1util_load$1styles$1bootstrap_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  bootstrap-util:load-styles-bootstrap
+    org.apache.jsp.tag.web.bootstrap.util.load_002dstyles_002dbootstrap_tagx _jspx_th_bootstrap$1util_load$1styles$1bootstrap_0 = (_jspx_resourceInjector != null) ? _jspx_resourceInjector.createTagHandlerInstance(org.apache.jsp.tag.web.bootstrap.util.load_002dstyles_002dbootstrap_tagx.class) : new org.apache.jsp.tag.web.bootstrap.util.load_002dstyles_002dbootstrap_tagx();
+    _jspx_th_bootstrap$1util_load$1styles$1bootstrap_0.setJspContext(_jspx_page_context);
+    _jspx_th_bootstrap$1util_load$1styles$1bootstrap_0.doTag();
+    return false;
+  }
+
   private boolean _jspx_meth_util_load$1scripts_0(PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
@@ -112,6 +139,17 @@ public final class default_jspx extends org.apache.jasper.runtime.HttpJspBase
     return false;
   }
 
+  private boolean _jspx_meth_bootstrap$1util_load$1scripts$1bootstrap_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  bootstrap-util:load-scripts-bootstrap
+    org.apache.jsp.tag.web.bootstrap.util.load_002dscripts_002dbootstrap_tagx _jspx_th_bootstrap$1util_load$1scripts$1bootstrap_0 = (_jspx_resourceInjector != null) ? _jspx_resourceInjector.createTagHandlerInstance(org.apache.jsp.tag.web.bootstrap.util.load_002dscripts_002dbootstrap_tagx.class) : new org.apache.jsp.tag.web.bootstrap.util.load_002dscripts_002dbootstrap_tagx();
+    _jspx_th_bootstrap$1util_load$1scripts$1bootstrap_0.setJspContext(_jspx_page_context);
+    _jspx_th_bootstrap$1util_load$1scripts$1bootstrap_0.doTag();
+    return false;
+  }
+
   private boolean _jspx_meth_spring_message_0(PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
@@ -120,8 +158,8 @@ public final class default_jspx extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.MessageTag _jspx_th_spring_message_0 = (org.springframework.web.servlet.tags.MessageTag) _jspx_tagPool_spring_message_var_htmlEscape_code_nobody.get(org.springframework.web.servlet.tags.MessageTag.class);
     _jspx_th_spring_message_0.setPageContext(_jspx_page_context);
     _jspx_th_spring_message_0.setParent(null);
-    _jspx_th_spring_message_0.setHtmlEscape("false");
     _jspx_th_spring_message_0.setVar("app_name");
+    _jspx_th_spring_message_0.setHtmlEscape("false");
     _jspx_th_spring_message_0.setCode("application_name");
     int[] _jspx_push_body_count_spring_message_0 = new int[] { 0 };
     try {
@@ -148,8 +186,8 @@ public final class default_jspx extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.MessageTag _jspx_th_spring_message_1 = (org.springframework.web.servlet.tags.MessageTag) _jspx_tagPool_spring_message_code_arguments_nobody.get(org.springframework.web.servlet.tags.MessageTag.class);
     _jspx_th_spring_message_1.setPageContext(_jspx_page_context);
     _jspx_th_spring_message_1.setParent(null);
-    _jspx_th_spring_message_1.setArguments((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${app_name}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     _jspx_th_spring_message_1.setCode("welcome_h3");
+    _jspx_th_spring_message_1.setArguments((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${app_name}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int[] _jspx_push_body_count_spring_message_1 = new int[] { 0 };
     try {
       int _jspx_eval_spring_message_1 = _jspx_th_spring_message_1.doStartTag();
@@ -174,8 +212,8 @@ public final class default_jspx extends org.apache.jasper.runtime.HttpJspBase
     //  tiles:insertAttribute
     org.apache.tiles.jsp.taglib.InsertAttributeTag _jspx_th_tiles_insertAttribute_0 = (_jspx_resourceInjector != null) ? _jspx_resourceInjector.createTagHandlerInstance(org.apache.tiles.jsp.taglib.InsertAttributeTag.class) : new org.apache.tiles.jsp.taglib.InsertAttributeTag();
     _jspx_th_tiles_insertAttribute_0.setJspContext(_jspx_page_context);
-    _jspx_th_tiles_insertAttribute_0.setIgnore(true);
     _jspx_th_tiles_insertAttribute_0.setName("header");
+    _jspx_th_tiles_insertAttribute_0.setIgnore(true);
     _jspx_th_tiles_insertAttribute_0.doTag();
     return false;
   }
@@ -187,9 +225,20 @@ public final class default_jspx extends org.apache.jasper.runtime.HttpJspBase
     //  tiles:insertAttribute
     org.apache.tiles.jsp.taglib.InsertAttributeTag _jspx_th_tiles_insertAttribute_1 = (_jspx_resourceInjector != null) ? _jspx_resourceInjector.createTagHandlerInstance(org.apache.tiles.jsp.taglib.InsertAttributeTag.class) : new org.apache.tiles.jsp.taglib.InsertAttributeTag();
     _jspx_th_tiles_insertAttribute_1.setJspContext(_jspx_page_context);
-    _jspx_th_tiles_insertAttribute_1.setIgnore(true);
     _jspx_th_tiles_insertAttribute_1.setName("menu");
+    _jspx_th_tiles_insertAttribute_1.setIgnore(true);
     _jspx_th_tiles_insertAttribute_1.doTag();
+    return false;
+  }
+
+  private boolean _jspx_meth_dialog_message$1box_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  dialog:message-box
+    org.apache.jsp.tag.web.bootstrap.dialog.modal.message_002dbox_tagx _jspx_th_dialog_message$1box_0 = (_jspx_resourceInjector != null) ? _jspx_resourceInjector.createTagHandlerInstance(org.apache.jsp.tag.web.bootstrap.dialog.modal.message_002dbox_tagx.class) : new org.apache.jsp.tag.web.bootstrap.dialog.modal.message_002dbox_tagx();
+    _jspx_th_dialog_message$1box_0.setJspContext(_jspx_page_context);
+    _jspx_th_dialog_message$1box_0.doTag();
     return false;
   }
 
@@ -212,8 +261,8 @@ public final class default_jspx extends org.apache.jasper.runtime.HttpJspBase
     //  tiles:insertAttribute
     org.apache.tiles.jsp.taglib.InsertAttributeTag _jspx_th_tiles_insertAttribute_3 = (_jspx_resourceInjector != null) ? _jspx_resourceInjector.createTagHandlerInstance(org.apache.tiles.jsp.taglib.InsertAttributeTag.class) : new org.apache.tiles.jsp.taglib.InsertAttributeTag();
     _jspx_th_tiles_insertAttribute_3.setJspContext(_jspx_page_context);
-    _jspx_th_tiles_insertAttribute_3.setIgnore(true);
     _jspx_th_tiles_insertAttribute_3.setName("footer");
+    _jspx_th_tiles_insertAttribute_3.setIgnore(true);
     _jspx_th_tiles_insertAttribute_3.doTag();
     return false;
   }

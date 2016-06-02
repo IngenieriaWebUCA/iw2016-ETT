@@ -7,9 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 public class mail {
 	
-	@RequestMapping("/send")
 	@SuppressWarnings("resource")
-	public static void main(String args[]) {
+	public void send(String toAddr, String subject, String body) {
  
 		// Spring Bean file you specified in /src/main/resources folder
 		String crunchifyConfFile = "META-INF/spring/applicationContext.xml";
@@ -17,14 +16,6 @@ public class mail {
  
 		// @Service("crunchifyEmail") <-- same annotation you specified in CrunchifyEmailAPI.java
 		NotificationServiceImpl mail = (NotificationServiceImpl) context.getBean("crunchifyEmail");
-		String toAddr = "juangarpe94@gmail.com";
-		String fromAddr = "ett.iw2016@gmail.com";
- 
-		// email subject
-		String subject = "Hey.. This email sent by Crunchify's Spring MVC Tutorial";
- 
-		// email body
-		String body = "There you go.. You got an email.. Let's understand details on how Spring MVC works -- By Crunchify Admin";
-		mail.SendEmail(toAddr, fromAddr, subject, body);
+		mail.SendEmail(toAddr, subject, body);
 	}
 }

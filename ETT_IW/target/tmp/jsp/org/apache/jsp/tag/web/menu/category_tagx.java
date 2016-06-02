@@ -149,12 +149,16 @@ static {
       do {
         if (_jspx_meth_c_if_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_0, _jspx_page_context))
           return true;
-        out.write("<li id=\"" + (java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${fn:escapeXml(id)}", java.lang.String.class, (PageContext)this.getJspContext(), _jspx_fnmap_1) + "\">");
-        out.write("<h2>");
+        out.write("<li id=\"" + (java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${fn:escapeXml(id)}", java.lang.String.class, (PageContext)this.getJspContext(), _jspx_fnmap_1) + "\" class=\"dropdown\">");
+        out.write("<a data-toggle=\"dropdown\" class=\"dropdown-toggle\" href=\"#\">");
         if (_jspx_meth_c_out_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_0, _jspx_page_context))
           return true;
-        out.write("</h2>");
-        out.write("<ul>");
+        out.write(' ');
+        out.write("<b class=\"caret\">");
+        out.write(' ');
+        out.write("</b>");
+        out.write("</a>");
+        out.write("<ul class=\"dropdown-menu\">");
         ((org.apache.jasper.runtime.JspContextWrapper) this.jspContext).syncBeforeInvoke();
         _jspx_sout = null;
         if (getJspBody() != null)
