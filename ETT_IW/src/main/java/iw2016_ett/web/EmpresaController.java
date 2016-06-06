@@ -55,11 +55,17 @@ public class EmpresaController {
         empresa.persist();
         return "redirect:/empresas/" + encodeUrlPathSegment(empresa.getId().toString(), httpServletRequest);
     }
+	
+public static Empresa empresa_logueada() {
+        
+    	Users u = UsersController.Usuario_logueado();
+		Empresa empresa = (Empresa) u;
+        return empresa;
+    }
+	
 	@RequestMapping(params = "perfil")
 	public String show_perfil() {
-
-    	Users empresa = UsersController.Usuario_logueado();
 		
-		return "redirect:/empresas/" + empresa.getId().toString();
+		return "redirect:/empresas/" + empresa_logueada().getId().toString();
 	}
 }

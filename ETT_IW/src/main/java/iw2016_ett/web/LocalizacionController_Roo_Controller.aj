@@ -21,17 +21,6 @@ import org.springframework.web.util.WebUtils;
 
 privileged aspect LocalizacionController_Roo_Controller {
     
-    @RequestMapping(method = RequestMethod.POST, produces = "text/html")
-    public String LocalizacionController.create(@Valid Localizacion localizacion, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
-        if (bindingResult.hasErrors()) {
-            populateEditForm(uiModel, localizacion);
-            return "localizacions/create";
-        }
-        uiModel.asMap().clear();
-        localizacion.persist();
-        return "redirect:/localizacions/" + encodeUrlPathSegment(localizacion.getId().toString(), httpServletRequest);
-    }
-    
     @RequestMapping(params = "form", produces = "text/html")
     public String LocalizacionController.createForm(Model uiModel) {
         populateEditForm(uiModel, new Localizacion());

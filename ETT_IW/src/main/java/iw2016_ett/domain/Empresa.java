@@ -40,4 +40,5 @@ public class Empresa extends Users{
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "empresa")
     private Set<Localizacion> localizacion = new HashSet<Localizacion>();
     
+    
 }
