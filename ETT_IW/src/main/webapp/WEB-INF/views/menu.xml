@@ -14,6 +14,7 @@
     <menu-item hidden="false" id="fi_demandante_experiencia" labelCode="menu_item_demandante_experiencia_label" messageCode="global_menu_find" roles="" url="/demandantes?find=ByExperiencia&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}"/>
     <menu-item hidden="false" id="fi_demandante_formacion" labelCode="menu_item_demandante_formacion_label" messageCode="global_menu_find" roles="" url="/demandantes?find=ByFormacion&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}"/>
     <menu-item hidden="false" id="fi_demandante_puestosinteresa" labelCode="menu_item_demandante_puestosinteresa_label" messageCode="global_menu_find" roles="" url="/demandantes?find=ByPuestosInteresa&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}"/>
+    <menu-item hidden="false" id="fi_demandante_usernameequals" labelCode="menu_item_demandante_usernameequals_label" messageCode="global_menu_find" roles="" url="/demandantes?find=ByUsernameEquals&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}"/>
     </menu-item>
 <menu-item id="c_titulaciones" labelCode="menu_category_titulaciones_label" name="Titulaciones">
         <menu-item hidden="false" id="i_titulaciones_new" labelCode="menu_item_titulaciones_new_label" messageCode="global_menu_new" roles="" url="/titulacioneses?form"/>

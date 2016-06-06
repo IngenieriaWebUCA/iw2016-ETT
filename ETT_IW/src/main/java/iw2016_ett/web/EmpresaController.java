@@ -1,6 +1,8 @@
 package iw2016_ett.web;
+import iw2016_ett.domain.Demandante;
 import iw2016_ett.domain.Empresa;
 import iw2016_ett.domain.Oferta;
+import iw2016_ett.domain.Users;
 
 import org.springframework.roo.addon.web.mvc.controller.scaffold.RooWebScaffold;
 import org.springframework.stereotype.Controller;
@@ -53,4 +55,11 @@ public class EmpresaController {
         empresa.persist();
         return "redirect:/empresas/" + encodeUrlPathSegment(empresa.getId().toString(), httpServletRequest);
     }
+	@RequestMapping(params = "perfil")
+	public String show_perfil() {
+
+    	Users empresa = UsersController.Usuario_logueado();
+		
+		return "redirect:/empresas/" + empresa.getId().toString();
+	}
 }

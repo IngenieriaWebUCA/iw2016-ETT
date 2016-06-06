@@ -1,7 +1,11 @@
 package iw2016_ett.web;
 import iw2016_ett.domain.Demandante;
 import iw2016_ett.domain.Empresa;
+import iw2016_ett.domain.Users;
+
 import org.springframework.roo.addon.web.mvc.controller.scaffold.RooWebScaffold;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -11,6 +15,8 @@ import org.gvnix.addon.web.mvc.annotations.jquery.GvNIXWebJQuery;
 import iw2016_ett.domain.batch.DemandanteBatchService;
 import iw2016_ett.email.NotificationServiceImpl;
 import iw2016_ett.email.mail;
+
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -39,12 +45,7 @@ public class DemandanteController {
         demandante.setRol("ROLE_DEMANDANTE");
         demandante.persist();
         
-        /*String crunchifyConfFile = "META-INF/spring/applicationContext.xml";
-		ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(crunchifyConfFile);
- 
-		// @Service("crunchifyEmail") <-- same annotation you specified in CrunchifyEmailAPI.java
-		NotificationServiceImpl mail = (NotificationServiceImpl) context.getBean("crunchifyEmail");
-		*/String toAddr = demandante.getEmail();
+        String toAddr = demandante.getEmail();
 		String fromAddr = "ett.iw2016@gmail.com";
  
 		// email subject
@@ -57,4 +58,19 @@ public class DemandanteController {
         
         return "redirect:/demandantes/" + encodeUrlPathSegment(demandante.getId().toString(), httpServletRequest);
     }
+    
+    public static Demandante demandante_logueado() {
+        
+    	Users u = UsersController.Usuario_logueado();
+		Demandante demandante = (Demandante) u;
+        return demandante;
+    }
+    
+    @RequestMapping(params = "perfil")
+	public String show_perfil() {
+
+    	Demandante demandante = DemandanteController.demandante_logueado();
+		
+		return "redirect:/demandantes/" + demandante.getId().toString();
+	}
 }

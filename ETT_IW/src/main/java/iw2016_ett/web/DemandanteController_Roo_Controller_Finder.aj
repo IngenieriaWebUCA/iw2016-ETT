@@ -79,4 +79,24 @@ privileged aspect DemandanteController_Roo_Controller_Finder {
         return "demandantes/list";
     }
     
+    @RequestMapping(params = { "find=ByUsernameEquals", "form" }, method = RequestMethod.GET)
+    public String DemandanteController.findDemandantesByUsernameEqualsForm(Model uiModel) {
+        return "demandantes/findDemandantesByUsernameEquals";
+    }
+    
+    @RequestMapping(params = "find=ByUsernameEquals", method = RequestMethod.GET)
+    public String DemandanteController.findDemandantesByUsernameEquals(@RequestParam("username") String username, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, @RequestParam(value = "sortFieldName", required = false) String sortFieldName, @RequestParam(value = "sortOrder", required = false) String sortOrder, Model uiModel) {
+        if (page != null || size != null) {
+            int sizeNo = size == null ? 10 : size.intValue();
+            final int firstResult = page == null ? 0 : (page.intValue() - 1) * sizeNo;
+            uiModel.addAttribute("demandantes", Demandante.findDemandantesByUsernameEquals(username, sortFieldName, sortOrder).setFirstResult(firstResult).setMaxResults(sizeNo).getResultList());
+            float nrOfPages = (float) Demandante.countFindDemandantesByUsernameEquals(username) / sizeNo;
+            uiModel.addAttribute("maxPages", (int) ((nrOfPages > (int) nrOfPages || nrOfPages == 0.0) ? nrOfPages + 1 : nrOfPages));
+        } else {
+            uiModel.addAttribute("demandantes", Demandante.findDemandantesByUsernameEquals(username, sortFieldName, sortOrder).getResultList());
+        }
+        addDateTimeFormatPatterns(uiModel);
+        return "demandantes/list";
+    }
+    
 }

@@ -3,7 +3,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_iw2016_ett_domain_Inscripcion" modelAttribute="inscripcion" path="/inscripcions" render="${empty dependencies}" z="i1y4vOyCTHv2fmJVFNPvLR/EMuM=">
-        <field:select field="Estado" id="c_iw2016_ett_domain_Inscripcion_Estado" items="${estadoinscs}" path="estadoinscs" render="false" z="user-managed"/>
+        <field:select field="Estado" id="c_iw2016_ett_domain_Inscripcion_Estado" items="${estadoinscs}" path="estadoinscs" z="user-managed"/>
         <field:select field="oferta" id="c_iw2016_ett_domain_Inscripcion_oferta" itemValue="id" items="${ofertas}" path="/ofertas" z="Si2u65ajePPrCEbBPYE30gBijL8="/>
         <field:select field="demandante" id="c_iw2016_ett_domain_Inscripcion_demandante" itemValue="id" items="${demandantes}" path="/demandantes" z="user-managed"/>
     </form:create>

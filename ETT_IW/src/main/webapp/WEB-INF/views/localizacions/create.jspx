@@ -4,7 +4,7 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_iw2016_ett_domain_Localizacion" modelAttribute="localizacion" path="/localizacions" render="${empty dependencies}" z="4dOBgGy5I5f16j8BQYQDsLz0iz0=">
         <field:input field="direccion" id="c_iw2016_ett_domain_Localizacion_direccion" z="1ZKDSj8ZgAHwezse9LW1gMnIYPk="/>
-        <field:select field="empresa" id="c_iw2016_ett_domain_Localizacion_empresa" itemValue="id" items="${empresas}" path="/empresas" z="unrK6UPoOYHs9j9zmNoABYkl4rs="/>
+        <field:select field="empresa" id="c_iw2016_ett_domain_Localizacion_empresa" itemValue="id" items="${empresas}" path="/empresas" render="false" z="user-managed"/>
         <field:simple field="ofertas" id="c_iw2016_ett_domain_Localizacion_ofertas" messageCode="entity_reference_not_managed" messageCodeAttribute="Oferta" z="YypHDF3pVqp1gS6TpUtEwFr5Vdw="/>
         <field:input field="Pais" id="c_iw2016_ett_domain_Localizacion_Pais" z="R2dUpEeqLSPYfBf2SC6tKoWMRS0="/>
         <field:input field="comunidad" id="c_iw2016_ett_domain_Localizacion_comunidad" z="81om5BQlHBtO+3HfNIQipJLCC7o="/>

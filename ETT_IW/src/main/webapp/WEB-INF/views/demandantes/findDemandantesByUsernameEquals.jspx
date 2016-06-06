@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/jquery/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:find finderName="ByUsernameEquals" id="ff_iw2016_ett_domain_Demandante" path="/demandantes" z="QllJm1dd/+PGzQQAymK2HslWU0Y=">
+        <field:input disableFormBinding="true" field="username" id="f_iw2016_ett_domain_Demandante_username" required="true" z="LBmDeDRiVPSzZvzSaVEVvgVWuaE="/>
+    </form:find>
+</div>

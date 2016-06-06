@@ -14,5 +14,6 @@
         <field:display field="sueldo" id="s_iw2016_ett_domain_Oferta_Sueldo" object="${oferta}" z="uNLFtMQYAp2aLQYyFNhm2bLNl84="/>
         <field:display field="localizacion" id="s_iw2016_ett_domain_Oferta_localizacion" object="${oferta}" z="QSaGpNkiAVb3d6ooM8gwuw1SOvY="/>
         <field:display field="puestotrabajo" id="s_iw2016_ett_domain_Oferta_puestotrabajo" object="${oferta}" z="3tuRKp4aWmIIC1RG4G+jZKJmzgk="/>
+        <a class="navbar-brand nav navbar-right" href="/ETT_IW/inscripcions/${oferta.getId()}?inscribir">Inscribirse</a>
     </page:show>
 </div>

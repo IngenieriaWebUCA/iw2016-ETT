@@ -61,6 +61,14 @@ privileged aspect Demandante_Roo_Finder {
         return ((Long) q.getSingleResult());
     }
     
+    public static Long Demandante.countFindDemandantesByUsernameEquals(String username) {
+        if (username == null || username.length() == 0) throw new IllegalArgumentException("The username argument is required");
+        EntityManager em = Demandante.entityManager();
+        TypedQuery q = em.createQuery("SELECT COUNT(o) FROM Demandante AS o WHERE o.username = :username", Long.class);
+        q.setParameter("username", username);
+        return ((Long) q.getSingleResult());
+    }
+    
     public static TypedQuery<Demandante> Demandante.findDemandantesByExperiencia(Set<ExperienciaLaboral> experiencia) {
         if (experiencia == null) throw new IllegalArgumentException("The experiencia argument is required");
         EntityManager em = Demandante.entityManager();
@@ -172,6 +180,29 @@ privileged aspect Demandante_Roo_Finder {
         for (PuestoTrabajo _puestotrabajo: puestosInteresa) {
             q.setParameter("puestosInteresa_item" + puestosInteresaIndex++, _puestotrabajo);
         }
+        return q;
+    }
+    
+    public static TypedQuery<Demandante> Demandante.findDemandantesByUsernameEquals(String username) {
+        if (username == null || username.length() == 0) throw new IllegalArgumentException("The username argument is required");
+        EntityManager em = Demandante.entityManager();
+        TypedQuery<Demandante> q = em.createQuery("SELECT o FROM Demandante AS o WHERE o.username = :username", Demandante.class);
+        q.setParameter("username", username);
+        return q;
+    }
+    
+    public static TypedQuery<Demandante> Demandante.findDemandantesByUsernameEquals(String username, String sortFieldName, String sortOrder) {
+        if (username == null || username.length() == 0) throw new IllegalArgumentException("The username argument is required");
+        EntityManager em = Demandante.entityManager();
+        StringBuilder queryBuilder = new StringBuilder("SELECT o FROM Demandante AS o WHERE o.username = :username");
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            queryBuilder.append(" ORDER BY ").append(sortFieldName);
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                queryBuilder.append(" ").append(sortOrder);
+            }
+        }
+        TypedQuery<Demandante> q = em.createQuery(queryBuilder.toString(), Demandante.class);
+        q.setParameter("username", username);
         return q;
     }
     

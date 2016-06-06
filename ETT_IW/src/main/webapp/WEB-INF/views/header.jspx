@@ -5,8 +5,8 @@
       <spring:url var="logo" value="/resources/images/logo.png" />
       <spring:url var="home" value="/" />
       <spring:url var="login" value="/login" />
-      <spring:url var="perfil" value="/demandantes/${id}" />
-      <spring:url var="perfil" value="/empresas/${id}" />
+      <spring:url var="perfil" value="/demandantes?perfil" />
+      <spring:url var="perfil_e" value="/empresas?perfil" />
       <spring:url var="cerrarsesion" value="/resources/j_spring_security_logout" />
       <spring:url var="registrar" value="/demandantes?form" />
       <spring:message code="button_home" var="home_label" htmlEscape="false" />
@@ -38,7 +38,7 @@
         <a class="navbar-brand nav navbar-right" href="${perfil}">Perfil</a>
         </sec:authorize>
         <sec:authorize access="hasRole('ROLE_EMPRESA')">
-        <a class="navbar-brand nav navbar-right" href="${perfil}">Perfil</a>
+        <a class="navbar-brand nav navbar-right" href="${perfil_e}">Perfil</a>
         </sec:authorize>
 			</div>
 
