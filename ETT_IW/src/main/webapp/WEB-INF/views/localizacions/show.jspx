@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/datatables" version="2.0">
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" 
+xmlns:page="urn:jsptagdir:/WEB-INF/tags/datatables" xmlns:sec="http://www.springframework.org/security/tags" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <page:show id="ps_iw2016_ett_domain_Localizacion" object="${localizacion}" path="/localizacions" z="/KOxBraB1rygBmvijjZlvmqdask=">
-        <field:display field="direccion" id="s_iw2016_ett_domain_Localizacion_direccion" object="${localizacion}" z="7WUfm8xtbMqgWmj3CeBHLNWbGQ8="/>
-        <field:display field="empresa" id="s_iw2016_ett_domain_Localizacion_empresa" object="${localizacion}" z="II7YCB5TzZ+9Brs5Vo6XhbbGDiQ="/>
-        <field:display field="pais" id="s_iw2016_ett_domain_Localizacion_Pais" object="${localizacion}" z="4dQWMD8K4Icssy2WraDTgq5e2wk="/>
-        <field:display field="comunidad" id="s_iw2016_ett_domain_Localizacion_comunidad" object="${localizacion}" z="3YlWEc7wZolKtn8E0bikBWKFu5E="/>
-        <field:display field="provincia" id="s_iw2016_ett_domain_Localizacion_Provincia" object="${localizacion}" z="BvrWJK7leQXyjMBPwoJoQMTQFZk="/>
-        <field:display field="localidad" id="s_iw2016_ett_domain_Localizacion_Localidad" object="${localizacion}" z="BMRh88DiA7QiBESqtabaT++uUUU="/>
-    </page:show>
+    <sec:authorize access="hasAnyRole('ROLE_GESTOR', 'ROLE_EMPRESA', 'ROLE_ADMIN')">
+	    <page:show id="ps_iw2016_ett_domain_Localizacion" object="${localizacion}" path="/localizacions" z="/KOxBraB1rygBmvijjZlvmqdask=">
+	        <field:display field="direccion" id="s_iw2016_ett_domain_Localizacion_direccion" object="${localizacion}" z="7WUfm8xtbMqgWmj3CeBHLNWbGQ8="/>
+	        <field:display field="empresa" id="s_iw2016_ett_domain_Localizacion_empresa" object="${localizacion}" z="II7YCB5TzZ+9Brs5Vo6XhbbGDiQ="/>
+	        <field:display field="pais" id="s_iw2016_ett_domain_Localizacion_Pais" object="${localizacion}" z="4dQWMD8K4Icssy2WraDTgq5e2wk="/>
+	        <field:display field="comunidad" id="s_iw2016_ett_domain_Localizacion_comunidad" object="${localizacion}" z="3YlWEc7wZolKtn8E0bikBWKFu5E="/>
+	        <field:display field="provincia" id="s_iw2016_ett_domain_Localizacion_Provincia" object="${localizacion}" z="BvrWJK7leQXyjMBPwoJoQMTQFZk="/>
+	        <field:display field="localidad" id="s_iw2016_ett_domain_Localizacion_Localidad" object="${localizacion}" z="BMRh88DiA7QiBESqtabaT++uUUU="/>
+	    </page:show>
+	</sec:authorize>
+	<sec:authorize access="hasAnyRole('ROLE_DEMANDANTE')">
+	    <page:show id="ps_iw2016_ett_domain_Localizacion" object="${localizacion}" path="/localizacions"
+	    create="false" update="false" delete="false" z="/KOxBraB1rygBmvijjZlvmqdask=">
+	        <field:display field="direccion" id="s_iw2016_ett_domain_Localizacion_direccion" object="${localizacion}" z="7WUfm8xtbMqgWmj3CeBHLNWbGQ8="/>
+	        <field:display field="empresa" id="s_iw2016_ett_domain_Localizacion_empresa" object="${localizacion}" z="II7YCB5TzZ+9Brs5Vo6XhbbGDiQ="/>
+	        <field:display field="pais" id="s_iw2016_ett_domain_Localizacion_Pais" object="${localizacion}" z="4dQWMD8K4Icssy2WraDTgq5e2wk="/>
+	        <field:display field="comunidad" id="s_iw2016_ett_domain_Localizacion_comunidad" object="${localizacion}" z="3YlWEc7wZolKtn8E0bikBWKFu5E="/>
+	        <field:display field="provincia" id="s_iw2016_ett_domain_Localizacion_Provincia" object="${localizacion}" z="BvrWJK7leQXyjMBPwoJoQMTQFZk="/>
+	        <field:display field="localidad" id="s_iw2016_ett_domain_Localizacion_Localidad" object="${localizacion}" z="BMRh88DiA7QiBESqtabaT++uUUU="/>
+	    </page:show>
+	</sec:authorize>	    
 </div>

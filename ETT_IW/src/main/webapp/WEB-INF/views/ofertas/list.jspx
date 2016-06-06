@@ -1,15 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/jquery/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" version="2.0">
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/jquery/form" xmlns:sec="http://www.springframework.org/security/tags" xmlns:table="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <page:list id="pl_iw2016_ett_domain_Oferta" items="${ofertas}" z="QGNy5BM8Rll6wpEFyMcN7/RAP0k=">
-        <table:table data="${ofertas}" id="l_iw2016_ett_domain_Oferta" path="/ofertas" z="wFBC5htexpIdKbCbSGt+1UX6llM=">
-            <table:column id="c_iw2016_ett_domain_Oferta_titulo" property="titulo" z="m6dTxdtiFwUtRxEqer+VrtaGGaM="/>
-            <table:column id="c_iw2016_ett_domain_Oferta_TipoContrato" property="tipoContrato" z="462TIJ7bk86Yz9SplIJwbsdgWMg="/>
-            <table:column date="true" dateTimePattern="${oferta_fechainicio_date_format}" id="c_iw2016_ett_domain_Oferta_FechaInicio" property="fechaInicio" z="qVhwCXTvSf4PVjMrqb95rGC9Ze4="/>
-            <table:column id="c_iw2016_ett_domain_Oferta_NumeroVacantes" property="numeroVacantes" z="ZlFWLsLhm5DlstnVeCnieO7V7tY="/>
-            <table:column id="c_iw2016_ett_domain_Oferta_Perfil" property="perfil" z="yYRv/HMmghzDVS81hrgEn0bdUYQ="/>
-            <table:column date="true" dateTimePattern="${oferta_fechafin_date_format}" id="c_iw2016_ett_domain_Oferta_FechaFin" property="fechaFin" z="/IvY2nwh7arp7NtS7XNwfHKKthk="/>
-        </table:table>
-    </page:list>
+    <sec:authorize access="hasAnyRole('ROLE_DEMANDANTE','ROLE_ANONYMOUS')">
+        <page:list id="pl_iw2016_ett_domain_Oferta" items="${ofertas}" z="QGNy5BM8Rll6wpEFyMcN7/RAP0k=">
+            <table:table create="false" data="${ofertas}" delete="false" id="l_iw2016_ett_domain_Oferta" path="/ofertas" update="false" z="user-managed">
+                <table:column id="c_iw2016_ett_domain_Oferta_titulo" property="titulo" z="m6dTxdtiFwUtRxEqer+VrtaGGaM="/>
+                <table:column id="c_iw2016_ett_domain_Oferta_TipoContrato" property="tipoContrato" z="462TIJ7bk86Yz9SplIJwbsdgWMg="/>
+                <table:column date="true" dateTimePattern="${oferta_fechainicio_date_format}" id="c_iw2016_ett_domain_Oferta_FechaInicio" property="fechaInicio" z="qVhwCXTvSf4PVjMrqb95rGC9Ze4="/>
+                <table:column id="c_iw2016_ett_domain_Oferta_NumeroVacantes" property="numeroVacantes" z="ZlFWLsLhm5DlstnVeCnieO7V7tY="/>
+                <table:column id="c_iw2016_ett_domain_Oferta_Perfil" property="perfil" z="yYRv/HMmghzDVS81hrgEn0bdUYQ="/>
+                <table:column date="true" dateTimePattern="${oferta_fechafin_date_format}" id="c_iw2016_ett_domain_Oferta_FechaFin" property="fechaFin" z="/IvY2nwh7arp7NtS7XNwfHKKthk="/>
+            </table:table>
+        </page:list>
+    </sec:authorize>
+    <sec:authorize access="hasAnyRole('ROLE_ADMIN', 'ROLE_GESTOR')">
+        <page:list id="pl_iw2016_ett_domain_Oferta" items="${ofertas}" z="QGNy5BM8Rll6wpEFyMcN7/RAP0k=">
+            <table:table data="${ofertas}" id="l_iw2016_ett_domain_Oferta" path="/ofertas" z="wFBC5htexpIdKbCbSGt+1UX6llM=">
+                <table:column id="c_iw2016_ett_domain_Oferta_titulo" property="titulo" z="m6dTxdtiFwUtRxEqer+VrtaGGaM="/>
+                <table:column id="c_iw2016_ett_domain_Oferta_TipoContrato" property="tipoContrato" z="462TIJ7bk86Yz9SplIJwbsdgWMg="/>
+                <table:column date="true" dateTimePattern="${oferta_fechainicio_date_format}" id="c_iw2016_ett_domain_Oferta_FechaInicio" property="fechaInicio" z="qVhwCXTvSf4PVjMrqb95rGC9Ze4="/>
+                <table:column id="c_iw2016_ett_domain_Oferta_NumeroVacantes" property="numeroVacantes" z="ZlFWLsLhm5DlstnVeCnieO7V7tY="/>
+                <table:column id="c_iw2016_ett_domain_Oferta_Perfil" property="perfil" z="yYRv/HMmghzDVS81hrgEn0bdUYQ="/>
+                <table:column date="true" dateTimePattern="${oferta_fechafin_date_format}" id="c_iw2016_ett_domain_Oferta_FechaFin" property="fechaFin" z="/IvY2nwh7arp7NtS7XNwfHKKthk="/>
+            </table:table>
+        </page:list>
+    </sec:authorize>
+    <sec:authorize access="hasAnyRole('ROLE_EMPRESA')">
+        <page:list id="pl_iw2016_ett_domain_Oferta" items="${ofertas}" z="QGNy5BM8Rll6wpEFyMcN7/RAP0k=">
+            <table:table create="false" data="${ofertas}" id="l_iw2016_ett_domain_Oferta" path="/ofertas" z="wFBC5htexpIdKbCbSGt+1UX6llM=">
+                <table:column id="c_iw2016_ett_domain_Oferta_titulo" property="titulo" z="m6dTxdtiFwUtRxEqer+VrtaGGaM="/>
+                <table:column id="c_iw2016_ett_domain_Oferta_TipoContrato" property="tipoContrato" z="462TIJ7bk86Yz9SplIJwbsdgWMg="/>
+                <table:column date="true" dateTimePattern="${oferta_fechainicio_date_format}" id="c_iw2016_ett_domain_Oferta_FechaInicio" property="fechaInicio" z="qVhwCXTvSf4PVjMrqb95rGC9Ze4="/>
+                <table:column id="c_iw2016_ett_domain_Oferta_NumeroVacantes" property="numeroVacantes" z="ZlFWLsLhm5DlstnVeCnieO7V7tY="/>
+                <table:column id="c_iw2016_ett_domain_Oferta_Perfil" property="perfil" z="yYRv/HMmghzDVS81hrgEn0bdUYQ="/>
+                <table:column date="true" dateTimePattern="${oferta_fechafin_date_format}" id="c_iw2016_ett_domain_Oferta_FechaFin" property="fechaFin" z="/IvY2nwh7arp7NtS7XNwfHKKthk="/>
+            </table:table>
+        </page:list>
+    </sec:authorize>
 </div>

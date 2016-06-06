@@ -1,12 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/jquery/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" version="2.0">
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/jquery/form" 
+xmlns:sec="http://www.springframework.org/security/tags" 
+xmlns:table="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <page:list id="pl_iw2016_ett_domain_Inscripcion" items="${inscripcions}" z="W/fTSAkJ7Z69uLzJhLNTwDS0idA=">
-        <table:table data="${inscripcions}" id="l_iw2016_ett_domain_Inscripcion" path="/inscripcions" z="AvaV7a3Qe1eAax2cOGaPwbUvSKw=">
-            <table:column id="c_iw2016_ett_domain_Inscripcion_Estado" property="estado" z="p9+7oQLJ7LImP2VHKYZ5yNJ+nAY="/>
-            <table:column id="c_iw2016_ett_domain_Inscripcion_oferta" property="oferta" z="tEEXm3NUXP0WX5YgselfYIdhhxE="/>
-            <table:column id="c_iw2016_ett_domain_Inscripcion_demandante" property="demandante" z="XXHdtGHQ4oUIz1fWPAD+RED9ZyE="/>
-        </table:table>
-    </page:list>
+    <sec:authorize access="hasAnyRole('ROLE_GESTOR', 'ROLE_EMPRESA')">
+        <page:list id="pl_iw2016_ett_domain_Inscripcion" items="${inscripcions}" z="W/fTSAkJ7Z69uLzJhLNTwDS0idA=">
+            <table:table create="false" data="${inscripcions}" delete="false" id="l_iw2016_ett_domain_Inscripcion" path="/inscripcions" z="user-managed">
+                <table:column id="c_iw2016_ett_domain_Inscripcion_Estado" property="estado" z="p9+7oQLJ7LImP2VHKYZ5yNJ+nAY="/>
+                <table:column id="c_iw2016_ett_domain_Inscripcion_oferta" property="oferta" z="tEEXm3NUXP0WX5YgselfYIdhhxE="/>
+                <table:column id="c_iw2016_ett_domain_Inscripcion_demandante" property="demandante" z="XXHdtGHQ4oUIz1fWPAD+RED9ZyE="/>
+            </table:table>
+        </page:list>
+    </sec:authorize>
+    <sec:authorize access="hasAnyRole('ROLE_ADMIN')">
+        <page:list id="pl_iw2016_ett_domain_Inscripcion" items="${inscripcions}" z="W/fTSAkJ7Z69uLzJhLNTwDS0idA=">
+            <table:table data="${inscripcions}" id="l_iw2016_ett_domain_Inscripcion" path="/inscripcions" z="AvaV7a3Qe1eAax2cOGaPwbUvSKw=">
+                <table:column id="c_iw2016_ett_domain_Inscripcion_Estado" property="estado" z="p9+7oQLJ7LImP2VHKYZ5yNJ+nAY="/>
+                <table:column id="c_iw2016_ett_domain_Inscripcion_oferta" property="oferta" z="tEEXm3NUXP0WX5YgselfYIdhhxE="/>
+                <table:column id="c_iw2016_ett_domain_Inscripcion_demandante" property="demandante" z="XXHdtGHQ4oUIz1fWPAD+RED9ZyE="/>
+            </table:table>
+        </page:list>
+    </sec:authorize>
+    <sec:authorize access="hasAnyRole('ROLE_DEMANDANTE')">
+        <page:list id="pl_iw2016_ett_domain_Inscripcion" items="${inscripcions}" z="W/fTSAkJ7Z69uLzJhLNTwDS0idA=">
+            <table:table create="false" data="${inscripcions}" id="l_iw2016_ett_domain_Inscripcion" path="/inscripcions" update="false" z="AvaV7a3Qe1eAax2cOGaPwbUvSKw=">
+                <table:column id="c_iw2016_ett_domain_Inscripcion_Estado" property="estado" z="p9+7oQLJ7LImP2VHKYZ5yNJ+nAY="/>
+                <table:column id="c_iw2016_ett_domain_Inscripcion_oferta" property="oferta" z="tEEXm3NUXP0WX5YgselfYIdhhxE="/>
+                <table:column id="c_iw2016_ett_domain_Inscripcion_demandante" property="demandante" z="XXHdtGHQ4oUIz1fWPAD+RED9ZyE="/>
+            </table:table>
+        </page:list>
+    </sec:authorize>
 </div>

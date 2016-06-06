@@ -1,14 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/jquery/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" version="2.0">
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/jquery/form" 
+xmlns:table="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" xmlns:sec="http://www.springframework.org/security/tags" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <page:list id="pl_iw2016_ett_domain_ExperienciaLaboral" items="${experiencialaborals}" z="CXdes+vyyoF5vAHXYZNpRIjCqPA=">
-        <table:table data="${experiencialaborals}" id="l_iw2016_ett_domain_ExperienciaLaboral" path="/experiencialaborals" z="8ZY8DrpAh6Y42kxuG2Ak1zmmV9A=">
-            <table:column id="c_iw2016_ett_domain_ExperienciaLaboral_Empresa" property="empresa" z="QTYj9XSt8IXBz/jwCnp1257/Iss="/>
-            <table:column date="true" dateTimePattern="${experienciaLaboral_fechainicio_date_format}" id="c_iw2016_ett_domain_ExperienciaLaboral_FechaInicio" property="fechaInicio" z="R/YbUTVza/kW96IBzui+2Qk7fCM="/>
-            <table:column date="true" dateTimePattern="${experienciaLaboral_fechafin_date_format}" id="c_iw2016_ett_domain_ExperienciaLaboral_FechaFin" property="fechaFin" z="KMGMZO9gRMx55vb5lAxFH2UjKpU="/>
-            <table:column id="c_iw2016_ett_domain_ExperienciaLaboral_demandante" property="demandante" z="mNz/XPIUeDpRdhuKtOvgKErM3No="/>
-            <table:column id="c_iw2016_ett_domain_ExperienciaLaboral_puestotrabajo" property="puestotrabajo" z="2wP/k1i6svhDVnH6gzhKwlBR158="/>
-        </table:table>
-    </page:list>
+    <sec:authorize access="hasAnyRole('ROLE_DEMANDANTE')">
+	    <page:list id="pl_iw2016_ett_domain_ExperienciaLaboral" items="${experiencialaborals}" z="CXdes+vyyoF5vAHXYZNpRIjCqPA=">
+	        <table:table data="${experiencialaborals}" id="l_iw2016_ett_domain_ExperienciaLaboral" path="/experiencialaborals" z="8ZY8DrpAh6Y42kxuG2Ak1zmmV9A=">
+	            <table:column id="c_iw2016_ett_domain_ExperienciaLaboral_Empresa" property="empresa" z="QTYj9XSt8IXBz/jwCnp1257/Iss="/>
+	            <table:column date="true" dateTimePattern="${experienciaLaboral_fechainicio_date_format}" id="c_iw2016_ett_domain_ExperienciaLaboral_FechaInicio" property="fechaInicio" z="R/YbUTVza/kW96IBzui+2Qk7fCM="/>
+	            <table:column date="true" dateTimePattern="${experienciaLaboral_fechafin_date_format}" id="c_iw2016_ett_domain_ExperienciaLaboral_FechaFin" property="fechaFin" z="KMGMZO9gRMx55vb5lAxFH2UjKpU="/>
+	            <table:column id="c_iw2016_ett_domain_ExperienciaLaboral_demandante" property="demandante" z="mNz/XPIUeDpRdhuKtOvgKErM3No="/>
+	            <table:column id="c_iw2016_ett_domain_ExperienciaLaboral_puestotrabajo" property="puestotrabajo" z="2wP/k1i6svhDVnH6gzhKwlBR158="/>
+	        </table:table>
+	    </page:list>
+	</sec:authorize>
+	<sec:authorize access="hasAnyRole('ROLE_EMPRESA', 'ROLE_GESTOR')">
+	    <page:list id="pl_iw2016_ett_domain_ExperienciaLaboral" items="${experiencialaborals}" z="CXdes+vyyoF5vAHXYZNpRIjCqPA=">
+	        <table:table data="${experiencialaborals}" id="l_iw2016_ett_domain_ExperienciaLaboral" 
+	        create="false" delete="false" update="false" path="/experiencialaborals" z="8ZY8DrpAh6Y42kxuG2Ak1zmmV9A=">
+	            <table:column id="c_iw2016_ett_domain_ExperienciaLaboral_Empresa" property="empresa" z="QTYj9XSt8IXBz/jwCnp1257/Iss="/>
+	            <table:column date="true" dateTimePattern="${experienciaLaboral_fechainicio_date_format}" id="c_iw2016_ett_domain_ExperienciaLaboral_FechaInicio" property="fechaInicio" z="R/YbUTVza/kW96IBzui+2Qk7fCM="/>
+	            <table:column date="true" dateTimePattern="${experienciaLaboral_fechafin_date_format}" id="c_iw2016_ett_domain_ExperienciaLaboral_FechaFin" property="fechaFin" z="KMGMZO9gRMx55vb5lAxFH2UjKpU="/>
+	            <table:column id="c_iw2016_ett_domain_ExperienciaLaboral_demandante" property="demandante" z="mNz/XPIUeDpRdhuKtOvgKErM3No="/>
+	            <table:column id="c_iw2016_ett_domain_ExperienciaLaboral_puestotrabajo" property="puestotrabajo" z="2wP/k1i6svhDVnH6gzhKwlBR158="/>
+	        </table:table>
+	    </page:list>
+	</sec:authorize>
+	<sec:authorize access="hasAnyRole('ROLE_ADMIN')">
+	    <page:list id="pl_iw2016_ett_domain_ExperienciaLaboral" items="${experiencialaborals}" z="CXdes+vyyoF5vAHXYZNpRIjCqPA=">
+	        <table:table data="${experiencialaborals}" id="l_iw2016_ett_domain_ExperienciaLaboral" path="/experiencialaborals" z="8ZY8DrpAh6Y42kxuG2Ak1zmmV9A=">
+	            <table:column id="c_iw2016_ett_domain_ExperienciaLaboral_Empresa" property="empresa" z="QTYj9XSt8IXBz/jwCnp1257/Iss="/>
+	            <table:column date="true" dateTimePattern="${experienciaLaboral_fechainicio_date_format}" id="c_iw2016_ett_domain_ExperienciaLaboral_FechaInicio" property="fechaInicio" z="R/YbUTVza/kW96IBzui+2Qk7fCM="/>
+	            <table:column date="true" dateTimePattern="${experienciaLaboral_fechafin_date_format}" id="c_iw2016_ett_domain_ExperienciaLaboral_FechaFin" property="fechaFin" z="KMGMZO9gRMx55vb5lAxFH2UjKpU="/>
+	            <table:column id="c_iw2016_ett_domain_ExperienciaLaboral_demandante" property="demandante" z="mNz/XPIUeDpRdhuKtOvgKErM3No="/>
+	            <table:column id="c_iw2016_ett_domain_ExperienciaLaboral_puestotrabajo" property="puestotrabajo" z="2wP/k1i6svhDVnH6gzhKwlBR158="/>
+	        </table:table>
+	    </page:list>
+	</sec:authorize>
 </div>

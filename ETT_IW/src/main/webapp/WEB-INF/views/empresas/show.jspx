@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/datatables" version="2.0">
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/datatables" xmlns:sec="http://www.springframework.org/security/tags" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <page:show id="ps_iw2016_ett_domain_Empresa" object="${empresa}" path="/empresas" z="/Uw82/+hNRkIRDvJalxCeD6lPSQ=">
-        <field:display field="CIF" id="s_iw2016_ett_domain_Empresa_CIF" object="${empresa}" z="X8uo+xq1/QGW1rjb+A7j5TS/Tkk="/>
-        <field:display field="nombre" id="s_iw2016_ett_domain_Empresa_nombre" object="${empresa}" z="1c/9m59T3dG1xah5ezinqRd3J1Q="/>
-        <field:display field="actividad" id="s_iw2016_ett_domain_Empresa_actividad" object="${empresa}" z="k58pa/rhwzm8JDZqurYJ7wd50cY="/>
-        <field:display field="n_Empleados" id="s_iw2016_ett_domain_Empresa_n_Empleados" object="${empresa}" z="72g4WeMvqZaFjkUR4sJdMdHpPvc="/>
-        <field:display field="email" id="s_iw2016_ett_domain_Empresa_email" object="${empresa}" z="93Oq+/EEfnHzLbqzb0l4C/NKSvw="/>
-        <field:display field="username" id="s_iw2016_ett_domain_Empresa_username" object="${empresa}" z="HyQVBXdbfmE13HNPiqs2a6ggRDE="/>
-        <field:display field="password" id="s_iw2016_ett_domain_Empresa_password" object="${empresa}" render="false" z="user-managed"/>
-        <field:display field="enable" id="s_iw2016_ett_domain_Empresa_enable" object="${empresa}" z="YboS7KTt7RXHK2ArQIWaUeRiH74="/>
-        <field:display field="rol" id="s_iw2016_ett_domain_Empresa_rol" object="${empresa}" z="xU7Tdjaq6xJRb7iWHUpyAY7yzs0="/>
-    </page:show>
+    <sec:authorize access="hasAnyRole('ROLE_DEMANDANTE', 'ROLE_ANONYMUS', 'ROLE_EMPRESA')">
+        <page:show create="false" delete="false" id="ps_iw2016_ett_domain_Empresa" object="${empresa}" path="/empresas" update="false" z="user-managed">
+            <field:display field="CIF" id="s_iw2016_ett_domain_Empresa_CIF" object="${empresa}" z="X8uo+xq1/QGW1rjb+A7j5TS/Tkk="/>
+            <field:display field="nombre" id="s_iw2016_ett_domain_Empresa_nombre" object="${empresa}" z="1c/9m59T3dG1xah5ezinqRd3J1Q="/>
+            <field:display field="actividad" id="s_iw2016_ett_domain_Empresa_actividad" object="${empresa}" z="k58pa/rhwzm8JDZqurYJ7wd50cY="/>
+            <field:display field="n_Empleados" id="s_iw2016_ett_domain_Empresa_n_Empleados" object="${empresa}" z="72g4WeMvqZaFjkUR4sJdMdHpPvc="/>
+            <field:display field="email" id="s_iw2016_ett_domain_Empresa_email" object="${empresa}" z="93Oq+/EEfnHzLbqzb0l4C/NKSvw="/>
+            <field:display field="username" id="s_iw2016_ett_domain_Empresa_username" object="${empresa}" z="HyQVBXdbfmE13HNPiqs2a6ggRDE="/>
+            <field:display field="password" id="s_iw2016_ett_domain_Empresa_password" object="${empresa}" render="false" z="user-managed"/>
+            <field:display field="enable" id="s_iw2016_ett_domain_Empresa_enable" object="${empresa}" z="YboS7KTt7RXHK2ArQIWaUeRiH74="/>
+            <field:display field="rol" id="s_iw2016_ett_domain_Empresa_rol" object="${empresa}" z="xU7Tdjaq6xJRb7iWHUpyAY7yzs0="/>
+        </page:show>
+    </sec:authorize>
+    <sec:authorize access="hasAnyRole('ROLE_ADMIN', 'ROLE_GESTOR')">
+        <page:show id="ps_iw2016_ett_domain_Empresa" object="${empresa}" path="/empresas" z="/Uw82/+hNRkIRDvJalxCeD6lPSQ=">
+            <field:display field="CIF" id="s_iw2016_ett_domain_Empresa_CIF" object="${empresa}" z="X8uo+xq1/QGW1rjb+A7j5TS/Tkk="/>
+            <field:display field="nombre" id="s_iw2016_ett_domain_Empresa_nombre" object="${empresa}" z="1c/9m59T3dG1xah5ezinqRd3J1Q="/>
+            <field:display field="actividad" id="s_iw2016_ett_domain_Empresa_actividad" object="${empresa}" z="k58pa/rhwzm8JDZqurYJ7wd50cY="/>
+            <field:display field="n_Empleados" id="s_iw2016_ett_domain_Empresa_n_Empleados" object="${empresa}" z="72g4WeMvqZaFjkUR4sJdMdHpPvc="/>
+            <field:display field="email" id="s_iw2016_ett_domain_Empresa_email" object="${empresa}" z="93Oq+/EEfnHzLbqzb0l4C/NKSvw="/>
+            <field:display field="username" id="s_iw2016_ett_domain_Empresa_username" object="${empresa}" z="HyQVBXdbfmE13HNPiqs2a6ggRDE="/>
+            <field:display field="password" id="s_iw2016_ett_domain_Empresa_password" object="${empresa}" render="false" z="user-managed"/>
+        </page:show>
+    </sec:authorize>
 </div>

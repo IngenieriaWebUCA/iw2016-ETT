@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/jquery/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" version="2.0">
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_iw2016_ett_domain_Demandante" items="${demandantes}" z="oLjwZNSza/dCA4OU+zetXu+3Kl8=">
         <table:table data="${demandantes}" id="l_iw2016_ett_domain_Demandante" path="/demandantes" z="5GfM3JFVApswQv++hlmdbhyuom8=">
-            <table:column id="c_iw2016_ett_domain_Demandante_nombre" property="nombre" z="lk9/PbGjLGrHxO9USuC69B+5Trc="/>
-            <table:column id="c_iw2016_ett_domain_Demandante_Apellidos" property="apellidos" z="jjmeelgaP6/GoJqjaDKwH+RXzRM="/>
             <table:column id="c_iw2016_ett_domain_Demandante_username" property="username" z="5ND/pMziuzP2udOdVxspKBKtGEI="/>
-            <table:column id="c_iw2016_ett_domain_Demandante_password" property="password" render="false" z="user-managed"/>
+            <table:column id="c_iw2016_ett_domain_Demandante_password" property="password" z="DhrAB+EDjGrWIvK/hqPc1byctLM="/>
             <table:column id="c_iw2016_ett_domain_Demandante_enable" property="enable" z="p767HFkNnDvor3Xmz5v0R8H4guI="/>
             <table:column id="c_iw2016_ett_domain_Demandante_rol" property="rol" z="IYntfAYpI6J+8QOgxexZllcAYQM="/>
+            <table:column id="c_iw2016_ett_domain_Demandante_nombre" property="nombre" z="lk9/PbGjLGrHxO9USuC69B+5Trc="/>
+            <table:column id="c_iw2016_ett_domain_Demandante_Apellidos" property="apellidos" z="jjmeelgaP6/GoJqjaDKwH+RXzRM="/>
         </table:table>
     </page:list>
 </div>

@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/jquery/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" version="2.0">
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/jquery/form" xmlns:sec="http://www.springframework.org/security/tags" xmlns:table="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <page:list id="pl_iw2016_ett_domain_Formacion" items="${formacions}" z="P7EdoEgUCs7OyzV6uNN+zVjEDlc=">
-        <table:table data="${formacions}" id="l_iw2016_ett_domain_Formacion" path="/formacions" z="tTNq14HzSa3NAsnFs6DvsFyKArQ=">
-            <table:column id="c_iw2016_ett_domain_Formacion_Titulo" property="titulo" z="tIm5Lykemn0OhFyyVCn+1nmhFps="/>
-            <table:column date="true" dateTimePattern="${formacion_fechainicio_date_format}" id="c_iw2016_ett_domain_Formacion_FechaInicio" property="fechaInicio" z="Gf2S6LTFXZqF3g2yuFZfJXGBqsg="/>
-            <table:column date="true" dateTimePattern="${formacion_fechafin_date_format}" id="c_iw2016_ett_domain_Formacion_FechaFin" property="fechaFin" z="nQo2yAJoNEtKT95OvjvJNMQt4WI="/>
-            <table:column id="c_iw2016_ett_domain_Formacion_Observaciones" property="observaciones" z="ZX0aRsidMCG6osIqsVjlBL357qA="/>
-            <table:column id="c_iw2016_ett_domain_Formacion_demandante" property="demandante" z="IFvF29lZKSvtXxfAVzdo8WaGRzI="/>
-            <table:column id="c_iw2016_ett_domain_Formacion_tipoFormacion" property="tipoFormacion" z="j3NgkX22KRCPobAgppRIoeFoICM="/>
-        </table:table>
-    </page:list>
+    <sec:authorize access="hasAnyRole('ROLE_GESTOR', 'ROLE_EMPRESA')">
+        <page:list id="pl_iw2016_ett_domain_Formacion" items="${formacions}" z="P7EdoEgUCs7OyzV6uNN+zVjEDlc=">
+            <table:table create="false" data="${formacions}" delete="false" id="l_iw2016_ett_domain_Formacion" path="/formacions" update="false" z="user-managed">
+                <table:column id="c_iw2016_ett_domain_Formacion_Titulo" property="titulo" z="tIm5Lykemn0OhFyyVCn+1nmhFps="/>
+                <table:column date="true" dateTimePattern="${formacion_fechainicio_date_format}" id="c_iw2016_ett_domain_Formacion_FechaInicio" property="fechaInicio" z="Gf2S6LTFXZqF3g2yuFZfJXGBqsg="/>
+                <table:column date="true" dateTimePattern="${formacion_fechafin_date_format}" id="c_iw2016_ett_domain_Formacion_FechaFin" property="fechaFin" z="nQo2yAJoNEtKT95OvjvJNMQt4WI="/>
+                <table:column id="c_iw2016_ett_domain_Formacion_Observaciones" property="observaciones" z="ZX0aRsidMCG6osIqsVjlBL357qA="/>
+                <table:column id="c_iw2016_ett_domain_Formacion_demandante" property="demandante" z="IFvF29lZKSvtXxfAVzdo8WaGRzI="/>
+                <table:column id="c_iw2016_ett_domain_Formacion_tipoFormacion" property="tipoFormacion" z="j3NgkX22KRCPobAgppRIoeFoICM="/>
+            </table:table>
+        </page:list>
+    </sec:authorize>
+    <sec:authorize access="hasAnyRole('ROLE_DEMANDANTE', 'ROLE_ADMIN')">
+        <page:list id="pl_iw2016_ett_domain_Formacion" items="${formacions}" z="P7EdoEgUCs7OyzV6uNN+zVjEDlc=">
+            <table:table data="${formacions}" id="l_iw2016_ett_domain_Formacion" path="/formacions" z="tTNq14HzSa3NAsnFs6DvsFyKArQ=">
+                <table:column id="c_iw2016_ett_domain_Formacion_Titulo" property="titulo" z="tIm5Lykemn0OhFyyVCn+1nmhFps="/>
+                <table:column date="true" dateTimePattern="${formacion_fechainicio_date_format}" id="c_iw2016_ett_domain_Formacion_FechaInicio" property="fechaInicio" z="Gf2S6LTFXZqF3g2yuFZfJXGBqsg="/>
+                <table:column date="true" dateTimePattern="${formacion_fechafin_date_format}" id="c_iw2016_ett_domain_Formacion_FechaFin" property="fechaFin" z="nQo2yAJoNEtKT95OvjvJNMQt4WI="/>
+                <table:column id="c_iw2016_ett_domain_Formacion_Observaciones" property="observaciones" z="ZX0aRsidMCG6osIqsVjlBL357qA="/>
+                <table:column id="c_iw2016_ett_domain_Formacion_demandante" property="demandante" z="IFvF29lZKSvtXxfAVzdo8WaGRzI="/>
+                <table:column id="c_iw2016_ett_domain_Formacion_tipoFormacion" property="tipoFormacion" z="j3NgkX22KRCPobAgppRIoeFoICM="/>
+            </table:table>
+        </page:list>
+    </sec:authorize>
 </div>
