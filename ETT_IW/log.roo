@@ -475,3 +475,37 @@ finder list
 // Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-06-06 20:25:34
 // Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-06-06 21:25:20
 // Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-06-06 21:27:49
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-06-07 10:05:33
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-06-07 11:00:36
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-06-07 11:36:14
+focus --class ~.domain.Inscripcion
+focus --class ~.domain.Inscripcion
+finder list
+finder add findInscripcionsByDemandante
+focus --class ~.domain.ExperienciaLaboral
+finder list
+finder add findExperienciaLaboralsByDemandante
+focus --class ~.domain.Formacion
+finder list
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-06-07 11:54:00
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-06-07 12:04:24
+focus --class ~.domain.Formacion
+finder list
+find add findFormacionsByDemandante
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-06-07 12:07:15
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-06-07 12:09:03
+focus --class ~.domain.Titulaciones
+finder list
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-06-07 12:17:07
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-06-07 12:18:28
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-06-07 12:23:07
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-06-07 12:54:04
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-06-07 12:57:08
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-06-07 17:31:53
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-06-07 17:34:36
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-06-07 17:53:25
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-06-07 20:29:54
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-06-07 20:42:00
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-06-07 20:48:59
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-06-07 20:52:50
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-06-07 20:57:26

@@ -50,21 +50,6 @@ privileged aspect FormacionController_Roo_Controller {
         return "formacions/show";
     }
     
-    @RequestMapping(produces = "text/html")
-    public String FormacionController.list(@RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, @RequestParam(value = "sortFieldName", required = false) String sortFieldName, @RequestParam(value = "sortOrder", required = false) String sortOrder, Model uiModel) {
-        if (page != null || size != null) {
-            int sizeNo = size == null ? 10 : size.intValue();
-            final int firstResult = page == null ? 0 : (page.intValue() - 1) * sizeNo;
-            uiModel.addAttribute("formacions", Formacion.findFormacionEntries(firstResult, sizeNo, sortFieldName, sortOrder));
-            float nrOfPages = (float) Formacion.countFormacions() / sizeNo;
-            uiModel.addAttribute("maxPages", (int) ((nrOfPages > (int) nrOfPages || nrOfPages == 0.0) ? nrOfPages + 1 : nrOfPages));
-        } else {
-            uiModel.addAttribute("formacions", Formacion.findAllFormacions(sortFieldName, sortOrder));
-        }
-        addDateTimeFormatPatterns(uiModel);
-        return "formacions/list";
-    }
-    
     @RequestMapping(method = RequestMethod.PUT, produces = "text/html")
     public String FormacionController.update(@Valid Formacion formacion, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {

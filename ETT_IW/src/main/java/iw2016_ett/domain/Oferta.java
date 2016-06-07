@@ -2,6 +2,9 @@ package iw2016_ett.domain;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.tostring.RooToString;
+
+import iw2016_ett.web.UsersController;
+
 import java.util.Date;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -84,7 +87,17 @@ public class Oferta {
     private PuestoTrabajo puestotrabajo;
     
     public static List<Oferta> findOfertaEntries(int firstResult, int maxResults, String sortFieldName, String sortOrder) {
-        String jpaQuery = "SELECT o FROM Oferta  o where estado = 0";
+       
+        Users u = UsersController.Usuario_logueado();
+        String jpaQuery = null;
+        /*if (u.getRol().equals("ROLE_ADMIN") ||  u.getRol().equals("ROLE_GESTOR")) {
+            jpaQuery = "SELECT o FROM Oferta  o";
+        } else if (u.getRol().equals("ROLE_EMPRESA")) {
+            jpaQuery = "SELECT o FROM Oferta  o where empresa =" + u.getId();
+        }else{*/
+        	jpaQuery = "SELECT o FROM Oferta  o where estado = 0";
+       // }
+        
         if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
             jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
             if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {

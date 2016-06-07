@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.gvnix.addon.web.mvc.annotations.jquery.GvNIXWebJQuery;
 import iw2016_ett.domain.batch.LocalizacionBatchService;
 import org.gvnix.addon.web.mvc.annotations.batch.GvNIXWebJpaBatch;
@@ -35,5 +36,7 @@ public class LocalizacionController {
 	        localizacion.persist();
 	        return "redirect:/localizacions/" + encodeUrlPathSegment(localizacion.getId().toString(), httpServletRequest);
 	    }
+	 
+	 
 	
 }

@@ -2,9 +2,13 @@ package iw2016_ett.domain;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.tostring.RooToString;
+
+import iw2016_ett.web.UsersController;
+
 import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.OneToMany;
@@ -43,4 +47,7 @@ public class Localizacion {
      */
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "localizacion")
     private Set<Oferta> ofertas = new HashSet<Oferta>();
+    
+   
+   
 }

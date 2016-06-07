@@ -50,17 +50,6 @@ privileged aspect ExperienciaLaboral_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT o FROM ExperienciaLaboral o", ExperienciaLaboral.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
-    public static List<ExperienciaLaboral> ExperienciaLaboral.findExperienciaLaboralEntries(int firstResult, int maxResults, String sortFieldName, String sortOrder) {
-        String jpaQuery = "SELECT o FROM ExperienciaLaboral o";
-        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
-            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
-            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
-                jpaQuery = jpaQuery + " " + sortOrder;
-            }
-        }
-        return entityManager().createQuery(jpaQuery, ExperienciaLaboral.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
-    }
-    
     @Transactional
     public void ExperienciaLaboral.persist() {
         if (this.entityManager == null) this.entityManager = entityManager();
