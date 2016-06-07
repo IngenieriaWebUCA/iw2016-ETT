@@ -3,7 +3,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <sec:authorize access="hasAnyRole('ROLE_DEMANDANTE','ROLE_ANONYMOUS')">
-        <page:show create="false" delete="false" id="ps_iw2016_ett_domain_Oferta" object="${oferta}" path="/ofertas" update="false" z="user-managed">
+        <page:show create="false" delete="false" list="false" id="ps_iw2016_ett_domain_Oferta" object="${oferta}" path="/ofertas" update="false" z="user-managed">
             <field:display field="titulo" id="s_iw2016_ett_domain_Oferta_titulo" object="${oferta}" z="nKWRjErDl5qzhIwsIOLchfsNy+0="/>
             <field:display field="tipoContrato" id="s_iw2016_ett_domain_Oferta_TipoContrato" object="${oferta}" z="A2gAbifBcafEiyhz3PlHkI/hGSQ="/>
             <field:display date="true" dateTimePattern="${oferta_fechainicio_date_format}" field="fechaInicio" id="s_iw2016_ett_domain_Oferta_FechaInicio" object="${oferta}" z="kuqqMNiZrlSUP7URIi7lKGRkBrU="/>
@@ -19,7 +19,7 @@
         </page:show>
     </sec:authorize>
     <sec:authorize access="hasAnyRole('ROLE_ADMIN', 'ROLE_GESTOR')">
-        <page:show create="false" id="ps_iw2016_ett_domain_Oferta" object="${oferta}" path="/ofertas" z="m2djjjsroyUOBWjPSyv9uCmUknA=">
+        <page:show create="false" id="ps_iw2016_ett_domain_Oferta" object="${oferta}" path="/ofertas" list="false" z="m2djjjsroyUOBWjPSyv9uCmUknA=">
             <field:display field="titulo" id="s_iw2016_ett_domain_Oferta_titulo" object="${oferta}" z="nKWRjErDl5qzhIwsIOLchfsNy+0="/>
             <field:display field="tipoContrato" id="s_iw2016_ett_domain_Oferta_TipoContrato" object="${oferta}" z="A2gAbifBcafEiyhz3PlHkI/hGSQ="/>
             <field:display date="true" dateTimePattern="${oferta_fechainicio_date_format}" field="fechaInicio" id="s_iw2016_ett_domain_Oferta_FechaInicio" object="${oferta}" z="kuqqMNiZrlSUP7URIi7lKGRkBrU="/>
@@ -35,8 +35,7 @@
         </page:show>
     </sec:authorize>
     <sec:authorize access="hasAnyRole('ROLE_EMPRESA')">
-        <!-- Falta controlar que solo pueda actualizar y eliminar su propia empresa -->
-        <page:show create="false" id="ps_iw2016_ett_domain_Oferta" object="${oferta}" path="/ofertas" z="m2djjjsroyUOBWjPSyv9uCmUknA=">
+        <page:show create="false" id="ps_iw2016_ett_domain_Oferta" object="${oferta}" path="/ofertas" list="false" z="m2djjjsroyUOBWjPSyv9uCmUknA=">
             <field:display field="titulo" id="s_iw2016_ett_domain_Oferta_titulo" object="${oferta}" z="nKWRjErDl5qzhIwsIOLchfsNy+0="/>
             <field:display field="tipoContrato" id="s_iw2016_ett_domain_Oferta_TipoContrato" object="${oferta}" z="A2gAbifBcafEiyhz3PlHkI/hGSQ="/>
             <field:display date="true" dateTimePattern="${oferta_fechainicio_date_format}" field="fechaInicio" id="s_iw2016_ett_domain_Oferta_FechaInicio" object="${oferta}" z="kuqqMNiZrlSUP7URIi7lKGRkBrU="/>
