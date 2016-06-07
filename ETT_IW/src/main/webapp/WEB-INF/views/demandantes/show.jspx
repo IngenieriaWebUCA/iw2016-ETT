@@ -1,21 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/jquery/form" version="2.0">
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/jquery/form" xmlns:sec="http://www.springframework.org/security/tags" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <page:show id="ps_iw2016_ett_domain_Demandante" object="${demandante}" path="/demandantes" z="JsqHQWck/5yw6SFuQt43fvRpxJQ=">
-        <field:display field="username" id="s_iw2016_ett_domain_Demandante_username" object="${demandante}" z="VP5+YUQwWwdQ3fq7s3qAGA0wfvY="/>
-        <field:display field="password" id="s_iw2016_ett_domain_Demandante_password" object="${demandante}" z="977NUVXvfB2zHLttuB3L1OGzw78="/>
-        <field:display field="enable" id="s_iw2016_ett_domain_Demandante_enable" object="${demandante}" z="RHFLkaVfFLWaRJTX9iAGVBCXU5E="/>
-        <field:display field="rol" id="s_iw2016_ett_domain_Demandante_rol" object="${demandante}" z="KZoJMnvNv7zjtB99/4newUcogf4="/>
-        <field:display field="nombre" id="s_iw2016_ett_domain_Demandante_nombre" object="${demandante}" z="3B8A+hBXGmH78nPp577w7AeIqKI="/>
-        <field:display field="apellidos" id="s_iw2016_ett_domain_Demandante_Apellidos" object="${demandante}" z="ShgJvzV5SKEmP+w21YGCpm9bY/g="/>
-        <field:display date="true" dateTimePattern="${demandante_fechanacimiento_date_format}" field="fechaNacimiento" id="s_iw2016_ett_domain_Demandante_FechaNacimiento" object="${demandante}" z="l8NxNt3nzo6/t4W51JR82Gge8HM="/>
-        <field:display field="direccion" id="s_iw2016_ett_domain_Demandante_direccion" object="${demandante}" z="zuWZq/+/BgvFn8jGTmPyVgOmm8A="/>
-        <field:display field="email" id="s_iw2016_ett_domain_Demandante_email" object="${demandante}" z="GBrhsU/DUdPdM8623QbXWSksd8k="/>
-        <field:display field="telefono" id="s_iw2016_ett_domain_Demandante_Telefono" object="${demandante}" z="JPA5fkGLIF5Zzfe9EyPCMplx5xM="/>
-        <field:display field="sexo" id="s_iw2016_ett_domain_Demandante_Sexo" object="${demandante}" z="rnBxE+mFbLPogcBXGbSjmxTCVPw="/>
-        <field:display field="resumen" id="s_iw2016_ett_domain_Demandante_Resumen" object="${demandante}" z="XQnNEq95EqyPP78ObKBQFuveOdQ="/>
-        <field:display field="foto" id="s_iw2016_ett_domain_Demandante_Foto" object="${demandante}" z="u13KClfqLmSN+ByfBm3GZCFz12o="/>
-        <field:display field="curriculum" id="s_iw2016_ett_domain_Demandante_Curriculum" object="${demandante}" z="8AZGkvtb/dfq7wvXav+DwZFuhHs="/>
-    </page:show>
+    <sec:authorize access="hasAnyRole('ROLE_DEMANDANTE')">
+        <page:show create="false" id="ps_iw2016_ett_domain_Demandante" object="${demandante}" path="/demandantes" z="user-managed">
+            <field:display field="nombre" id="s_iw2016_ett_domain_Demandante_nombre" object="${demandante}" z="3B8A+hBXGmH78nPp577w7AeIqKI="/>
+            <field:display field="apellidos" id="s_iw2016_ett_domain_Demandante_Apellidos" object="${demandante}" z="ShgJvzV5SKEmP+w21YGCpm9bY/g="/>
+            <field:display date="true" dateTimePattern="${demandante_fechanacimiento_date_format}" field="fechaNacimiento" id="s_iw2016_ett_domain_Demandante_FechaNacimiento" object="${demandante}" z="l8NxNt3nzo6/t4W51JR82Gge8HM="/>
+            <field:display field="direccion" id="s_iw2016_ett_domain_Demandante_direccion" object="${demandante}" z="zuWZq/+/BgvFn8jGTmPyVgOmm8A="/>
+            <field:display field="email" id="s_iw2016_ett_domain_Demandante_email" object="${demandante}" z="GBrhsU/DUdPdM8623QbXWSksd8k="/>
+            <field:display field="telefono" id="s_iw2016_ett_domain_Demandante_Telefono" object="${demandante}" z="JPA5fkGLIF5Zzfe9EyPCMplx5xM="/>
+            <field:display field="sexo" id="s_iw2016_ett_domain_Demandante_Sexo" object="${demandante}" z="rnBxE+mFbLPogcBXGbSjmxTCVPw="/>
+            <field:display field="resumen" id="s_iw2016_ett_domain_Demandante_Resumen" object="${demandante}" z="XQnNEq95EqyPP78ObKBQFuveOdQ="/>
+            <field:display field="foto" id="s_iw2016_ett_domain_Demandante_Foto" object="${demandante}" z="u13KClfqLmSN+ByfBm3GZCFz12o="/>
+            <field:display field="curriculum" id="s_iw2016_ett_domain_Demandante_Curriculum" object="${demandante}" z="8AZGkvtb/dfq7wvXav+DwZFuhHs="/>
+            <field:display field="username" id="s_iw2016_ett_domain_Demandante_username" object="${demandante}" z="VP5+YUQwWwdQ3fq7s3qAGA0wfvY="/>
+            <field:display field="password" id="s_iw2016_ett_domain_Demandante_password" object="${demandante}" render="false" z="user-managed"/>
+            <field:display field="enable" id="s_iw2016_ett_domain_Demandante_enable" object="${demandante}" z="RHFLkaVfFLWaRJTX9iAGVBCXU5E="/>
+            <field:display field="rol" id="s_iw2016_ett_domain_Demandante_rol" object="${demandante}" z="KZoJMnvNv7zjtB99/4newUcogf4="/>
+        </page:show>
+    </sec:authorize>
+    <sec:authorize access="hasAnyRole('ROLE_ADMIN')">
+        <page:show id="ps_iw2016_ett_domain_Demandante" object="${demandante}" path="/demandantes" z="JsqHQWck/5yw6SFuQt43fvRpxJQ=">
+            <field:display field="nombre" id="s_iw2016_ett_domain_Demandante_nombre" object="${demandante}" z="3B8A+hBXGmH78nPp577w7AeIqKI="/>
+            <field:display field="apellidos" id="s_iw2016_ett_domain_Demandante_Apellidos" object="${demandante}" z="ShgJvzV5SKEmP+w21YGCpm9bY/g="/>
+            <field:display date="true" dateTimePattern="${demandante_fechanacimiento_date_format}" field="fechaNacimiento" id="s_iw2016_ett_domain_Demandante_FechaNacimiento" object="${demandante}" z="l8NxNt3nzo6/t4W51JR82Gge8HM="/>
+            <field:display field="direccion" id="s_iw2016_ett_domain_Demandante_direccion" object="${demandante}" z="zuWZq/+/BgvFn8jGTmPyVgOmm8A="/>
+            <field:display field="email" id="s_iw2016_ett_domain_Demandante_email" object="${demandante}" z="GBrhsU/DUdPdM8623QbXWSksd8k="/>
+            <field:display field="telefono" id="s_iw2016_ett_domain_Demandante_Telefono" object="${demandante}" z="JPA5fkGLIF5Zzfe9EyPCMplx5xM="/>
+            <field:display field="sexo" id="s_iw2016_ett_domain_Demandante_Sexo" object="${demandante}" z="rnBxE+mFbLPogcBXGbSjmxTCVPw="/>
+            <field:display field="resumen" id="s_iw2016_ett_domain_Demandante_Resumen" object="${demandante}" z="XQnNEq95EqyPP78ObKBQFuveOdQ="/>
+            <field:display field="foto" id="s_iw2016_ett_domain_Demandante_Foto" object="${demandante}" z="u13KClfqLmSN+ByfBm3GZCFz12o="/>
+            <field:display field="curriculum" id="s_iw2016_ett_domain_Demandante_Curriculum" object="${demandante}" z="8AZGkvtb/dfq7wvXav+DwZFuhHs="/>
+            <field:display field="username" id="s_iw2016_ett_domain_Demandante_username" object="${demandante}" z="VP5+YUQwWwdQ3fq7s3qAGA0wfvY="/>
+            <field:display field="password" id="s_iw2016_ett_domain_Demandante_password" object="${demandante}" render="false" z="user-managed"/>
+        </page:show>
+    </sec:authorize>
+    <sec:authorize access="hasAnyRole('ROLE_GESTOR', 'ROLE_EMPRESA')">
+        <page:show create="false" delete="false" id="ps_iw2016_ett_domain_Demandante" object="${demandante}" path="/demandantes" update="false" z="JsqHQWck/5yw6SFuQt43fvRpxJQ=">
+            <field:display field="nombre" id="s_iw2016_ett_domain_Demandante_nombre" object="${demandante}" z="3B8A+hBXGmH78nPp577w7AeIqKI="/>
+            <field:display field="apellidos" id="s_iw2016_ett_domain_Demandante_Apellidos" object="${demandante}" z="ShgJvzV5SKEmP+w21YGCpm9bY/g="/>
+            <field:display date="true" dateTimePattern="${demandante_fechanacimiento_date_format}" field="fechaNacimiento" id="s_iw2016_ett_domain_Demandante_FechaNacimiento" object="${demandante}" z="l8NxNt3nzo6/t4W51JR82Gge8HM="/>
+            <field:display field="direccion" id="s_iw2016_ett_domain_Demandante_direccion" object="${demandante}" z="zuWZq/+/BgvFn8jGTmPyVgOmm8A="/>
+            <field:display field="email" id="s_iw2016_ett_domain_Demandante_email" object="${demandante}" z="GBrhsU/DUdPdM8623QbXWSksd8k="/>
+            <field:display field="telefono" id="s_iw2016_ett_domain_Demandante_Telefono" object="${demandante}" z="JPA5fkGLIF5Zzfe9EyPCMplx5xM="/>
+            <field:display field="sexo" id="s_iw2016_ett_domain_Demandante_Sexo" object="${demandante}" z="rnBxE+mFbLPogcBXGbSjmxTCVPw="/>
+            <field:display field="resumen" id="s_iw2016_ett_domain_Demandante_Resumen" object="${demandante}" z="XQnNEq95EqyPP78ObKBQFuveOdQ="/>
+            <field:display field="foto" id="s_iw2016_ett_domain_Demandante_Foto" object="${demandante}" z="u13KClfqLmSN+ByfBm3GZCFz12o="/>
+            <field:display field="curriculum" id="s_iw2016_ett_domain_Demandante_Curriculum" object="${demandante}" z="8AZGkvtb/dfq7wvXav+DwZFuhHs="/>
+            <field:display field="username" id="s_iw2016_ett_domain_Demandante_username" object="${demandante}" z="VP5+YUQwWwdQ3fq7s3qAGA0wfvY="/>
+            <field:display field="password" id="s_iw2016_ett_domain_Demandante_password" object="${demandante}" render="false" z="user-managed"/>
+        </page:show>
+    </sec:authorize>
+    <sec:authorize access="hasAnyRole('ROLE_ANONYMOUS')"/>
 </div>

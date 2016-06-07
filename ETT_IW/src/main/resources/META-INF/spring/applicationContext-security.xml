@@ -19,7 +19,7 @@
         <intercept-url pattern="\A/empresas.*\Z" access="permitAll" />
         <intercept-url pattern="\A/users.*\Z" access="hasRole('ROLE_ADMIN')" />
         <intercept-url pattern="\A/formacions\?form.*\Z" access="hasAnyRole('ROLE_DEMANDANTE', 'ROLE_ADMIN')" />
-        <intercept-url pattern="\A/formacions.*\Z" access="hasAnyRole('ROLE_EMPRESA', 'ROLE_ADMIN','ROLE_GESTOR')" />
+        <intercept-url pattern="\A/formacions.*\Z" access="hasAnyRole('ROLE_DEMANDANTE', 'ROLE_EMPRESA', 'ROLE_ADMIN','ROLE_GESTOR')" />
         <intercept-url pattern="\A/titulacions.*\Z" access="hasAnyRole('ROLE_EMPRESA', 'ROLE_ADMIN','ROLE_GESTOR')" />
         <intercept-url pattern="\A/experiencialaborals.*\Z" access="hasAnyRole('ROLE_DEMANDANTE', 'ROLE_ADMIN')" />
         <intercept-url pattern="\A/inscripcions.*\Z" access="hasAnyRole('ROLE_EMPRESA','ROLE_DEMANDANTE', 'ROLE_ADMIN','ROLE_GESTOR')" />
