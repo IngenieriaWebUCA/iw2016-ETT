@@ -13,6 +13,7 @@
         <field:input field="password" id="c_iw2016_ett_domain_Empresa_password" required="true" type="password" z="user-managed"/>
         <field:input field="enable" id="c_iw2016_ett_domain_Empresa_enable" render="false" z="user-managed"/>
         <field:input field="rol" id="c_iw2016_ett_domain_Empresa_rol" render="false" value="ROLE_USER" z="user-managed"/>
+        <field:simple field="ofertas" id="c_iw2016_ett_domain_Empresa_ofertas" messageCode="entity_reference_not_managed" messageCodeAttribute="Oferta" z="6p8W9p4YMC+tKIBStivx833EZLA="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_iw2016_ett_domain_Empresa" render="${not empty dependencies}" z="Sd/CrlYf5H1byK+JGkjG+SInXbc="/>
 </div>

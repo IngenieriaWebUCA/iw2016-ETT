@@ -4,6 +4,7 @@
 package iw2016_ett.web;
 
 import iw2016_ett.domain.Contrato;
+import iw2016_ett.domain.Empresa;
 import iw2016_ett.domain.Estado;
 import iw2016_ett.domain.Inscripcion;
 import iw2016_ett.domain.Localizacion;
@@ -90,6 +91,7 @@ privileged aspect OfertaController_Roo_Controller {
         uiModel.addAttribute("oferta", oferta);
         addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("contratoes", Arrays.asList(Contrato.values()));
+        uiModel.addAttribute("empresas", Empresa.findAllEmpresas());
         uiModel.addAttribute("estadoes", Arrays.asList(Estado.values()));
         uiModel.addAttribute("inscripcions", Inscripcion.findAllInscripcions());
         uiModel.addAttribute("localizacions", Localizacion.findAllLocalizacions());

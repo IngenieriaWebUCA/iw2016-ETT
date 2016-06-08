@@ -2,9 +2,7 @@ package iw2016_ett.domain;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.tostring.RooToString;
-
 import com.mysema.query.annotations.QueryEntity;
-
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
@@ -13,7 +11,7 @@ import javax.persistence.OneToMany;
 @RooJavaBean
 @RooToString
 @RooJpaActiveRecord
-public class Empresa extends Users{
+public class Empresa extends Users {
 
     /**
      */
@@ -39,6 +37,9 @@ public class Empresa extends Users{
      */
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "empresa")
     private Set<Localizacion> localizacion = new HashSet<Localizacion>();
-    
-    
+
+    /**
+     */
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "empresa")
+    private Set<Oferta> ofertas = new HashSet<Oferta>();
 }

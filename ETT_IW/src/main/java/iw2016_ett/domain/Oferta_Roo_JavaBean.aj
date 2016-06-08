@@ -4,6 +4,7 @@
 package iw2016_ett.domain;
 
 import iw2016_ett.domain.Contrato;
+import iw2016_ett.domain.Empresa;
 import iw2016_ett.domain.Estado;
 import iw2016_ett.domain.Inscripcion;
 import iw2016_ett.domain.Localizacion;
@@ -118,6 +119,14 @@ privileged aspect Oferta_Roo_JavaBean {
     
     public void Oferta.setPuestotrabajo(PuestoTrabajo puestotrabajo) {
         this.puestotrabajo = puestotrabajo;
+    }
+    
+    public Empresa Oferta.getEmpresa() {
+        return this.empresa;
+    }
+    
+    public void Oferta.setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
     }
     
 }

@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 privileged aspect Empresa_Roo_Jpa_ActiveRecord {
     
-    public static final List<String> Empresa.fieldNames4OrderClauseFilter = java.util.Arrays.asList("CIF", "nombre", "actividad", "n_Empleados", "email", "localizacion");
+    public static final List<String> Empresa.fieldNames4OrderClauseFilter = java.util.Arrays.asList("CIF", "nombre", "actividad", "n_Empleados", "email", "localizacion", "ofertas");
     
     public static long Empresa.countEmpresas() {
         return entityManager().createQuery("SELECT COUNT(o) FROM Empresa o", Long.class).getSingleResult();
