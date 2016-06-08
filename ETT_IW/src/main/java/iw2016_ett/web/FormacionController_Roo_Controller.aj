@@ -25,17 +25,6 @@ import org.springframework.web.util.WebUtils;
 
 privileged aspect FormacionController_Roo_Controller {
     
-    @RequestMapping(method = RequestMethod.POST, produces = "text/html")
-    public String FormacionController.create(@Valid Formacion formacion, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
-        if (bindingResult.hasErrors()) {
-            populateEditForm(uiModel, formacion);
-            return "formacions/create";
-        }
-        uiModel.asMap().clear();
-        formacion.persist();
-        return "redirect:/formacions/" + encodeUrlPathSegment(formacion.getId().toString(), httpServletRequest);
-    }
-    
     @RequestMapping(params = "form", produces = "text/html")
     public String FormacionController.createForm(Model uiModel) {
         populateEditForm(uiModel, new Formacion());

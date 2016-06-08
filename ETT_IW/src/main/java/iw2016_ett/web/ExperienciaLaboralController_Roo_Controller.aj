@@ -23,17 +23,6 @@ import org.springframework.web.util.WebUtils;
 
 privileged aspect ExperienciaLaboralController_Roo_Controller {
     
-    @RequestMapping(method = RequestMethod.POST, produces = "text/html")
-    public String ExperienciaLaboralController.create(@Valid ExperienciaLaboral experienciaLaboral, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
-        if (bindingResult.hasErrors()) {
-            populateEditForm(uiModel, experienciaLaboral);
-            return "experiencialaborals/create";
-        }
-        uiModel.asMap().clear();
-        experienciaLaboral.persist();
-        return "redirect:/experiencialaborals/" + encodeUrlPathSegment(experienciaLaboral.getId().toString(), httpServletRequest);
-    }
-    
     @RequestMapping(params = "form", produces = "text/html")
     public String ExperienciaLaboralController.createForm(Model uiModel) {
         populateEditForm(uiModel, new ExperienciaLaboral());

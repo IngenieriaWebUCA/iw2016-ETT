@@ -4,10 +4,16 @@ import iw2016_ett.domain.Formacion;
 import org.springframework.roo.addon.web.mvc.controller.scaffold.RooWebScaffold;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.gvnix.addon.web.mvc.annotations.jquery.GvNIXWebJQuery;
 import iw2016_ett.domain.batch.FormacionBatchService;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
+
 import org.gvnix.addon.web.mvc.annotations.batch.GvNIXWebJpaBatch;
 
 @RequestMapping("/formacions")
@@ -30,5 +36,17 @@ public class FormacionController {
         }
         addDateTimeFormatPatterns(uiModel);
         return "formacions/list";
+    }
+	
+	@RequestMapping(method = RequestMethod.POST, produces = "text/html")
+    public String create(@Valid Formacion formacion, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
+        if (bindingResult.hasErrors()) {
+            populateEditForm(uiModel, formacion);
+            return "formacions/create";
+        }
+        uiModel.asMap().clear();
+        formacion.setDemandante(DemandanteController.demandante_logueado());
+        formacion.persist();
+        return "redirect:/formacions/" + encodeUrlPathSegment(formacion.getId().toString(), httpServletRequest);
     }
 }

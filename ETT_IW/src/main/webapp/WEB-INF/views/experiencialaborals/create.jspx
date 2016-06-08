@@ -6,7 +6,7 @@
         <field:input field="Empresa" id="c_iw2016_ett_domain_ExperienciaLaboral_Empresa" z="jSjU1QAjDrt18dpgQFDbQmhl8YA="/>
         <field:datetime dateTimePattern="${experienciaLaboral_fechainicio_date_format}" field="FechaInicio" id="c_iw2016_ett_domain_ExperienciaLaboral_FechaInicio" z="Nr7OywGfo0fWiFe5ovJmrxMiSPY="/>
         <field:datetime dateTimePattern="${experienciaLaboral_fechafin_date_format}" field="FechaFin" id="c_iw2016_ett_domain_ExperienciaLaboral_FechaFin" z="0qg2vhIDvfcdVZ3i6ANWts0ZQt4="/>
-        <field:select field="demandante" id="c_iw2016_ett_domain_ExperienciaLaboral_demandante" itemValue="id" items="${demandantes}" path="/demandantes" z="2C3rHJ2Bgf3D+PTWvMyhEfg0FT8="/>
+        <field:select field="demandante" id="c_iw2016_ett_domain_ExperienciaLaboral_demandante" itemValue="id" items="${demandantes}" path="/demandantes" render="false" z="user-managed"/>
         <field:select field="puestotrabajo" id="c_iw2016_ett_domain_ExperienciaLaboral_puestotrabajo" itemValue="id" items="${puestotrabajoes}" path="/puestotrabajoes" z="pnDq4X18Y0duezF0hEg6825zU30="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_iw2016_ett_domain_ExperienciaLaboral" render="${not empty dependencies}" z="86eT0B6q3T2R28BCyQyfpRB7j20="/>
