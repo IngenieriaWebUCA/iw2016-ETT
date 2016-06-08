@@ -83,9 +83,9 @@ public class InscripcionController {
 		mail m = new mail();
 
 		m.send(inscripcion.getDemandante().getEmail(), "Inscripción",
-				"Usted se ha inscripto en la oferta: " + inscripcion.getOferta().getTitulo());
+				"Usted se ha inscrito en la oferta: " + inscripcion.getOferta().getTitulo());
 
-		return "redirect:/ofertas";
+		return "redirect://inscripcions?page=1&size=10";
 	}
 	
 	@RequestMapping(produces = "text/html")
