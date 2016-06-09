@@ -18,7 +18,7 @@ import javax.persistence.OneToOne;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord(finders = { "findOfertasByEstado", "findOfertasByPuestotrabajo", "findOfertasByLocalizacion", "findOfertasByTitulaciones" })
+@RooJpaActiveRecord(finders = { "findOfertasByEstado", "findOfertasByPuestotrabajo", "findOfertasByLocalizacion", "findOfertasByTitulaciones", "findOfertasByEmpresa" })
 public class Oferta {
 
     /**
@@ -87,13 +87,13 @@ public class Oferta {
     public static List<Oferta> findOfertaEntries(int firstResult, int maxResults, String sortFieldName, String sortOrder) {
         Users u = UsersController.Usuario_logueado();
         String jpaQuery = null;
-        if(u == null || u.getRol().equals("ROLE_DEMANDANTE")){
-        	jpaQuery = "SELECT o FROM Oferta  o where estado = 1";
-        }else if (u.getRol().equals("ROLE_ADMIN") ||  u.getRol().equals("ROLE_GESTOR")) {
-         jpaQuery = "SELECT o FROM Oferta  o";
-         } else if (u.getRol().equals("ROLE_EMPRESA")) {
-         jpaQuery = "SELECT o FROM Oferta  o where empresa =" + u.getId();
-         }
+        if (u == null || u.getRol().equals("ROLE_DEMANDANTE")) {
+            jpaQuery = "SELECT o FROM Oferta  o where estado = 1";
+        } else if (u.getRol().equals("ROLE_ADMIN") || u.getRol().equals("ROLE_GESTOR")) {
+            jpaQuery = "SELECT o FROM Oferta  o";
+        } else if (u.getRol().equals("ROLE_EMPRESA")) {
+            jpaQuery = "SELECT o FROM Oferta  o where empresa =" + u.getId();
+        }
         if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
             jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
             if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {

@@ -45,7 +45,6 @@ public class Inscripcion {
 					+ u.getId() + ")";
 		}
 
-		System.out.println(jpaQuery);
 		if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
 			jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
 			if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {

@@ -1,11 +1,8 @@
 package iw2016_ett.web;
-
 import iw2016_ett.domain.Demandante;
 import iw2016_ett.domain.Empresa;
 import iw2016_ett.domain.Users;
-
 import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.springframework.roo.addon.web.mvc.controller.scaffold.RooWebScaffold;
@@ -24,31 +21,26 @@ import org.springframework.roo.addon.web.mvc.controller.finder.RooWebFinder;
 @RooWebFinder
 public class UsersController {
 
-	@RequestMapping(method = RequestMethod.POST, produces = "text/html")
-	public String create(@Valid Users users, BindingResult bindingResult, Model uiModel,
-			HttpServletRequest httpServletRequest) {
-		if (bindingResult.hasErrors()) {
-			populateEditForm(uiModel, users);
-			return "userses/create";
-		}
-		if (Users.countFindUsersesByUsernameEquals(users.getUsername()) > 0)
-			return "userses/create";
-		uiModel.asMap().clear();
-		users.persist();
-		return "redirect:/userses/" + encodeUrlPathSegment(users.getId().toString(), httpServletRequest);
-	}
+    @RequestMapping(method = RequestMethod.POST, produces = "text/html")
+    public String create(@Valid Users users, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
+        if (bindingResult.hasErrors()) {
+            populateEditForm(uiModel, users);
+            return "userses/create";
+        }
+        if (Users.countFindUsersesByUsernameEquals(users.getUsername()) > 0) return "userses/create";
+        uiModel.asMap().clear();
+        users.persist();
+        return "redirect:/userses/" + encodeUrlPathSegment(users.getId().toString(), httpServletRequest);
+    }
 
-	public static Users Usuario_logueado() {
-
-		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		String name = auth.getName();
-		List<Users> lUser = Users.findUsersesByUsernameEquals(name).getResultList();
-		Users usuario = null;
-		if (lUser.size() > 0) {
-			usuario =  lUser.get(0);
-		}
-		
-		return usuario;
-	}
-
+    public static Users Usuario_logueado() {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String name = auth.getName();
+        List<Users> lUser = Users.findUsersesByUsernameEquals(name).getResultList();
+        Users usuario = null;
+        if (lUser.size() > 0) {
+            usuario = lUser.get(0);
+        }
+        return usuario;
+    }
 }

@@ -8,10 +8,10 @@
         <put-attribute name="body" value="/WEB-INF/views/ofertas/show.jspx"/>
     </definition>
 <definition extends="default" name="ofertas/create">
-        <put-attribute name="body" value="/WEB-INF/views/ofertas/create.jspx" />
+        <put-attribute name="body" value="/WEB-INF/views/ofertas/create.jspx"/>
     </definition>
 <definition extends="default" name="ofertas/update">
-        <put-attribute name="body" value="/WEB-INF/views/ofertas/update.jspx" role="ROLE_ADMIN"/>
+        <put-attribute name="body" value="/WEB-INF/views/ofertas/update.jspx"/>
     </definition>
 <definition extends="default" name="ofertas/findOfertasByEstado">
         <put-attribute name="body" value="/WEB-INF/views/ofertas/findOfertasByEstado.jspx"/>
@@ -24,5 +24,8 @@
     </definition>
 <definition extends="default" name="ofertas/findOfertasByTitulaciones">
         <put-attribute name="body" value="/WEB-INF/views/ofertas/findOfertasByTitulaciones.jspx"/>
+    </definition>
+<definition extends="default" name="ofertas/findOfertasByEmpresa">
+        <put-attribute name="body" value="/WEB-INF/views/ofertas/findOfertasByEmpresa.jspx"/>
     </definition>
 </tiles-definitions>

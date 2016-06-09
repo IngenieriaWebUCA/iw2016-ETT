@@ -3,26 +3,20 @@ import iw2016_ett.domain.Demandante;
 import iw2016_ett.domain.Empresa;
 import iw2016_ett.domain.Oferta;
 import iw2016_ett.domain.Users;
-
 import org.springframework.roo.addon.web.mvc.controller.scaffold.RooWebScaffold;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
 import com.mysema.query.Query;
 import com.mysema.query.annotations.QueryEntity;
-
 import org.gvnix.addon.web.mvc.annotations.jquery.GvNIXWebJQuery;
 import org.gvnix.web.datatables.util.DatatablesUtilsBean;
 import org.hibernate.jpa.internal.EntityManagerImpl;
 import org.hibernate.loader.custom.sql.SQLCustomQuery;
-
 import iw2016_ett.domain.batch.EmpresaBatchService;
-
 import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
 import javax.servlet.http.HttpServletRequest;
@@ -39,33 +33,27 @@ import org.gvnix.addon.datatables.annotations.GvNIXDatatables;
 @GvNIXDatatables(ajax = true, detailFields = { "localizacion" })
 public class EmpresaController {
 
-
-	@RequestMapping(method = RequestMethod.POST, produces = "text/html")
+    @RequestMapping(method = RequestMethod.POST, produces = "text/html")
     public String create(@Valid Empresa empresa, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
             populateEditForm(uiModel, empresa);
             return "empresas/create";
         }
-        if(Empresa.countFindUsersesByUsernameEquals(empresa.getUsername())>0)
-        	return "empresas/create";
-        
+        if (Empresa.countFindUsersesByUsernameEquals(empresa.getUsername()) > 0) return "empresas/create";
         uiModel.asMap().clear();
         empresa.setRol("ROLE_EMPRESA");
-        
         empresa.persist();
         return "redirect:/empresas/" + encodeUrlPathSegment(empresa.getId().toString(), httpServletRequest);
     }
-	
-public static Empresa empresa_logueada() {
-        
-    	Users u = UsersController.Usuario_logueado();
-		Empresa empresa = (Empresa) u;
+
+    public static Empresa empresa_logueada() {
+        Users u = UsersController.Usuario_logueado();
+        Empresa empresa = (Empresa) u;
         return empresa;
     }
-	
-	@RequestMapping(params = "perfil")
-	public String show_perfil() {
-		
-		return "redirect:/empresas/" + empresa_logueada().getId().toString();
-	}
+
+    @RequestMapping(params = "perfil")
+    public String show_perfil() {
+        return "redirect:/empresas/" + empresa_logueada().getId().toString();
+    }
 }

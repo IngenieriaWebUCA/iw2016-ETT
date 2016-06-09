@@ -43,6 +43,7 @@
     <menu-item hidden="false" id="fi_oferta_localizacion" labelCode="menu_item_oferta_localizacion_label" messageCode="global_menu_find" roles="" url="/ofertas?find=ByLocalizacion&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}"/>
     <menu-item hidden="false" id="fi_oferta_puestotrabajo" labelCode="menu_item_oferta_puestotrabajo_label" messageCode="global_menu_find" roles="" url="/ofertas?find=ByPuestotrabajo&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}"/>
     <menu-item hidden="false" id="fi_oferta_titulaciones" labelCode="menu_item_oferta_titulaciones_label" messageCode="global_menu_find" roles="" url="/ofertas?find=ByTitulaciones&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}"/>
+    <menu-item hidden="false" id="fi_oferta_empresa" labelCode="menu_item_oferta_empresa_label" messageCode="global_menu_find" roles="" url="/ofertas?find=ByEmpresa&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}"/>
     </menu-item>
 <menu-item id="c_users" labelCode="menu_category_users_label" name="Users">
         <menu-item hidden="false" id="i_users_new" labelCode="menu_item_users_new_label" messageCode="global_menu_new" roles="" url="/userses?form"/>

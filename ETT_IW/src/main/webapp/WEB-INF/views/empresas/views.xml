@@ -11,6 +11,6 @@
         <put-attribute name="body" value="/WEB-INF/views/empresas/create.jspx" />
     </definition>
 <definition extends="default" name="empresas/update">
-        <put-attribute name="body" value="/WEB-INF/views/empresas/update.jspx" role="ROLE_ADMIN"/>
+        <put-attribute name="body" value="/WEB-INF/views/empresas/update.jspx" />
     </definition>
 </tiles-definitions>
