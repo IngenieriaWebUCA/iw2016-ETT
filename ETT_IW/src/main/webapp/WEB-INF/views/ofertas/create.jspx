@@ -16,7 +16,7 @@
         <field:simple field="titulaciones" id="c_iw2016_ett_domain_Oferta_titulaciones" messageCode="entity_reference_not_managed" messageCodeAttribute="Titulaciones" z="d0q47KuIB/OdOQZcvLj0l3IxfL4="/>
         <field:simple field="inscripcion" id="c_iw2016_ett_domain_Oferta_inscripcion" messageCode="entity_reference_not_managed" messageCodeAttribute="Inscripcion" z="R/WGhViNIYzGkd9u8OMoPZuHgKc="/>
         <field:select field="puestotrabajo" id="c_iw2016_ett_domain_Oferta_puestotrabajo" itemValue="id" items="${puestotrabajoes}" path="/puestotrabajoes" z="YElUdbbQqPLFoD6nXqjpONHITH0="/>
-        <field:select field="empresa" id="c_iw2016_ett_domain_Oferta_empresa" itemValue="id" items="${empresas}" path="/empresas" z="f9EPXvYa5h6pNCyEiJHU6Qwcd8k="/>
+        <field:select field="empresa" id="c_iw2016_ett_domain_Oferta_empresa" itemValue="id" items="${empresas}" path="/empresas" render="false" z="user-managed"/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_iw2016_ett_domain_Oferta" render="${not empty dependencies}" z="Vm9pR92z9FIKK8dcGYgAQcixqr4="/>
 </div>

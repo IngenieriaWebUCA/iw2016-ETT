@@ -30,17 +30,6 @@ import org.springframework.web.util.WebUtils;
 
 privileged aspect OfertaController_Roo_Controller {
     
-    @RequestMapping(method = RequestMethod.POST, produces = "text/html")
-    public String OfertaController.create(@Valid Oferta oferta, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
-        if (bindingResult.hasErrors()) {
-            populateEditForm(uiModel, oferta);
-            return "ofertas/create";
-        }
-        uiModel.asMap().clear();
-        oferta.persist();
-        return "redirect:/ofertas/" + encodeUrlPathSegment(oferta.getId().toString(), httpServletRequest);
-    }
-    
     @RequestMapping(params = "form", produces = "text/html")
     public String OfertaController.createForm(Model uiModel) {
         populateEditForm(uiModel, new Oferta());

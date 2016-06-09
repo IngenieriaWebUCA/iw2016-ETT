@@ -531,3 +531,4 @@ field set --fieldName ofertas --type Oferta --cardinality ONE_TO_MANY --mappedBy
 focus --class ~.domain.Oferta
 find add --finderName findOfertasByEmpresa
 web mvc all --package  ~.web
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-06-09 15:32:06
